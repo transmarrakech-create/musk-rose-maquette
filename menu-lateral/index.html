@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Nour — Style A : Menu latéral (façon Selena)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbfaf8;--ink:#262320;--muted:#8c857b;--gold:#b08d57;--dark:#1c1a18;--line:#e7e2d8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"EB Garamond",serif;font-size:1.05rem;line-height:1.75}
+h1,h2,h3,.logo{font-family:"Playfair Display",serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.pill{display:inline-block;padding:18px 44px;background:var(--dark);color:#fff;border-radius:40px;font-family:"EB Garamond",serif;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;transition:.3s;cursor:pointer}
+.pill:hover{background:var(--gold)}
+.label{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.section-head{text-align:center;margin-bottom:54px}
+.section-head h2{font-size:2.8rem;font-weight:500}
+.section-head p{color:var(--muted);max-width:560px;margin:14px auto 0}
+
+/* SIDEBAR */
+.sidebar{position:fixed;left:0;top:0;width:280px;height:100vh;background:#f6f4f0;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;align-items:center;padding:48px 28px;z-index:40}
+.logo{font-size:2.2rem;font-style:italic;font-weight:600}
+.snav{margin-top:64px;display:flex;flex-direction:column;gap:30px;text-align:center;flex:1}
+.snav a{font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);transition:.25s}
+.snav a:hover{color:var(--ink)}
+.scontact{font-size:1.05rem;color:var(--gold);text-align:center;margin-bottom:18px}
+.ssocial{display:flex;gap:18px;color:var(--muted);font-size:.8rem;letter-spacing:.1em}
+
+/* MAIN */
+.main{margin-left:280px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 40px}
+
+/* HERO */
+.hero{height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;
+  background:linear-gradient(180deg,rgba(20,24,20,.55),rgba(20,24,20,.75)),linear-gradient(135deg,#26302a,#13110e)}
+.hero h1{font-size:5rem;font-weight:500}
+.hero h1 em{font-style:italic}
+.hero .sub{margin-top:18px;font-size:1.2rem;letter-spacing:.04em;color:#e8e3da}
+.hero .ssocial{justify-content:center;margin-top:34px;color:#cfc9bf}
+.mouse{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:1px solid rgba(255,255,255,.6);border-radius:16px}
+
+/* FORMULES */
+.formules{padding:110px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{text-align:center;padding:44px 28px;border:1px solid var(--line);transition:.3s}
+.card:hover{box-shadow:0 18px 44px rgba(38,35,32,.08);transform:translateY(-5px)}
+.card h3{font-size:1.7rem;font-weight:500;margin:6px 0 12px}
+.card p{color:var(--muted);font-size:1rem;margin-bottom:18px}
+.card .more{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+
+/* REALISATIONS (masonry) */
+.works{padding:30px 0 110px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:240px;gap:14px}
+.tile{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:22px;color:#fff}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(15,14,12,.72))}
+.tile span{position:relative;z-index:2}
+.tile .k{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#d9b98a}
+.tile .t{font-family:"Playfair Display",serif;font-size:1.5rem}
+.big{grid-row:span 2}
+.wide{grid-column:span 2}
+.g1{background:linear-gradient(135deg,#2a2620,#0f0e0c)}
+.g2{background:linear-gradient(135deg,#3a3228,#171410)}
+.g3{background:linear-gradient(135deg,#26302a,#12110d)}
+.g4{background:linear-gradient(135deg,#4a3c2a,#1d1813)}
+.g5{background:linear-gradient(135deg,#33302a,#14130f)}
+.g6{background:linear-gradient(135deg,#5a4a30,#211a12)}
+
+/* TRANSPORT */
+.transport{padding:100px 0;background:#f6f4f0;border-top:1px solid var(--line)}
+.transport .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.transport h2{font-size:2.6rem;font-weight:500;margin:12px 0 16px}
+.transport p{color:var(--muted);margin-bottom:14px}
+.transport .badge{display:inline-block;margin-top:8px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:9px 18px;border-radius:30px}
+.transport .visual{height:360px;background:linear-gradient(135deg,#1c1a18,#b08d57)}
+
+/* TEMOIGNAGES */
+.temoignages{padding:110px 0}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+.quote p{font-family:"Playfair Display",serif;font-style:italic;font-size:1.35rem;margin-bottom:14px}
+.quote .who{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* CONTACT */
+.contact{padding:30px 0 110px}
+.contact h2{font-size:3rem;font-weight:500;text-align:center;margin-bottom:46px}
+.form{max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.form input,.form textarea{width:100%;padding:12px 2px;border:none;border-bottom:1px solid var(--line);background:transparent;font-family:inherit;font-size:1.05rem;color:var(--ink)}
+.form input::placeholder,.form textarea::placeholder{color:#aaa39a}
+.form .full{grid-column:1/3}
+.form .send{grid-column:1/3;text-align:right;margin-top:8px}
+
+/* FOOTER */
+.footer{background:#f6f4f0;border-top:1px solid var(--line);padding:64px 0 40px}
+.footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.footer .logo{font-size:1.9rem}
+.footer p{color:var(--muted);margin-top:12px}
+.footer h4{font-family:"Playfair Display",serif;font-weight:500;margin-bottom:10px}
+.footer a{color:var(--gold)}
+.copy{text-align:center;color:var(--muted);font-size:.85rem;margin-top:48px}
+
+@media(max-width:900px){
+  .sidebar{position:static;width:100%;height:auto;flex-direction:row;flex-wrap:wrap;justify-content:space-between;padding:20px}
+  .snav{flex-direction:row;flex-wrap:wrap;gap:16px;margin:0;flex:1;justify-content:center}
+  .scontact,.sidebar .ssocial{display:none}
+  .main{margin-left:0}
+  .hero h1{font-size:3rem}
+  .cards,.grid,.quotes,.transport .wrap,.form,.footer .wrap{grid-template-columns:1fr}
+  .big,.wide{grid-row:auto;grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="logo">Maison Nour</div>
+  <nav class="snav">
+    <a href="#hero">Accueil</a>
+    <a href="#formules">Formules</a>
+    <a href="#works">Réalisations</a>
+    <a href="#temoignages">Témoignages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="scontact">+212 6 00 00 00 00<br>contact@maisonnour.com</div>
+  <div class="ssocial"><span>Fb</span><span>Ig</span><span>Pin</span></div>
+</aside>
+
+<main class="main">
+
+  <section id="hero" class="hero">
+    <div>
+      <h1>Votre mariage à <em>Marrakech</em></h1>
+      <p class="sub">Wedding planner — Désert d'Agafay & Palais</p>
+      <div class="ssocial"><span>Facebook</span><span>Instagram</span><span>Pinterest</span></div>
+    </div>
+    <div class="mouse"></div>
+  </section>
+
+  <section id="formules" class="formules"><div class="wrap">
+    <div class="section-head"><p class="label">Nos formules</p><h2>Trois façons de vous accompagner</h2></div>
+    <div class="cards">
+      <div class="card"><h3>Coordination jour J</h3><p>Vous avez tout réservé, nous orchestrons la journée et le transport.</p><a class="more" href="#contact">En savoir plus</a></div>
+      <div class="card"><h3>Organisation partielle</h3><p>Nous prenons en main le lieu, la décoration et la logistique.</p><a class="more" href="#contact">En savoir plus</a></div>
+      <div class="card"><h3>Clé en main</h3><p>De la première idée au dernier invité raccompagné, tout est géré.</p><a class="more" href="#contact">En savoir plus</a></div>
+    </div>
+  </div></section>
+
+  <section id="works" class="works"><div class="wrap">
+    <div class="section-head"><p class="label">Nos réalisations</p><h2>Des mariages d'exception</h2>
+      <p>Des cérémonies intimes aux grandes célébrations, dans les plus beaux décors de Marrakech et de sa région.</p></div>
+    <div class="grid">
+      <div class="tile big g3"><span><span class="k">Désert</span><span class="t">Agafay</span></span></div>
+      <div class="tile g2"><span><span class="k">Cérémonie</span><span class="t">Palais</span></span></div>
+      <div class="tile g1"><span><span class="k">Réception</span><span class="t">Riad</span></span></div>
+      <div class="tile g4"><span><span class="k">Domaine</span><span class="t">Palmeraie</span></span></div>
+      <div class="tile wide g6"><span><span class="k">Soirée</span><span class="t">Gala dans le désert</span></span></div>
+    </div>
+  </div></section>
+
+  <section class="transport"><div class="wrap">
+    <div>
+      <p class="label">Notre différence</p>
+      <h2>Le transport de vos invités, notre métier</h2>
+      <p>Transferts aéroport, navettes entre hôtels, lieu de cérémonie et soirée de gala : nous gérons les flux de dizaines à des centaines de personnes sans accroc.</p>
+      <p>C'est notre métier d'origine, et l'atout qui fait la différence le jour J.</p>
+      <span class="badge">Logistique assurée par TransMarrakech</span>
+    </div>
+    <div class="visual"></div>
+  </div></section>
+
+  <section id="temoignages" class="temoignages"><div class="wrap">
+    <div class="section-head"><p class="label">Témoignages</p><h2>Ils nous ont fait confiance</h2></div>
+    <div class="quotes">
+      <div class="quote"><p>« Un mariage de rêve dans le désert, et une organisation millimétrée. »</p><div class="who">Camille & James — Agafay</div></div>
+      <div class="quote"><p>« Nos 120 invités transportés sans le moindre stress. Bravo. »</p><div class="who">Sarah & Tariq — Palais</div></div>
+      <div class="quote"><p>« Un interlocuteur unique, des devis clairs, zéro surprise. »</p><div class="who">Léa & Marc — Palmeraie</div></div>
+    </div>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap">
+    <h2>Parlons de votre mariage</h2>
+    <form class="form" onsubmit="return false">
+      <input placeholder="Nom"><input placeholder="Email">
+      <input placeholder="Date du mariage"><input placeholder="Nombre d'invités">
+      <textarea class="full" rows="3" placeholder="Votre message"></textarea>
+      <div class="send full"><button class="pill">Nous contacter</button></div>
+    </form>
+  </div></section>
+
+  <footer class="footer"><div class="wrap">
+    <div><div class="logo">Maison Nour</div><p>Wedding planner de luxe à Marrakech, désert d'Agafay & palais. Mariages clé en main pour couples internationaux.</p></div>
+    <div><h4>Contact</h4><p>+212 6 00 00 00 00<br>contact@maisonnour.com</p></div>
+    <div><h4>Suivez-nous</h4><p><a href="#">Instagram</a><br><a href="#">Pinterest</a><br><a href="#">Facebook</a></p></div>
+  </div><div class="copy">© Maison Nour — Logistique assurée par TransMarrakech · Maquette de style (nom et visuels provisoires)</div></footer>
+
+</main>
+</body>
+</html>
