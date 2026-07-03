@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Plan d'acquisition, Musk &amp; Rose Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --creme:#F6F1E8; --creme-ombre:#EFE7D9; --ivoire:#FBF8F2;
+    --terre:#2C2620; --taupe:#615949; --terracotta:#A8543A; --terracotta-fonce:#6E3B29;
+    --ocre:#C18E4A; --vert:#3F4A3A; --sable:#E0D6C4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--creme);color:var(--terre);font-family:'Josefin Sans',sans-serif;font-weight:400;line-height:1.7;font-size:16.5px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.14}
+
+  header.top{background:var(--terre);color:var(--creme);padding:48px 0 40px}
+  header.top .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ocre);margin-bottom:14px}
+  header.top h1{font-size:44px;color:var(--creme);margin-bottom:6px}
+  header.top .sub{color:var(--sable);max-width:640px;font-weight:300}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .chip{background:rgba(246,241,232,.08);border:1px solid rgba(224,214,196,.28);border-radius:4px;padding:9px 15px;font-size:14px}
+  .chip b{color:#fff;font-weight:600}
+
+  .progress-band{background:var(--terracotta-fonce);color:var(--creme);padding:18px 0}
+  .progress-band .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .bar{flex:1;min-width:220px;height:12px;background:rgba(246,241,232,.18);border-radius:20px;overflow:hidden}
+  .bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ocre),#e6b978);transition:width .4s ease}
+  .progress-band .pct{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;min-width:70px}
+  .progress-band .lbl{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#f0dcb5}
+  .reset{background:none;border:1px solid rgba(246,241,232,.4);color:var(--creme);border-radius:4px;padding:7px 13px;font-family:inherit;font-size:13px;cursor:pointer}
+  .reset:hover{background:rgba(246,241,232,.12)}
+
+  section{padding:44px 0}
+  section.alt{background:var(--creme-ombre)}
+  h2.section-title{font-size:30px;margin-bottom:6px}
+  .section-lead{color:var(--taupe);max-width:720px;margin-bottom:26px;font-weight:300}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:10px;font-weight:600}
+
+  .callout{background:var(--ivoire);border-left:4px solid var(--terracotta);border-radius:4px;padding:20px 22px;margin-bottom:8px}
+  .callout h3{font-size:22px;margin-bottom:10px}
+  .callout ul{list-style:none}
+  .callout li{padding-left:22px;position:relative;margin-bottom:7px;font-size:15.5px}
+  .callout li::before{content:"!";position:absolute;left:0;top:0;color:var(--terracotta);font-weight:700}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .card{background:var(--ivoire);border:1px solid var(--sable);border-radius:6px;padding:22px;position:relative}
+  .card .rank{position:absolute;top:-14px;left:20px;width:30px;height:30px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600}
+  .card h3{font-size:21px;margin:8px 0 8px}
+  .card p{font-size:14.5px;color:var(--taupe)}
+  .card .tag{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--creme-ombre);color:var(--terracotta-fonce);padding:4px 9px;border-radius:3px}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+  .kpi{background:var(--ivoire);border:1px solid var(--sable);border-radius:6px;padding:20px;text-align:center}
+  .kpi .num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--terracotta)}
+  .kpi .cap{font-size:13px;color:var(--taupe);letter-spacing:.04em}
+
+  .phase{background:var(--ivoire);border:1px solid var(--sable);border-radius:8px;padding:8px 24px 20px;margin-bottom:20px}
+  .phase-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:16px 0 8px;border-bottom:1px solid var(--sable);margin-bottom:12px}
+  .phase-head h3{font-size:25px}
+  .phase-head .when{font-size:13px;color:var(--terracotta-fonce);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .phase-head .goal{font-size:14px;color:var(--taupe);margin-left:auto;font-weight:300}
+
+  .step{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px dashed var(--sable)}
+  .step:last-child{border-bottom:none}
+  .step input{appearance:none;-webkit-appearance:none;width:22px;height:22px;min-width:22px;border:2px solid var(--terracotta);border-radius:5px;margin-top:2px;cursor:pointer;position:relative;transition:.15s}
+  .step input:checked{background:var(--terracotta)}
+  .step input:checked::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .step label{flex:1;cursor:pointer;font-size:15.5px}
+  .step input:checked + label{color:var(--taupe);text-decoration:line-through;text-decoration-color:var(--sable)}
+  .who{font-size:10.5px;font-weight:600;letter-spacing:.05em;padding:3px 8px;border-radius:20px;white-space:nowrap;margin-top:2px}
+  .who.s{background:#f2ddd4;color:var(--terracotta-fonce)}
+  .who.sm{background:#f2e6cf;color:#8a6420}
+  .who.j{background:#dde3d8;color:var(--vert)}
+  .who.t{background:var(--creme-ombre);color:var(--taupe)}
+  .milestone{background:var(--creme-ombre);border-radius:5px;padding:10px 14px;margin-top:8px;font-size:14.5px}
+  .milestone b{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--terracotta-fonce)}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:var(--taupe)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:50%}
+
+  footer{background:var(--terre);color:var(--sable);padding:30px 0;font-size:13px;font-weight:300}
+  footer b{color:var(--creme)}
+  @media(max-width:600px){header.top h1{font-size:34px}h2.section-title{font-size:26px}.phase-head .goal{margin-left:0;flex-basis:100%}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Musk &amp; Rose Events, univers Mariages</div>
+    <h1>Plan d'acquisition</h1>
+    <p class="sub">D'où viendront les visiteurs, puis les clients. Le site convertit, il n'attire pas seul. Ce document est le plan pour amener du monde et signer les premiers mariages.</p>
+    <div class="chips">
+      <div class="chip">Objectif an 1 : <b>3 à 5 mariages</b></div>
+      <div class="chip">Budget pub : <b>1 000 à 3 000 DH/mois</b></div>
+      <div class="chip">Équipe : <b>Salah, Smahane, Jarvis</b></div>
+      <div class="chip">Établi le <b>03/07/2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="progress-band">
+  <div class="wrap">
+    <span class="lbl">Avancement</span>
+    <div class="bar"><span id="barFill"></span></div>
+    <div class="pct" id="pctText">0%</div>
+    <button class="reset" id="resetBtn">Réinitialiser</button>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="label">À garder en tête</div>
+    <h2 class="section-title">Les règles d'or (avant de courir)</h2>
+    <div class="callout">
+      <ul>
+        <li><b>Le site ne suffit pas.</b> Il transforme un visiteur en demande. Il ne va pas chercher le visiteur. Ce plan, c'est ce qui va chercher le visiteur.</li>
+        <li><b>Le SEO est lent.</b> 6 à 18 mois pour la 1re page sur les mots-clés concurrentiels. Ne compte pas dessus pour tes premiers clients.</li>
+        <li><b>Sans vraies photos, tous les canaux plafonnent.</b> Le 1er mariage documenté (offre de lancement) est le déblocage prioritaire.</li>
+        <li><b>Petit budget pub = tester, pas scaler.</b> On ne verse pas d'argent dans une page sans photos ni avis.</li>
+        <li><b>Zéro faux.</b> Jamais de faux avis ni de fausse réalisation (rappel charte). L'honnêteté est un atout premium ici.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="label">Par ordre de priorité pour toi</div>
+    <h2 class="section-title">Les 5 canaux d'acquisition</h2>
+    <p class="section-lead">Pour un mariage haut de gamme à distance (ticket élevé, décision de confiance), les premiers clients viennent surtout des relations et de la découverte visuelle, pas du SEO. Voici l'ordre qui rapporte le plus vite pour ton profil.</p>
+    <div class="cards">
+      <div class="card"><div class="rank">1</div><h3>Partenariats &amp; réseau</h3><p>Photographes, lieux (riads, domaines, Agafay), fleuristes, traiteurs, planners étrangers qui sous-traitent la logistique locale, et ton réseau TransMarrakech. Le canal le plus rentable pour décrocher les premiers mariages.</p><span class="tag">Rapide, gratuit, confiance</span></div>
+      <div class="card"><div class="rank">2</div><h3>Marketplaces mariage</h3><p>Mariages.net, Zankyou, Bodas.net. Les couples y cherchent activement un prestataire. Profil optimisé + quelques visuels. Certaines options payantes, à tester.</p><span class="tag">Intention d'achat forte</span></div>
+      <div class="card"><div class="rank">3</div><h3>Instagram + Pinterest</h3><p>Découverte visuelle, cœur du marché mariage. Pinterest est idéal (les couples y font leurs moodboards). Porté à trois, 2 à 3 publications/semaine. Lent à monter mais gratuit et cumulatif.</p><span class="tag">Compounding, visuel</span></div>
+      <div class="card"><div class="rank">4</div><h3>Google &amp; Meta Ads</h3><p>Petit budget (1 à 3k DH/mois) pour tester des requêtes à forte intention et un ciblage fiancés France/Belgique/Suisse. À activer une fois la page et quelques photos prêtes. Trafic dès le 1er jour.</p><span class="tag">Test payant ciblé</span></div>
+      <div class="card"><div class="rank">5</div><h3>SEO (long terme)</h3><p>La landing d'abord (marque + longue traîne transport, ton terrain), puis le blog en phase 2 pour le concurrentiel. Un actif qui rapporte des années sans payer, mais qui met 6 à 18 mois à monter.</p><span class="tag">Actif long terme</span></div>
+    </div>
+    <p class="section-lead" style="margin-top:22px"><b>Transversal et prioritaire :</b> les vraies photos et les premiers avis Google. C'est le carburant commun de tous les canaux ci-dessus.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">Les repères chiffrés (indicatifs, à ajuster)</div>
+    <h2 class="section-title">La cible de l'année 1</h2>
+    <p class="section-lead">Pour signer 3 à 5 mariages, il faut alimenter le haut de l'entonnoir. Ordres de grandeur honnêtes pour un démarrage, à corriger avec tes vrais chiffres au fil des mois.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="num">3-5</div><div class="cap">mariages signés</div></div>
+      <div class="kpi"><div class="num">~50</div><div class="cap">demandes qualifiées / an (~4-6 par mois)</div></div>
+      <div class="kpi"><div class="num">3+</div><div class="cap">avis Google réels</div></div>
+      <div class="kpi"><div class="num">1er</div><div class="cap">mariage documenté (offre lancement)</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="label">La feuille de route</div>
+    <h2 class="section-title">Les étapes à suivre</h2>
+    <p class="section-lead">Coche au fur et à mesure. Ta progression est enregistrée dans ce navigateur. Responsable de chaque tâche indiqué à droite.</p>
+    <div class="legend">
+      <span><i class="dot" style="background:#A8543A"></i> Salah</span>
+      <span><i class="dot" style="background:#C18E4A"></i> Smahane</span>
+      <span><i class="dot" style="background:#3F4A3A"></i> Jarvis</span>
+      <span><i class="dot" style="background:#b8ad99"></i> Tous</span>
+    </div>
+
+    <div class="phase" style="margin-top:22px">
+      <div class="phase-head"><h3>Phase 0, Fondations</h3><span class="when">Maintenant → mise en ligne ~10/07</span><span class="goal">But : tout est prêt à recevoir du trafic</span></div>
+      <div class="step"><input type="checkbox" id="p0a"><label for="p0a">Acheter le domaine muskandrose.com + créer l'email pro</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p0b"><label for="p0b">Rassembler les vraies photos disponibles (flotte, events, mariages transportés) avec les droits</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p0c"><label for="p0c">Définir l'offre de lancement (tarif réduit contre droit de photographier + témoignage)</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p0d"><label for="p0d">Finaliser la landing (contenu honnête, formulaire fonctionnel, légal, SEO on-page)</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p0e"><label for="p0e">Créer le Google Business Profile (catégorie Wedding planner, NAP cohérent)</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p0f"><label for="p0f">Ouvrir les comptes Instagram + Pinterest (bio, lien, 3 posts de lancement)</label><span class="who t">Tous</span></div>
+      <div class="step"><input type="checkbox" id="p0g"><label for="p0g">Lister 20 partenaires cibles (photographes, lieux, fleuristes, planners étrangers)</label><span class="who sm">Smahane</span></div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-head"><h3>Phase 1, Amorçage</h3><span class="when">Mi-juillet → août 2026</span><span class="goal">But : premières demandes + 1er mariage</span></div>
+      <div class="step"><input type="checkbox" id="p1a"><label for="p1a">Contacter les 20 partenaires (message personnalisé, proposition gagnant-gagnant)</label><span class="who t">Tous</span></div>
+      <div class="step"><input type="checkbox" id="p1b"><label for="p1b">S'inscrire sur 1 à 2 marketplaces mariage, profil optimisé avec visuels</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p1c"><label for="p1c">Publier 2 à 3 fois/semaine sur Instagram + épingles Pinterest (lieux, coulisses, transport)</label><span class="who t">Tous</span></div>
+      <div class="step"><input type="checkbox" id="p1d"><label for="p1d">Lancer une campagne Google Ads test (petit budget, requêtes à forte intention)</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p1e"><label for="p1e">Mettre en place le suivi des demandes (réponse sous 48h, tableau des leads)</label><span class="who s">Salah</span></div>
+      <div class="milestone"><b>Jalon.</b> Décrocher le 1er mariage via l'offre de lancement.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-head"><h3>Phase 2, Preuve</h3><span class="when">Septembre → novembre 2026</span><span class="goal">But : de vraies réalisations et avis</span></div>
+      <div class="step"><input type="checkbox" id="p2a"><label for="p2a">Réaliser et faire photographier les premiers mariages (droits validés)</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p2b"><label for="p2b">Publier les vraies réalisations sur le site + les réseaux</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p2c"><label for="p2c">Solliciter un avis Google réel après chaque prestation (email + lien direct)</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="p2d"><label for="p2d">Ouvrir la section avis du site au 1er vrai témoignage</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p2e"><label for="p2e">Ajuster la pub : couper ce qui ne convertit pas, renforcer ce qui marche</label><span class="who j">Jarvis</span></div>
+      <div class="milestone"><b>Jalon.</b> 1er vrai avis publié + les premières réalisations en ligne.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-head"><h3>Phase 3, Traction</h3><span class="when">Décembre 2026 → au-delà</span><span class="goal">But : flux régulier de demandes</span></div>
+      <div class="step"><input type="checkbox" id="p3a"><label for="p3a">Lancer le blog SEO (2 articles piliers : « se marier à Marrakech », « transport invités »)</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p3b"><label for="p3b">Câbler le SEO de fond (données structurées, sitemap, llms.txt) et la phase 2 du site</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="p3c"><label for="p3c">Aller chercher des backlinks et de la presse (guides destination wedding, retombées)</label><span class="who t">Tous</span></div>
+      <div class="step"><input type="checkbox" id="p3d"><label for="p3d">Enrichir les profils marketplaces avec les vraies photos</label><span class="who s">Salah</span></div>
+      <div class="milestone"><b>Jalon.</b> Requêtes longue traîne en 1re page + demandes régulières.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-head"><h3>Boucle continue</h3><span class="when">Chaque mois</span><span class="goal">But : doubler ce qui marche</span></div>
+      <div class="step"><input type="checkbox" id="pca"><label for="pca">Tenir le tableau des demandes (date, source, statut, mariage signé ou non)</label><span class="who s">Salah</span></div>
+      <div class="step"><input type="checkbox" id="pcb"><label for="pcb">Mesurer : demandes/mois, coût pub par demande, mariages signés, avis</label><span class="who j">Jarvis</span></div>
+      <div class="step"><input type="checkbox" id="pcc"><label for="pcc">Décision mensuelle : renforcer les canaux qui rapportent, couper les autres</label><span class="who t">Tous</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Plan d'acquisition Musk &amp; Rose Events, univers Mariages. Document vivant, mis à jour au fil des mois. Il complète le <b>plan de site</b> (le site) et le <b>plan de mise en ligne</b> (le lancement). Ici, on répond à la seule question qui compte ensuite : <b>d'où viennent les clients</b>.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='musk-rose-plan-acquisition-v1';
+    var boxes=Array.prototype.slice.call(document.querySelectorAll('.step input[type=checkbox]'));
+    var barFill=document.getElementById('barFill');
+    var pctText=document.getElementById('pctText');
+    var saved={};
+    try{ saved=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ saved={}; }
+
+    function update(){
+      var done=0;
+      boxes.forEach(function(b){ if(b.checked) done++; });
+      var pct=boxes.length?Math.round(done/boxes.length*100):0;
+      barFill.style.width=pct+'%';
+      pctText.textContent=pct+'%';
+    }
+    function save(){
+      var state={};
+      boxes.forEach(function(b){ state[b.id]=b.checked; });
+      try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+    }
+    boxes.forEach(function(b){
+      if(saved[b.id]) b.checked=true;
+      b.addEventListener('change',function(){ save(); update(); });
+    });
+    document.getElementById('resetBtn').addEventListener('click',function(){
+      if(!confirm('Décocher toutes les étapes ?')) return;
+      boxes.forEach(function(b){ b.checked=false; });
+      save(); update();
+    });
+    update();
+  })();
+</script>
+</body>
+</html>
