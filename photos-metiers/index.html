@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Photos à récupérer, Musk &amp; Rose Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --creme:#F6F1E8; --creme-ombre:#EFE7D9; --ivoire:#FBF8F2;
+    --terre:#2C2620; --taupe:#615949; --terracotta:#A8543A; --terracotta-fonce:#6E3B29;
+    --ocre:#C18E4A; --vert:#3F4A3A; --sable:#E0D6C4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--creme);color:var(--terre);font-family:'Josefin Sans',sans-serif;font-weight:400;line-height:1.7;font-size:16.5px}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.14}
+
+  header.top{background:var(--terre);color:var(--creme);padding:46px 0 38px}
+  header.top .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ocre);margin-bottom:14px}
+  header.top h1{font-size:42px;color:var(--creme);margin-bottom:6px}
+  header.top .sub{color:var(--sable);max-width:600px;font-weight:300}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .chip{background:rgba(246,241,232,.08);border:1px solid rgba(224,214,196,.28);border-radius:4px;padding:9px 15px;font-size:14px}
+  .chip b{color:#fff;font-weight:600}
+
+  .progress-band{background:var(--terracotta-fonce);color:var(--creme);padding:16px 0}
+  .progress-band .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .bar{flex:1;min-width:200px;height:11px;background:rgba(246,241,232,.18);border-radius:20px;overflow:hidden}
+  .bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ocre),#e6b978);transition:width .4s ease}
+  .progress-band .pct{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;min-width:64px}
+  .progress-band .lbl{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#f0dcb5}
+  .reset{background:none;border:1px solid rgba(246,241,232,.4);color:var(--creme);border-radius:4px;padding:7px 13px;font-family:inherit;font-size:13px;cursor:pointer}
+  .reset:hover{background:rgba(246,241,232,.12)}
+
+  section{padding:40px 0}
+  section.alt{background:var(--creme-ombre)}
+  h2.section-title{font-size:29px;margin-bottom:6px}
+  .section-lead{color:var(--taupe);max-width:660px;margin-bottom:24px;font-weight:300}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:10px;font-weight:600}
+
+  .callout{background:var(--ivoire);border-left:4px solid var(--terracotta);border-radius:4px;padding:20px 22px}
+  .callout ol{margin:0;padding-left:20px}
+  .callout li{margin-bottom:9px;font-size:15.5px}
+  .callout li b{color:var(--terracotta-fonce)}
+
+  .metier{background:var(--ivoire);border:1px solid var(--sable);border-radius:7px;padding:16px 18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+  .metier input{appearance:none;-webkit-appearance:none;width:24px;height:24px;min-width:24px;border:2px solid var(--terracotta);border-radius:6px;margin-top:3px;cursor:pointer;position:relative;transition:.15s}
+  .metier input:checked{background:var(--terracotta)}
+  .metier input:checked::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:12px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .metier .body h3{font-size:21px;margin-bottom:3px}
+  .metier .body p{font-size:14.5px;color:var(--taupe)}
+  .metier input:checked ~ .body h3{color:var(--taupe);text-decoration:line-through;text-decoration-color:var(--sable)}
+  .bonus-title{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta-fonce);margin:22px 0 12px;font-weight:600}
+
+  .msgbox{background:var(--ivoire);border:1px solid var(--sable);border-radius:8px;padding:22px}
+  .msgbox pre{white-space:pre-wrap;font-family:'Josefin Sans',sans-serif;font-size:15px;color:var(--terre);line-height:1.65;margin-bottom:16px}
+  .copybtn{background:var(--terracotta);color:#fff;border:none;border-radius:5px;padding:10px 18px;font-family:inherit;font-size:14px;cursor:pointer;letter-spacing:.02em}
+  .copybtn:hover{background:var(--terracotta-fonce)}
+  .copybtn.done{background:var(--vert)}
+
+  ul.plain{list-style:none}
+  ul.plain li{padding-left:20px;position:relative;margin-bottom:8px;font-size:15.5px}
+  ul.plain li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--ocre)}
+
+  footer{background:var(--terre);color:var(--sable);padding:28px 0;font-size:13px;font-weight:300}
+  footer b{color:var(--creme)}
+  @media(max-width:600px){header.top h1{font-size:33px}h2.section-title{font-size:25px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Musk &amp; Rose Events</div>
+    <h1>Photos à récupérer</h1>
+    <p class="sub">Les métiers à contacter pour rassembler de vraies photos de Marrakech (lieux, ambiances, détails) pour le site. Pour Smahane.</p>
+    <div class="chips">
+      <div class="chip">Pilote : <b>Smahane</b></div>
+      <div class="chip">Coche <b>ce que tu as contacté</b></div>
+      <div class="chip">Établi le <b>03/07/2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="progress-band">
+  <div class="wrap">
+    <span class="lbl">Contactés</span>
+    <div class="bar"><span id="barFill"></span></div>
+    <div class="pct" id="pctText">0%</div>
+    <button class="reset" id="resetBtn">Réinitialiser</button>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="label">À lire avant de contacter</div>
+    <h2 class="section-title">La règle d'or</h2>
+    <p class="section-lead">Ces photos viennent des mariages et du travail d'autres prestataires, pas des nôtres. On peut les utiliser, mais proprement.</p>
+    <div class="callout">
+      <ol>
+        <li><b>Accord + crédit.</b> On ne publie qu'avec l'accord du prestataire (un OK par WhatsApp suffit, on garde la trace) et en le créditant (mention + lien vers sa page).</li>
+        <li><b>Droit d'auteur.</b> Une photo appartient au photographe qui l'a prise, même quand c'est un lieu ou un fleuriste qui la partage. Toujours demander qui créditer et s'il est d'accord.</li>
+        <li><b>Droit à l'image.</b> Préférer les photos sans visage reconnaissable. Si des personnes sont identifiables, il faut leur accord.</li>
+        <li><b>Honnêteté Musk &amp; Rose.</b> Ces photos servent d'ambiance, inspiration ou lieux, <b>jamais présentées comme « nos réalisations »</b> (réservé à nos vrais mariages). On étiquette clairement.</li>
+      </ol>
+    </div>
+    <p class="section-lead" style="margin-top:18px">Bon réflexe : demander les photos, c'est aussi une première prise de contact partenaire. En proposant de créditer et de recommander en retour, tu ouvres la porte à une collaboration.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="label">Coche ceux que tu as contactés</div>
+    <h2 class="section-title">Les métiers à contacter</h2>
+    <div class="metier"><input type="checkbox" id="m1"><div class="body"><h3>Photographe / vidéaste de mariage</h3><p>La source la plus propre (ils ont les droits et les meilleures images). Leurs plus belles photos de mariages à Marrakech, Agafay, riads : scènes, lieux, couples, détails.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m2"><div class="body"><h3>Fleuriste / décorateur floral</h3><p>Compositions, arches, tables fleuries, scénographies, centres de table.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m3"><div class="body"><h3>Villas &amp; lieux de réception</h3><p>Riads, domaines, villas, camps d'Agafay : espaces vides et dressés, jour et nuit, vues Atlas, tentes berbères, patios, bassins.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m4"><div class="body"><h3>Traiteur / art de la table</h3><p>Dressage, buffets, dîners aux chandelles, vaisselle, mets, tablées.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m5"><div class="body"><h3>Neggafa</h3><p>Habillage traditionnel, caftans et takchitas, amariya (cérémonie du trône), rituels marocains. Photos très identitaires, rares ailleurs.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m6"><div class="body"><h3>Mixologue / bar</h3><p>Bar dressé, cocktails signature, coin lounge, ambiance apéritif.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m7"><div class="body"><h3>DJ / musique</h3><p>Orchestres, gnawa, dabka, groupes : scène, ambiance de nuit, danse, artistes, jeux de lumière.</p></div></div>
+
+    <div class="bonus-title">En bonus, si tu veux enrichir</div>
+    <div class="metier"><input type="checkbox" id="m8"><div class="body"><h3>Maquilleur / coiffeur</h3><p>Préparatifs de la mariée, beauté, détails, matin du mariage.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m9"><div class="body"><h3>Pâtissier / wedding cake</h3><p>Pièce montée, sucré, dressage gourmand.</p></div></div>
+    <div class="metier"><input type="checkbox" id="m10"><div class="body"><h3>Scénographe / mobilier, tentes, lumière</h3><p>Mises en place, ambiances, décor de nuit.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">Prêt à envoyer</div>
+    <h2 class="section-title">Le message à leur envoyer</h2>
+    <p class="section-lead">Personnalise le crochet [ ] selon le métier. Il demande les photos et ouvre la collaboration.</p>
+    <div class="msgbox">
+<pre id="msgText">Bonjour [Nom],
+Je suis Smahane, de Musk & Rose Events, agence de mariages à Marrakech. Nous préparons notre site et nous aimons mettre en avant les beaux prestataires de la ville. Accepteriez-vous de nous partager quelques-unes de vos plus belles photos [de vos compositions / du lieu / de vos cérémonies...] ? Nous les publierions en vous créditant (mention + lien vers votre page), et nous vous recommandons à nos couples en retour.
+Si les photos ont été prises par un photographe, dites-nous qui créditer.
+Merci beaucoup,
+Smahane, Musk & Rose Events</pre>
+      <button class="copybtn" id="copyBtn">Copier le message</button>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="label">Qualité</div>
+    <h2 class="section-title">Ce qu'il faut récupérer</h2>
+    <ul class="plain">
+      <li><b>Haute résolution</b> (au moins 2000 px de large), fichier d'origine (JPEG). Pas une capture d'écran Instagram, trop basse qualité.</li>
+      <li>Le <b>nom du photographe</b> à créditer.</li>
+      <li>Le <b>statut</b> de chaque photo : ambiance / inspiration / lieu (jamais « réalisation »).</li>
+    </ul>
+    <p class="section-lead" style="margin-top:18px"><b>Après la collecte :</b> déposer les photos reçues (avec le nom du prestataire et du photographe) dans la photothèque du disque D:. Ensuite Jarvis sélectionne, optimise et pose les meilleures sur le site, avec crédit et étiquetage honnête.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Musk &amp; Rose Events, univers Mariages. Liste des métiers à contacter pour rassembler de vraies photos de Marrakech. <b>Règle absolue : accord, crédit, et jamais présenté comme une réalisation de l'agence.</b>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='musk-rose-photos-metiers-v1';
+    var boxes=Array.prototype.slice.call(document.querySelectorAll('.metier input[type=checkbox]'));
+    var barFill=document.getElementById('barFill'), pctText=document.getElementById('pctText');
+    var saved={};
+    try{ saved=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ saved={}; }
+    function update(){
+      var done=0; boxes.forEach(function(b){ if(b.checked) done++; });
+      var pct=boxes.length?Math.round(done/boxes.length*100):0;
+      barFill.style.width=pct+'%'; pctText.textContent=pct+'%';
+    }
+    function save(){
+      var s={}; boxes.forEach(function(b){ s[b.id]=b.checked; });
+      try{ localStorage.setItem(KEY,JSON.stringify(s)); }catch(e){}
+    }
+    boxes.forEach(function(b){
+      if(saved[b.id]) b.checked=true;
+      b.addEventListener('change',function(){ save(); update(); });
+    });
+    document.getElementById('resetBtn').addEventListener('click',function(){
+      if(!confirm('Décocher tous les métiers ?')) return;
+      boxes.forEach(function(b){ b.checked=false; }); save(); update();
+    });
+    var copyBtn=document.getElementById('copyBtn');
+    copyBtn.addEventListener('click',function(){
+      var txt=document.getElementById('msgText').textContent;
+      function ok(){ copyBtn.textContent='Message copié'; copyBtn.classList.add('done'); setTimeout(function(){ copyBtn.textContent='Copier le message'; copyBtn.classList.remove('done'); },2200); }
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(ok,function(){ fallback(txt,ok); }); }
+      else fallback(txt,ok);
+    });
+    function fallback(txt,ok){
+      var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); }catch(e){} document.body.removeChild(ta);
+    }
+    update();
+  })();
+</script>
+</body>
+</html>
