@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/><meta name="robots" content="noindex,nofollow"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Accueil - OPUS EVENTS | L'événementiel d'entreprise à Marrakech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#614003",
+                        "surface-dim": "#d4dbe2",
+                        "secondary-fixed-dim": "#efbe78",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "secondary": "#7c571b",
+                        "primary-fixed-dim": "#bbc8d2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-secondary-container": "#795518",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bbc8d2",
+                        "on-primary-fixed-variant": "#3c4851",
+                        "surface": "#f5faff",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-fixed": "#111d24",
+                        "on-tertiary-container": "#a4a39f",
+                        "surface-container-highest": "#dce3ea",
+                        "outline": "#74777b",
+                        "surface-variant": "#dce3ea",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-background": "#151c21",
+                        "surface-container": "#e8eff5",
+                        "background": "#f5faff",
+                        "surface-bright": "#f5faff",
+                        "on-surface-variant": "#43474a",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d7e4ee",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#2f3b43",
+                        "outline-variant": "#c4c7cb",
+                        "tertiary-container": "#393a37",
+                        "surface-tint": "#546069",
+                        "on-surface": "#151c21",
+                        "inverse-surface": "#2a3136",
+                        "surface-container-high": "#e2e9f0",
+                        "surface-container-low": "#eef4fb",
+                        "inverse-on-surface": "#ebf2f8",
+                        "on-primary-container": "#98a5af",
+                        "tertiary-fixed": "#e4e2dd",
+                        "secondary-fixed": "#ffddb1",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fecc84",
+                        "primary": "#19252d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#242421",
+                        "lin": "#F4F2ED",
+                        "ivoire": "#FBFAF7",
+                        "slate": "#2F3B43",
+                        "grey-text": "#1F262B",
+                        "grey-secondary": "#5C666D",
+                        "brass": "#A97F3F",
+                        "brass-link": "#8A6A34"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Source Sans 3"],
+                        "body-md": ["Source Sans 3"],
+                        "label-caps": ["Space Grotesk"],
+                        "display-lg-mobile": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F4F2ED;
+            color: #1F262B;
+            font-family: "Source Sans 3", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .brass-button {
+            background-color: #A97F3F;
+            transition: all 0.3s ease;
+        }
+        .brass-button:hover {
+            background-color: #8A6A34;
+            transform: translateY(-1px);
+        }
+        .fine-border {
+            border: 1px solid rgba(169, 127, 63, 0.15);
+        }
+    </style>
+<style>
+/* Menu de navigation : Stitch laissait « À propos », « Séjours au Maroc » et le bouton
+   se couper en deux lignes. On interdit la coupure et on resserre pour que tout tienne. */
+header nav > div:not(:first-child) { gap: 1.35rem !important; }
+header nav > div:not(:first-child) a,
+header nav > div:not(:first-child) button { white-space: nowrap !important; }
+header nav > div:not(:first-child) a { font-size: 13.5px !important; line-height: 1.2 !important; }
+header nav > div:not(:first-child) button { padding: 12px 18px !important; font-size: 12px !important; line-height: 1.2 !important; }
+@media (max-width: 1320px) { header nav > div:not(:first-child) { gap: 1rem !important; } }
+</style>
+</head>
+<body class="bg-lin selection:bg-brass selection:text-ivoire">
+<div style="background:#1F262B;color:#fff;font:12.5px/1.5 system-ui,sans-serif;padding:9px 16px;text-align:center">
+<a href="../index.html" style="color:#fff;font-weight:600;text-decoration:none">&larr; Les 3 palettes</a>
+<span style="opacity:.75;margin-left:14px">Maquette de travail Opus Events, palette « Lin & ardoise ». Textes réels. Photos provisoires générées par IA, jamais publiées.</span>
+</div>
+<!-- 1. Fine Top Bar -->
+<div class="bg-slate text-on-primary-container py-2 px-margin-desktop hidden md:block">
+<div class="max-w-container-max mx-auto flex justify-between items-center font-label-caps text-[10px] tracking-widest">
+<div class="flex gap-6">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">call</span> +212 524 000 000</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">mail</span> contact@opus-events.com</span>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex gap-4 border-r border-outline-variant pr-8">
+<a class="hover:text-secondary-fixed transition-colors" href="#">FR</a>
+<a class="opacity-50 hover:text-secondary-fixed transition-colors" href="#">EN</a>
+<a class="opacity-50 hover:text-secondary-fixed transition-colors" href="#">ES</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-secondary-fixed">share</span>
+<span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-secondary-fixed">public</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Header -->
+<nav class="bg-ivoire border-b border-outline-variant/30 sticky top-0 z-50">
+<div class="max-w-container-max mx-auto px-margin-desktop h-24 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-[0.2em] text-primary">OPUS EVENTS</span>
+<span class="font-label-caps text-[9px] uppercase tracking-widest text-grey-secondary mt-1">L'événementiel d'entreprise à Marrakech</span>
+</div>
+<div class="hidden lg:flex items-center gap-10">
+<a class="font-label-caps text-label-caps text-secondary border-b-2 border-secondary pb-1" href="#">Accueil</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">À propos</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Séjours au Maroc</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Réalisations</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Blog</a>
+</div>
+<button class="brass-button text-ivoire font-label-caps text-label-caps px-8 py-4 tracking-widest">
+                DEMANDER UN DEVIS
+            </button>
+</div>
+</nav>
+<!-- 3. Hero Section -->
+<header class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('../img/img-06.jpg')">
+<div class="absolute inset-0 bg-slate/40"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-ivoire">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg leading-[1.1] mb-8">Vos événements d'entreprise à Marrakech, du premier repérage au dernier transfert retour</h1>
+<p class="font-body-lg text-body-lg text-ivoire/80 mb-10 max-w-2xl">Expertise logistique, créativité marocaine et rigueur opérationnelle pour vos séminaires, lancements et incentives d'exception.</p>
+<div class="flex gap-6">
+<button class="brass-button px-10 py-5 text-ivoire font-label-caps text-label-caps tracking-widest">DÉCOUVRIR NOS SERVICES</button>
+<button class="border border-ivoire px-10 py-5 text-ivoire font-label-caps text-label-caps tracking-widest hover:bg-ivoire hover:text-slate transition-all">VOIR NOS RÉALISATIONS</button>
+</div>
+</div>
+</div>
+</header>
+<!-- 4. CTA Banner -->
+<section class="bg-slate py-12 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<h2 class="font-headline-sm text-headline-sm text-ivoire">Un événement à organiser à Marrakech ? Proposition chiffrée, sans engagement.</h2>
+<button class="brass-button px-8 py-4 text-ivoire font-label-caps text-label-caps tracking-widest shrink-0">CONTACTER UN CONSEILLER</button>
+</div>
+</section>
+<!-- 5. Nos prestations -->
+<section class="py-24 px-margin-desktop bg-lin">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center mb-16 text-center">
+<span class="font-label-caps text-label-caps text-brass mb-4">NOTRE EXPERTISE</span>
+<h2 class="font-headline-md text-headline-md text-grey-text">Conception et logistique événementielle</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-ivoire p-10 fine-border group hover:border-brass transition-all flex flex-col h-full">
+<span class="material-symbols-outlined text-brass text-4xl mb-6">corporate_fare</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Séminaires</h3>
+<p class="font-body-md text-grey-secondary mb-8 flex-grow">Organisation complète de vos réunions de travail, conventions et séminaires résidentiels.</p>
+<a class="font-label-caps text-[11px] text-brass-link flex items-center gap-2 group-hover:gap-4 transition-all" href="#">EN SAVOIR PLUS <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<!-- Card 2 -->
+<div class="bg-ivoire p-10 fine-border group hover:border-brass transition-all flex flex-col h-full">
+<span class="material-symbols-outlined text-brass text-4xl mb-6">groups</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Team Building</h3>
+<p class="font-body-md text-grey-secondary mb-8 flex-grow">Activités fédératrices sur mesure, de la chasse au trésor en médina aux raids dans le désert.</p>
+<a class="font-label-caps text-[11px] text-brass-link flex items-center gap-2 group-hover:gap-4 transition-all" href="#">EN SAVOIR PLUS <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<!-- Card 3 -->
+<div class="bg-ivoire p-10 fine-border group hover:border-brass transition-all flex flex-col h-full">
+<span class="material-symbols-outlined text-brass text-4xl mb-6">celebration</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Événements Privés</h3>
+<p class="font-body-md text-grey-secondary mb-8 flex-grow">Soirées de gala, anniversaires d'entreprise et réceptions exclusives dans des lieux secrets.</p>
+<a class="font-label-caps text-[11px] text-brass-link flex items-center gap-2 group-hover:gap-4 transition-all" href="#">EN SAVOIR PLUS <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<!-- Card 4 -->
+<div class="bg-ivoire p-10 fine-border group hover:border-brass transition-all flex flex-col h-full">
+<span class="material-symbols-outlined text-brass text-4xl mb-6">travel_explore</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Séjours au Maroc</h3>
+<p class="font-body-md text-grey-secondary mb-8 flex-grow">Voyages d'étude et circuits VIP pour découvrir le Maroc authentique et confidentiel.</p>
+<a class="font-label-caps text-[11px] text-brass-link flex items-center gap-2 group-hover:gap-4 transition-all" href="#">EN SAVOIR PLUS <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Signature section -->
+<section class="py-24 bg-ivoire px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[4/3] bg-cover bg-center" style="background-image: url('../img/img-07.jpg')"></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-brass/10 -z-10"></div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-brass mb-6 block">NOTRE ADN</span>
+<h2 class="font-headline-md text-headline-md mb-8">Notre point de départ, c'est le transport</h2>
+<p class="font-body-lg text-body-lg text-grey-secondary mb-10 leading-relaxed">
+                    Opus Events est adossé à une société de transport touristique installée à Marrakech, avec sa propre flotte de minibus et d'autocars, et ses chauffeurs. Quand trois cents participants atterrissent le même après-midi, personne ne patiente sur le parvis de l'aéroport : les navettes sont calées, les hôtels prévenus, la salle prête. Cette maîtrise du mouvement, la plupart des agences la sous-traitent. Chez nous, c'est le métier d'origine.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brass mt-1">check_circle</span>
+<div>
+<strong class="font-body-md font-bold text-grey-text block">Flotte propre</strong>
+<span class="font-body-md text-grey-secondary">Minibus et autocars avec nos chauffeurs, pas de sous-traitance.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brass mt-1">check_circle</span>
+<div>
+<strong class="font-body-md font-bold text-grey-text block">Arrivées échelonnées</strong>
+<span class="font-body-md text-grey-secondary">Accueil des vols étalés sur la journée, navettes calées à l'avance.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brass mt-1">check_circle</span>
+<div>
+<strong class="font-body-md font-bold text-grey-text block">Jusqu'au dernier retour</strong>
+<span class="font-body-md text-grey-secondary">Coordination des flux du premier repérage au dernier transfert retour.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 7. Proof metrics -->
+<section class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('../img/img-08.jpg')">
+<div class="absolute inset-0 bg-slate/70"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 md:grid-cols-3 text-center gap-12">
+<div>
+<span class="block font-display-lg text-display-lg text-secondary-fixed mb-2">300</span>
+<span class="font-label-caps text-label-caps text-ivoire/60 tracking-widest">Participants, séminaire international géré de A à Z, gala compris, gala compris</span>
+</div>
+<div>
+<span class="block font-display-lg text-display-lg text-secondary-fixed mb-2">600</span>
+<span class="font-label-caps text-label-caps text-ivoire/60 tracking-widest">participants, transport d'un séminaire assuré</span>
+</div>
+<div>
+<span class="block font-display-lg text-display-lg text-secondary-fixed mb-2">100 à 200</span>
+<span class="font-label-caps text-label-caps text-ivoire/60 tracking-widest">participants, plusieurs séminaires chaque année</span>
+</div>
+</div>
+</section>
+<!-- 8. Methodology -->
+<section class="py-24 px-margin-desktop bg-lin">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center mb-16 text-center">
+<span class="font-label-caps text-label-caps text-brass mb-4">PROCESSUS</span>
+<h2 class="font-headline-md text-headline-md text-grey-text">Notre manière de travailler</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="relative p-8 border-l border-brass/30">
+<span class="text-4xl font-display-lg text-brass/20 absolute -top-4 left-4">01</span>
+<h4 class="font-headline-sm text-headline-sm mb-4 mt-4">Cadrage</h4>
+<p class="font-body-md text-grey-secondary">Analyse précise de vos objectifs, de votre budget et de l'image de votre marque.</p>
+</div>
+<div class="relative p-8 border-l border-brass/30">
+<span class="text-4xl font-display-lg text-brass/20 absolute -top-4 left-4">02</span>
+<h4 class="font-headline-sm text-headline-sm mb-4 mt-4">Repérage</h4>
+<p class="font-body-md text-grey-secondary">Visites techniques des lieux et sélection rigoureuse des prestataires locaux.</p>
+</div>
+<div class="relative p-8 border-l border-brass/30">
+<span class="text-4xl font-display-lg text-brass/20 absolute -top-4 left-4">03</span>
+<h4 class="font-headline-sm text-headline-sm mb-4 mt-4">Coordination</h4>
+<p class="font-body-md text-grey-secondary">Gestion de la logistique en temps réel avec une équipe dédiée sur le terrain.</p>
+</div>
+<div class="relative p-8 border-l border-brass/30">
+<span class="text-4xl font-display-lg text-brass/20 absolute -top-4 left-4">04</span>
+<h4 class="font-headline-sm text-headline-sm mb-4 mt-4">Bilan</h4>
+<p class="font-body-md text-grey-secondary">Analyse de performance, débriefing et reporting financier détaillé après l'événement.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Réalisations -->
+<section class="py-24 px-margin-desktop bg-ivoire overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-caps text-label-caps text-brass mb-4 block">PORTEFEUILLE</span>
+<h2 class="font-headline-md text-headline-md text-grey-text">Nos dernières réalisations</h2>
+</div>
+<div class="max-w-xs italic text-grey-secondary text-right font-body-md text-sm">
+                    Opus Events est une marque jeune. Nous ne publions pas encore de galerie clients ni de témoignages. Les photos et les avis viendront, réels, au fil des prochains événements. Les visuels ci-dessous sont des images d'ambiance.</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-[600px]">
+<div class="md:col-span-8 bg-slate relative group cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('../img/img-09.jpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-ivoire">
+<span class="font-label-caps text-[10px] tracking-widest mb-2 block">IMAGE D'AMBIANCE</span>
+<h4 class="font-headline-sm text-headline-sm">Séminaire en salle plénière</h4>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="h-1/2 bg-slate relative group cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('../img/img-10.jpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-ivoire">
+<span class="font-label-caps text-[10px] tracking-widest mb-1 block">IMAGE D'AMBIANCE</span>
+<h4 class="font-body-lg font-bold">Atelier dans le désert d'Agafay</h4>
+</div>
+</div>
+<div class="h-1/2 bg-slate relative group cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('../img/img-11.jpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-ivoire">
+<span class="font-label-caps text-[10px] tracking-widest mb-1 block">IMAGE D'AMBIANCE</span>
+<h4 class="font-body-lg font-bold">Dîner de groupe dans un riad</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Team -->
+<section class="py-24 px-margin-desktop bg-lin">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center mb-16 text-center">
+<span class="font-label-caps text-label-caps text-brass mb-4">L'ÉQUIPE</span>
+<h2 class="font-headline-md text-headline-md text-grey-text">Vos interlocuteurs privilégiés</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-2xl mx-auto">
+<div class="text-center">
+<div class="w-full aspect-square mb-6 flex items-center justify-center" style="background:rgba(127,127,127,.10);border:1px solid rgba(127,127,127,.30)">
+<span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55">Photo à venir</span>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Salah</h3>
+<p class="font-label-md uppercase tracking-widest text-xs" style="opacity:.75">Direction, commercial et logistique</p>
+</div>
+
+<div class="text-center">
+<div class="w-full aspect-square mb-6 flex items-center justify-center" style="background:rgba(127,127,127,.10);border:1px solid rgba(127,127,127,.30)">
+<span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55">Photo à venir</span>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Manar</h3>
+<p class="font-label-md uppercase tracking-widest text-xs" style="opacity:.75">Développement corporate et grands comptes</p>
+</div>
+</div>
+</section>
+<!-- 11. Discrete Banner -->
+<div class="bg-brass py-6 px-margin-desktop text-ivoire">
+<div class="max-w-container-max mx-auto flex justify-center items-center gap-6">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<p class="font-body-md">Un mariage à Marrakech ? Notre marque dédiée : <strong>Musk &amp; Rose Events</strong></p>
+<a class="font-label-caps text-[11px] underline underline-offset-4 tracking-widest hover:opacity-80" href="#">VISITER LE SITE</a>
+</div>
+</div>
+<!-- 12. Final Conversion block -->
+<section class="relative py-32 overflow-hidden bg-slate">
+<div class="absolute inset-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('../img/img-12.jpg')"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-display-lg text-display-lg text-ivoire mb-8">Parlez-nous de votre projet...</h2>
+<p class="font-body-lg text-ivoire/70 mb-12 max-w-2xl mx-auto">Chaque événement est une page blanche. Nous sommes là pour y écrire votre histoire avec la rigueur d'un architecte et l'âme d'un hôte marocain.</p>
+<button class="brass-button px-16 py-6 text-ivoire font-label-caps text-label-caps tracking-widest text-lg">DEMANDER UNE PROPOSITION</button>
+</div>
+</section>
+<!-- 13. Rich Footer -->
+<footer class="bg-primary pt-24 pb-12 px-margin-desktop text-ivoire">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md tracking-widest mb-6 text-surface-container-lowest">OPUS EVENTS</span>
+<p class="font-body-md text-on-primary-container leading-relaxed">
+                    Opus Events organise les événements d'entreprise à Marrakech : séminaires, congrès, conventions, soirées de gala. Marque de la société SAMSWFT TM.</p>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary-fixed mb-8">SERVICES</h5>
+<ul class="space-y-4 font-body-md text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Séminaires &amp; Conventions</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Team Building &amp; Raid</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Soirées de Gala</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Logistique Transport</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary-fixed mb-8">COORDONNÉES</h5>
+<ul class="space-y-4 font-body-md text-on-primary-container">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brass text-lg">location_on</span>
+<span>Quartier Mabrouka<br/>40000 Marrakech, Maroc</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brass text-lg">call</span>
+<span>+212 524 000 000</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brass text-lg">mail</span>
+<span>contact@opus-events.com</span>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary-fixed mb-8">SUIVEZ-NOUS</h5>
+<div class="flex gap-4 mb-8">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-full hover:bg-brass transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-full hover:bg-brass transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+</div>
+<h5 class="font-label-caps text-[10px] tracking-[0.2em] mb-4">RECRUTEMENT</h5>
+<a class="font-body-md text-on-primary-container underline underline-offset-4 hover:text-secondary-fixed" href="#">Consultez nos offres</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto pt-8 border-t border-primary-container flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-md text-on-primary-container text-sm">© 2026 Opus Events. Tous droits réservés.</span>
+<div class="flex gap-8 font-body-md text-sm text-on-primary-container">
+<a class="hover:text-secondary-fixed" href="#">Plan du site</a>
+<a class="hover:text-secondary-fixed" href="#">Politique de confidentialité</a>
+<a class="hover:text-secondary-fixed" href="#">Mentions légales</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+            });
+        });
+    </script>
+</body></html>
