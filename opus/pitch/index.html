@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Opus Events — pitch commercial (prospection)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ardoise:#2F3B43; --ink:#1F262B; --ink-2:#5C666D; --laiton:#A97F3F; --laiton-fonce:#8A6A34;
+         --lin:#F4F2ED; --ivoire:#FBFAF7; --line:#DDD8D0; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--lin);color:var(--ink);font:16px/1.65 Inter,system-ui,Segoe UI,sans-serif}
+
+  /* ---------- Barre de pilotage (jamais imprimée) ---------- */
+  .bar{position:sticky;top:0;z-index:20;background:var(--ardoise);color:#fff;padding:13px 20px;
+       display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+  .bar h1{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;letter-spacing:.01em;flex:1;min-width:220px}
+  .bar h1 span{display:block;font-family:Inter,sans-serif;font-size:12px;font-weight:400;opacity:.75;margin-top:2px}
+  .grp{display:flex;gap:0;border:1px solid rgba(255,255,255,.28);border-radius:8px;overflow:hidden}
+  .grp button{background:transparent;color:#fff;border:0;padding:8px 13px;font:600 12.5px Inter,sans-serif;cursor:pointer;white-space:nowrap}
+  .grp button+button{border-left:1px solid rgba(255,255,255,.28)}
+  .grp button[aria-pressed="true"]{background:var(--laiton);color:#fff}
+  .grp button:hover:not([aria-pressed="true"]){background:rgba(255,255,255,.12)}
+  .print{background:#fff;color:var(--ardoise);border:0;border-radius:8px;padding:9px 15px;font:600 12.5px Inter,sans-serif;cursor:pointer}
+  .print:hover{background:var(--lin)}
+
+  /* ---------- Avertissement interne (jamais imprimé) ---------- */
+  .warn{max-width:900px;margin:20px auto 0;background:#fff;border:1px solid var(--laiton);
+        border-left:4px solid var(--laiton);border-radius:10px;padding:15px 18px}
+  .warn b{display:block;font-size:14px;margin-bottom:5px}
+  .warn p{font-size:13.5px;color:var(--ink-2);margin-bottom:6px}
+  .warn p:last-child{margin-bottom:0}
+
+  /* ---------- La page A4 ---------- */
+  .doc{display:none;max-width:900px;margin:20px auto 40px;background:#fff;border:1px solid var(--line);
+       border-radius:12px;padding:44px 52px}
+  .doc.on{display:block}
+  .doc header{border-bottom:2px solid var(--ardoise);padding-bottom:14px;margin-bottom:26px}
+  .marque{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;letter-spacing:.02em;color:var(--ardoise)}
+  .baseline{font-size:13px;color:var(--laiton-fonce);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-top:4px}
+  .doc h2{font-family:'Space Grotesk',sans-serif;font-size:21px;line-height:1.28;color:var(--ardoise);margin:0 0 12px}
+  .doc h3{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--laiton-fonce);
+          margin:22px 0 7px}
+  .doc p{margin-bottom:11px;color:#2b333a}
+  .doc strong{color:var(--ink)}
+  .doc ul{margin:0 0 11px 19px}
+  .doc li{margin-bottom:5px;color:#2b333a}
+  .punch{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;color:var(--ardoise);
+         border-left:3px solid var(--laiton);padding-left:13px;margin:15px 0 15px}
+  .honnete{font-size:14px;color:var(--ink-2);font-style:italic}
+  .todo{background:#FDF6E9;border:1px dashed var(--laiton);border-radius:6px;padding:3px 8px;font-size:13px;color:var(--laiton-fonce)}
+  .contact{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+
+  /* ---------- Annexes (e-mail, oral) : à l'écran seulement ---------- */
+  .extra{max-width:900px;margin:0 auto 40px}
+  .extra .card{background:var(--ivoire);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin-bottom:14px}
+  .extra h4{font-family:'Space Grotesk',sans-serif;font-size:14.5px;color:var(--ardoise);margin-bottom:9px}
+  .extra p{font-size:14.5px;color:#2b333a;margin-bottom:10px}
+  .extra p:last-child{margin-bottom:0}
+  .copy{background:var(--ardoise);color:#fff;border:0;border-radius:7px;padding:7px 12px;font:600 12px Inter,sans-serif;cursor:pointer;margin-top:10px}
+  .copy:hover{background:var(--ink)}
+
+  @media(max-width:700px){ .doc{padding:28px 22px;margin:14px} .extra{padding:0 14px} .warn{margin:14px} }
+
+  /* ---------- Impression : on ne sort que le document affiché ---------- */
+  @media print{
+    @page{ size:A4; margin:14mm 15mm; }
+    body{background:#fff}
+    .bar,.warn,.extra,.copy{display:none !important}
+    .doc{display:none;border:0;border-radius:0;margin:0;padding:0;max-width:none}
+    .doc.on{display:block}
+    .doc h2{font-size:19px}
+    .doc p,.doc li{font-size:12.4px;line-height:1.5;margin-bottom:8px}
+    .punch{font-size:15px}
+    .todo{background:none;border:0;padding:0}
+  }
+</style>
+</head>
+<body>
+
+<div style="background:#1F262B;color:#fff;font:12.5px/1.5 system-ui,sans-serif;padding:9px 16px;text-align:center">
+<a href="../index.html" style="color:#fff;font-weight:600;text-decoration:none">&larr; Espace Opus</a>
+<span style="opacity:.75;margin-left:14px">Proposition soumise à Salah et Manar. Espace interne, à ne pas diffuser en l'état.</span>
+</div>
+<div class="bar">
+  <h1>Opus Events, proposition de pitch commercial
+    <span>Suggestion soumise à Salah et Manar. Rien n'est validé, rien ne part avant votre relecture.</span>
+  </h1>
+  <div class="grp" id="g-pitch">
+    <button data-pitch="a" aria-pressed="true">Pitch A · Entreprise</button>
+    <button data-pitch="b" aria-pressed="false">Pitch B · Agence étrangère</button>
+  </div>
+  <div class="grp" id="g-lang">
+    <button data-lang="fr" aria-pressed="true">FR</button>
+    <button data-lang="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="print" onclick="window.print()">Imprimer / PDF</button>
+</div>
+
+<div class="warn">
+  <b>Ceci est une proposition, pas une version validée</b>
+  <p>J'ai écrit ces deux argumentaires à partir du contenu du site et de nos références réelles. <strong>Salah et Manar les relisent, les corrigent ou les réécrivent</strong> avant que quoi que ce soit parte. Rien n'est figé, surtout le ton.</p>
+  <p><strong>Les deux pitchs ne se mélangent jamais.</strong> Le pitch A s'adresse à l'entreprise qui organise son évènement. Le pitch B s'adresse aux agences étrangères qui vendent le Maroc à leurs clients : on s'y présente comme leur relais, pas comme un concurrent. Envoyer le A à une agence, c'est se griller.</p>
+  <p><strong>Deux choses manquent encore</strong> : les coordonnées (téléphone, e-mail, site), et surtout la décision sur la <strong>non-sollicitation et la marque blanche</strong>, sur laquelle repose tout le pitch B. Un engagement de ce genre se tient dans la durée : tant qu'il n'est pas assumé, le pitch B ne part pas.</p>
+  <p><strong>Ce qui reste à trancher</strong> : qui signe (Salah, Manar, ou l'agence), si l'on cite un jour un client par son nom (aucun n'apparaît aujourd'hui), et s'il faut une version espagnole pour démarcher l'Espagne.</p>
+</div>
+
+<!-- ============================= PITCH A · FR ============================= -->
+<div class="doc on" data-doc="a-fr">
+  <header>
+    <div class="marque">OPUS EVENTS</div>
+    <div class="baseline">Évènementiel d'entreprise à Marrakech · Séminaires, congrès, conventions, galas</div>
+  </header>
+
+  <h2>Un séminaire se joue sur des créneaux de quinze minutes</h2>
+  <p>Le programme, le lieu, le traiteur : vous savez déjà les choisir. Ce qui fait dérailler un évènement, c'est le mouvement des gens. Un vol qui glisse de quarante minutes. Un car de trop peu. Trente participants plantés devant un hall d'hôtel pendant que la navette repart à moitié vide. À partir de là, tout le programme recule, et la plénière commence en retard.</p>
+
+  <h3>Qui nous sommes</h3>
+  <p>Opus Events organise les évènements d'entreprise à Marrakech et partout au Maroc. La marque est jeune. L'équipe derrière vient du transport touristique, avec sa propre flotte de minibus et d'autocars, ses chauffeurs, et des années passées sur les grands formats de la région.</p>
+
+  <h3>Ce que nous faisons</h3>
+  <p>Nous prenons le projet en main du premier repérage jusqu'au dernier transfert retour. Repérage et réservation des lieux, hébergement, restauration, régie technique, animation, coordination sur place du premier au dernier jour. Vous nous confiez l'évènement entier, ou seulement la part que vous préférez déléguer.</p>
+  <div class="punch">Un seul interlocuteur. Le même du devis au bilan, celui qui décroche le samedi soir quand un vol est annulé.</div>
+
+  <h3>Ce qui nous distingue</h3>
+  <p>Les véhicules et les chauffeurs sont les nôtres. Le maillon le plus exposé d'un évènement, la plupart des agences le sous-traitent, parfois à un troisième niveau : personne n'a la main dessus le jour J. Nous, nous le tenons en direct. C'est notre métier d'origine, et c'est de là qu'est née l'agence.</p>
+
+  <h3>Ce que nous avons déjà mené</h3>
+  <ul>
+    <li>Un <strong>séminaire international de 300 participants</strong>, géré de bout en bout : hébergement, transport de tous les participants, régie, et une soirée de gala montée dans le désert d'Agafay.</li>
+    <li>Le <strong>transport d'un séminaire de 600 participants</strong>, l'un des formats les plus durs à cadencer.</li>
+    <li>Chaque année, <strong>plusieurs séminaires de 100 à 200 participants</strong>.</li>
+    <li>Depuis nos débuts dans le transport, des <strong>dizaines d'évènements et de mariages</strong> acheminés à Marrakech et alentour.</li>
+  </ul>
+  <p class="honnete">Nous ne publions ni logos ni témoignages : nous n'avons pas encore l'accord de nos donneurs d'ordre pour les citer, et nous préférons une référence vérifiable à une vitrine gonflée.</p>
+
+  <h3>Ce que nous attendons de vous</h3>
+  <p>Vos dates, la ville, un ordre de grandeur du nombre de participants, et ce que vous voulez nous confier. Vous recevez une proposition chiffrée, sans engagement. Un appel suffit souvent à dégrossir un projet.</p>
+
+  <div class="contact">Contact : <span class="todo">téléphone · e-mail · site, à compléter</span></div>
+</div>
+
+<!-- ============================= PITCH A · EN ============================= -->
+<div class="doc" data-doc="a-en">
+  <header>
+    <div class="marque">OPUS EVENTS</div>
+    <div class="baseline">Corporate events in Marrakech · Seminars, conferences, conventions, galas</div>
+  </header>
+
+  <h2>A seminar is won or lost in fifteen-minute slots</h2>
+  <p>The programme, the venue, the caterer: you already know how to pick those. What derails an event is the movement of people. A flight that slips by forty minutes. One coach too few. Thirty delegates left standing outside a hotel lobby while the shuttle pulls away half empty. From there, the whole schedule shifts back, and the plenary starts late.</p>
+
+  <h3>Who we are</h3>
+  <p>Opus Events runs corporate events in Marrakech and across Morocco. The brand is young. The team behind it comes from tourism transport, with its own fleet of minibuses and coaches, its own drivers, and years spent on the region's large-format events.</p>
+
+  <h3>What we do</h3>
+  <p>We take the project in hand, from the first site visit to the last return transfer. Venue scouting and booking, accommodation, catering, technical production, entertainment, on-site coordination from day one to the end. Hand us the whole event, or only the part you would rather delegate.</p>
+  <div class="punch">One point of contact. The same person from quote to final report, the one who picks up on a Saturday night when a flight is cancelled.</div>
+
+  <h3>What sets us apart</h3>
+  <p>The vehicles and the drivers are ours. Most agencies subcontract the most exposed link of an event, sometimes down a third level, and nobody has real control of it on the day. We hold it directly. It is our original trade, and it is where the agency came from.</p>
+
+  <h3>What we have already run</h3>
+  <ul>
+    <li>An <strong>international seminar for 300 delegates</strong>, managed end to end: accommodation, transport for every participant, production, and a gala evening staged in the Agafay desert.</li>
+    <li>The <strong>transport for a 600-delegate seminar</strong>, one of the hardest formats to pace.</li>
+    <li>Every year, <strong>several seminars of 100 to 200 delegates</strong>.</li>
+    <li>Since our early days in transport, <strong>dozens of events and weddings</strong> moved across Marrakech and its surroundings.</li>
+  </ul>
+  <p class="honnete">We publish no client logos and no testimonials: we do not yet have our clients' permission to name them, and we would rather show one verifiable reference than an inflated showcase.</p>
+
+  <h3>What we need from you</h3>
+  <p>Your dates, the city, a rough headcount, and what you want to hand over. You get a costed proposal, with no obligation. A single call is usually enough to shape a project.</p>
+
+  <div class="contact">Contact: <span class="todo">phone · email · website, to be completed</span></div>
+</div>
+
+<!-- ============================= PITCH B · FR ============================= -->
+<div class="doc" data-doc="b-fr">
+  <header>
+    <div class="marque">OPUS EVENTS</div>
+    <div class="baseline">Votre relais au Maroc · Logistique, transport et coordination sur place</div>
+  </header>
+
+  <h2>Votre client reste votre client</h2>
+  <p>Vous vendez le Maroc depuis Paris, Madrid, Londres ou Francfort. Vous connaissez votre client, son budget, ses susceptibilités. Ce qui vous manque à mille kilomètres, c'est quelqu'un sur place qui décroche, qui a vu les lieux de ses yeux, et qui répond fermement quand votre client vous appelle la veille du départ pour savoir combien de cars attendent à l'aéroport.</p>
+  <div class="punch">Nous ne vendons pas à votre place. Nous exécutons.</div>
+
+  <h3>Qui nous sommes</h3>
+  <p>Opus Events, agence évènementielle installée à Marrakech, adossée à une société de transport touristique avec sa propre flotte de minibus et d'autocars et ses chauffeurs. Nous travaillons en français, en anglais et en espagnol.</p>
+
+  <h3>Ce que nous prenons en charge pour vous</h3>
+  <p>Repérage et réservation des lieux, hôtels et riads, restauration, régie technique, animation et team building, coordination sur place le jour J. Et le poste que tout le monde sous-traite en cascade : l'intégralité des déplacements, des arrivées échelonnées jusqu'aux retours cadencés vers l'aéroport.</p>
+  <p>Vous prenez la totalité, ou seulement le bloc logistique et transport si le reste est déjà calé de votre côté.</p>
+
+  <h3>La règle du jeu, dite clairement</h3>
+  <p>Votre client est le vôtre, avant, pendant et après. Nous ne le sollicitons pas, ni sur l'évènement en cours, ni sur le suivant. Vous restez son interlocuteur, du brief à la facture. Nos propositions vous sont remises pour que vous les présentiez à vos couleurs. <span class="todo">à valider par Salah : accord de non-sollicitation signé sur demande, travail en marque blanche</span></p>
+
+  <h3>Ce qui rend notre exécution solide</h3>
+  <p>Le transport est notre métier d'origine, pas une ligne rachetée à un prestataire. Quand un vol glisse et que le premier groupe atterrit avec quarante minutes de retard, la décision se prend chez nous, tout de suite, sans chaîne d'intermédiaires à réveiller.</p>
+
+  <h3>Ce que nous avons déjà mené</h3>
+  <ul>
+    <li>Un <strong>séminaire international de 300 participants</strong>, géré de bout en bout, gala compris dans le désert d'Agafay.</li>
+    <li>Le <strong>transport d'un séminaire de 600 participants</strong>.</li>
+    <li>Chaque année, <strong>plusieurs séminaires de 100 à 200 participants</strong>.</li>
+    <li>Des <strong>dizaines d'évènements et de mariages</strong> transportés à Marrakech et alentour.</li>
+  </ul>
+  <p class="honnete">La marque Opus Events est jeune, nous ne prétendons pas le contraire. Le socle sous la marque ne l'est pas.</p>
+
+  <h3>Ce que nous attendons de vous</h3>
+  <p>Un brief, même sommaire : dates, nombre de participants, ce que votre client attend, ce que vous gardez chez vous. Nous revenons avec une proposition chiffrée et détaillée poste par poste. Si vous préférez nous tester sur un petit groupe avant de nous confier un congrès, ça nous convient très bien.</p>
+
+  <div class="contact">Contact : <span class="todo">téléphone · e-mail · site, à compléter</span></div>
+</div>
+
+<!-- ============================= PITCH B · EN ============================= -->
+<div class="doc" data-doc="b-en">
+  <header>
+    <div class="marque">OPUS EVENTS</div>
+    <div class="baseline">Your ground partner in Morocco · Logistics, transport and on-site coordination</div>
+  </header>
+
+  <h2>Your client stays your client</h2>
+  <p>You sell Morocco from Paris, Madrid, London or Frankfurt. You know your client, their budget, their sensitivities. What you cannot have from a thousand kilometres away is someone on the ground who picks up the phone, who has walked the venues, and who gives you a firm answer when your client calls the night before departure to ask how many coaches will be waiting at the airport.</p>
+  <div class="punch">We do not sell in your place. We deliver.</div>
+
+  <h3>Who we are</h3>
+  <p>Opus Events is an event agency based in Marrakech, backed by a tourism transport company with its own fleet of minibuses and coaches and its own drivers. We work in French, English and Spanish.</p>
+
+  <h3>What we take on for you</h3>
+  <p>Venue scouting and booking, hotels and riads, catering, technical production, entertainment and team building, on-site coordination on the day. Plus the one item everybody subcontracts down the chain: every movement, from staggered arrivals to paced airport returns.</p>
+  <p>Take the whole package, or only the logistics and transport block if the rest is already settled on your side.</p>
+
+  <h3>The ground rule, stated plainly</h3>
+  <p>Your client is yours, before, during and after. We do not approach them, not on this event and not on the next one. You remain their single point of contact, from brief to invoice. Our proposals are handed to you to present under your own name. <span class="todo">to be confirmed by Salah: signed non-solicitation agreement on request, white-label work</span></p>
+
+  <h3>Why our delivery holds</h3>
+  <p>Transport is our original trade, not a line bought in from a supplier. When a flight slips and the first group lands forty minutes late, the call is made in-house, on the spot, with no chain of middlemen to wake up.</p>
+
+  <h3>What we have already run</h3>
+  <ul>
+    <li>An <strong>international seminar for 300 delegates</strong>, managed end to end, gala included in the Agafay desert.</li>
+    <li>The <strong>transport for a 600-delegate seminar</strong>.</li>
+    <li>Every year, <strong>several seminars of 100 to 200 delegates</strong>.</li>
+    <li><strong>Dozens of events and weddings</strong> moved across Marrakech and its surroundings.</li>
+  </ul>
+  <p class="honnete">The Opus Events brand is young and we will not pretend otherwise. What sits underneath it is not.</p>
+
+  <h3>What we need from you</h3>
+  <p>A brief, even a rough one: dates, headcount, what your client expects, what you keep in-house. We come back with a costed proposal, broken down line by line. If you would rather test us on a small group before handing over a conference, that suits us perfectly.</p>
+
+  <div class="contact">Contact: <span class="todo">phone · email · website, to be completed</span></div>
+</div>
+
+<!-- ===================== Annexes : e-mail et oral (écran) ===================== -->
+<div class="extra">
+
+  <div class="card" data-extra="a-fr">
+    <h4>Version courte · e-mail de prospection ou message LinkedIn</h4>
+    <p id="t-a-fr-mail">Bonjour [Prénom],<br><br>
+      Opus Events organise les séminaires, congrès et soirées d'entreprise à Marrakech, avec une particularité : la flotte de minibus et d'autocars et les chauffeurs sont à nous, rien n'est sous-traité sur le transport. C'est le poste qui fait glisser un programme entier quand il lâche. Nous avons géré un séminaire international de 300 personnes de A à Z, gala dans le désert d'Agafay compris, et assuré le transport d'un séminaire de 600.<br><br>
+      Si vous préparez quelque chose au Maroc, donnez-moi vos dates et un ordre de grandeur du nombre de participants : je vous prépare une proposition chiffrée, sans engagement.</p>
+    <button class="copy" data-copy="t-a-fr-mail">Copier</button>
+  </div>
+  <div class="card" data-extra="a-fr">
+    <h4>Version orale · trente secondes</h4>
+    <p>Opus Events, agence évènementielle à Marrakech. Notre particularité, c'est qu'on vient du transport : la flotte et les chauffeurs sont à nous. Sur un séminaire, c'est ce qui casse le programme en premier, les arrivées échelonnées, les navettes, les retours vers l'aéroport. Nous, on le tient en direct, sans intermédiaire. On a mené un séminaire international de trois cents personnes de A à Z, avec le gala dans le désert d'Agafay, et le transport d'un séminaire de six cents. Le reste, lieux, hôtels, régie, coordination, on le fait aussi, avec un seul interlocuteur pour vous. Si vous montez quelque chose au Maroc, on en parle quand vous voulez.</p>
+  </div>
+
+  <div class="card" data-extra="a-en" hidden>
+    <h4>Short version · prospecting email or LinkedIn message</h4>
+    <p id="t-a-en-mail">Hello [First name],<br><br>
+      Opus Events runs seminars, conferences and corporate parties in Marrakech, with one particularity: the fleet of minibuses and coaches and the drivers are ours, nothing on transport is subcontracted. That is the one thing that drags a whole programme down when it fails. We managed an international seminar for 300 people end to end, gala in the Agafay desert included, and handled the transport for a 600-delegate seminar.<br><br>
+      If you are planning something in Morocco, send me your dates and a rough headcount: I will put together a costed proposal, with no obligation.</p>
+    <button class="copy" data-copy="t-a-en-mail">Copy</button>
+  </div>
+  <div class="card" data-extra="a-en" hidden>
+    <h4>Spoken version · thirty seconds</h4>
+    <p>Opus Events, an event agency in Marrakech. What makes us different is where we come from: transport. The fleet and the drivers are ours. On a seminar, that is the first thing that breaks the schedule, staggered arrivals, shuttles, airport runs. We handle it directly, with no middleman. We ran an international seminar for three hundred people from start to finish, gala in the Agafay desert included, and the transport for a six-hundred-delegate seminar. Venues, hotels, production, on-site coordination, we do all of that too, with one contact person for you. If you have something coming up in Morocco, let's talk.</p>
+  </div>
+
+  <div class="card" data-extra="b-fr" hidden>
+    <h4>Version courte · e-mail de prospection ou message LinkedIn</h4>
+    <p id="t-b-fr-mail">Bonjour [Prénom],<br><br>
+      Je dirige Opus Events, agence évènementielle à Marrakech. Nous ne démarchons pas les entreprises que vous démarchez : nous travaillons comme relais local pour les agences qui vendent le Maroc à leurs clients. Vous vendez, nous exécutons sur place, et votre client reste votre client.<br><br>
+      Notre socle, c'est la logistique : flotte de minibus et d'autocars en propre, chauffeurs à nous, un séminaire international de 300 personnes géré de A à Z avec gala à Agafay, le transport d'un séminaire de 600. Si un dossier Maroc vous arrive, envoyez-moi le brief, je vous fais une proposition détaillée que vous présentez à vos couleurs.</p>
+    <button class="copy" data-copy="t-b-fr-mail">Copier</button>
+  </div>
+  <div class="card" data-extra="b-fr" hidden>
+    <h4>Version orale · trente secondes</h4>
+    <p>Opus Events, on est basés à Marrakech, et on travaille surtout pour des agences comme la vôtre. On ne vend pas de séminaire en direct à vos clients, ce n'est pas notre rôle : vous vendez, nous exécutons sur place. Votre client reste votre client, on ne le sollicite pas. Notre socle, c'est la logistique : la flotte et les chauffeurs sont à nous, ce n'est pas racheté à un prestataire. On a géré un séminaire international de trois cents personnes de A à Z, gala dans le désert d'Agafay, et le transport d'un séminaire de six cents. Envoyez-nous un brief, même sommaire, on vous fait une proposition détaillée que vous présentez à vos couleurs.</p>
+  </div>
+
+  <div class="card" data-extra="b-en" hidden>
+    <h4>Short version · prospecting email or LinkedIn message</h4>
+    <p id="t-b-en-mail">Hello [First name],<br><br>
+      I run Opus Events, an event agency in Marrakech. We do not chase the companies you are chasing: we work as the local partner for agencies that sell Morocco to their own clients. You sell, we deliver on the ground, and your client stays your client.<br><br>
+      Logistics is our foundation: our own fleet of minibuses and coaches, our own drivers, an international seminar for 300 people run end to end with a gala in the Agafay desert, and the transport for a 600-delegate seminar. Next time a Morocco file lands on your desk, send me the brief and I will come back with a detailed proposal you can present under your own name.</p>
+    <button class="copy" data-copy="t-b-en-mail">Copy</button>
+  </div>
+  <div class="card" data-extra="b-en" hidden>
+    <h4>Spoken version · thirty seconds</h4>
+    <p>Opus Events, we are based in Marrakech and we mostly work for agencies like yours. We do not sell seminars directly to your clients, that is not our role: you sell, we deliver on site. Your client stays your client, we never approach them. Logistics is our foundation, the fleet and the drivers are ours, nothing bought in from a supplier. We ran an international seminar for three hundred people from start to finish, with the gala in the Agafay desert, and the transport for a six-hundred-delegate seminar. Send us a brief, even a rough one, and we will come back with a detailed proposal you can put your own name on.</p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var pitch = 'a', lang = 'fr';
+
+  function apply(){
+    var key = pitch + '-' + lang;
+    document.querySelectorAll('.doc').forEach(function(d){
+      d.classList.toggle('on', d.dataset.doc === key);
+    });
+    document.querySelectorAll('.extra .card').forEach(function(c){
+      c.hidden = (c.dataset.extra !== key);
+    });
+    document.querySelectorAll('#g-pitch button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.pitch === pitch));
+    });
+    document.querySelectorAll('#g-lang button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    document.documentElement.lang = lang;
+  }
+
+  document.querySelectorAll('#g-pitch button').forEach(function(b){
+    b.addEventListener('click', function(){ pitch = b.dataset.pitch; apply(); });
+  });
+  document.querySelectorAll('#g-lang button').forEach(function(b){
+    b.addEventListener('click', function(){ lang = b.dataset.lang; apply(); });
+  });
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.dataset.copy);
+      var txt = el.innerText;
+      navigator.clipboard.writeText(txt).then(function(){
+        var old = btn.textContent;
+        btn.textContent = 'Copié';
+        setTimeout(function(){ btn.textContent = old; }, 1600);
+      });
+    });
+  });
+
+  apply();
+})();
+</script>
+
+</body>
+</html>
