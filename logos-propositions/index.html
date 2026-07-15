@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pistes de logo — Musk &amp; Rose Events / Marrakech Opus Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Musk & Rose */
+    --mr-terracotta:#A8543A;
+    --mr-brulee:#6E3B29;
+    --mr-ocre:#C18E4A;
+    --mr-creme:#F6F1E8;
+    --mr-ink:#2C2620;
+    /* Opus */
+    --op-slate:#3A434C;
+    --op-slate2:#6B7480;
+    --op-lin:#EDE8DC;
+    --op-bronze:#9A7B4F;
+    --op-acier:#8B939B;
+    /* Gallery neutrals */
+    --page:#EFEDE7;
+    --card:#FFFFFF;
+    --line:#E2DED4;
+    --txt:#3A352F;
+    --txt-soft:#8A8072;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--txt);
+    font-family:'Josefin Sans',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header.top{
+    padding:64px 24px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#F6F4EF 0%,var(--page) 100%);
+  }
+  header.top .eyebrow{
+    font-size:12px;letter-spacing:.36em;text-transform:uppercase;
+    color:var(--txt-soft);margin:0 0 14px;
+  }
+  header.top h1{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 14px;
+    color:var(--mr-ink);
+  }
+  header.top p{
+    max-width:640px;margin:0 auto;font-size:15px;color:var(--txt-soft);
+    font-weight:300;
+  }
+  /* liens vers les pages par pôle */
+  header.top .pole-switch{margin:26px 0 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  header.top .pole-switch a{
+    display:inline-block;font-family:'Josefin Sans',sans-serif;font-weight:400;
+    font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    text-decoration:none;border:1px solid var(--line);border-radius:24px;padding:9px 20px;
+    transition:border-color .2s,background .2s;
+  }
+  header.top .pole-switch a.mr{color:var(--mr-terracotta);}
+  header.top .pole-switch a.op{color:var(--op-bronze);}
+  header.top .pole-switch a.mr:hover{border-color:var(--mr-terracotta);background:#fff;}
+  header.top .pole-switch a.op:hover{border-color:var(--op-bronze);background:#fff;}
+
+  /* ---------- Section (par marque) ---------- */
+  section.brand{padding:56px 0 24px;}
+  .brand-head{
+    display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    padding-bottom:8px;margin-bottom:28px;border-bottom:1px solid var(--line);
+  }
+  .brand-head .kicker{
+    font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--txt-soft);
+  }
+  .brand-head h2{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:clamp(24px,4vw,34px);margin:0;color:var(--mr-ink);
+  }
+  .brand-head .desc{font-size:14px;color:var(--txt-soft);font-weight:300;margin-left:auto;}
+  section.opus h2{color:var(--op-slate);}
+  section.opus .swatches .sw.a{background:var(--op-slate);}
+
+  /* palette swatches */
+  .swatches{display:flex;gap:8px;align-items:center;margin:0 0 34px;flex-wrap:wrap;}
+  .swatches .lab{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--txt-soft);margin-right:6px;}
+  .swatches .sw{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.08);}
+  .swatches .sw small{display:none;}
+
+  /* ---------- Carte piste ---------- */
+  .piste{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 22px 26px;margin-bottom:26px;
+    box-shadow:0 1px 2px rgba(40,35,30,.03),0 10px 30px -22px rgba(40,35,30,.25);
+  }
+  .piste-head{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:18px;}
+  .piste-head .num{
+    font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1;color:var(--mr-terracotta);
+    font-weight:600;min-width:34px;
+  }
+  section.opus .piste-head .num{color:var(--op-bronze);}
+  .piste-head .ttl{flex:1;min-width:200px;}
+  .piste-head .ttl h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:21px;margin:0 0 3px;color:var(--mr-ink);
+  }
+  section.opus .piste-head .ttl h3{color:var(--op-slate);}
+  .piste-head .ttl .sub{font-size:13px;color:var(--txt-soft);font-weight:300;}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .chip{
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-soft);
+    border:1px solid var(--line);border-radius:20px;padding:4px 10px;white-space:nowrap;
+  }
+  .chip .dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle;margin-right:5px;border:1px solid rgba(0,0,0,.08);}
+
+  /* Grille des 4 tuiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.tiles{grid-template-columns:1fr;}}
+
+  .tile{
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .tile .stage{
+    flex:1;min-height:170px;display:flex;align-items:center;justify-content:center;
+    padding:24px 18px;
+  }
+  .tile .cap{
+    font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-soft);
+    text-align:center;padding:9px 8px;border-top:1px solid var(--line);background:#FBFAF7;
+  }
+
+  /* fonds des tuiles */
+  .stage.blanc{background:#FFFFFF;}
+  .stage.mono{background:#FFFFFF;}
+  .stage.fav{background:#FFFFFF;}
+  section.mr   .stage.sombre{background:var(--mr-ink);}
+  section.opus .stage.sombre{background:var(--op-slate);}
+
+  /* ---------- Recolor par contexte (variables) ---------- */
+  /* Musk & Rose */
+  section.mr .blanc  {--mark:var(--mr-terracotta);--accent:var(--mr-ocre);--word:var(--mr-ink);}
+  section.mr .sombre {--mark:var(--mr-creme);--accent:var(--mr-ocre);--word:var(--mr-creme);}
+  section.mr .mono   {--mark:var(--mr-ink);--accent:var(--mr-ink);--word:var(--mr-ink);}
+  section.mr .fav    {--mark:var(--mr-terracotta);--accent:var(--mr-ocre);--word:var(--mr-ink);}
+  /* Opus */
+  section.opus .blanc  {--mark:var(--op-slate);--accent:var(--op-bronze);--word:var(--op-slate);}
+  section.opus .sombre {--mark:var(--op-lin);--accent:var(--op-bronze);--word:var(--op-lin);}
+  section.opus .mono   {--mark:var(--op-slate);--accent:var(--op-slate);--word:var(--op-slate);}
+  section.opus .fav    {--mark:var(--op-slate);--accent:var(--op-bronze);--word:var(--op-slate);}
+
+  /* ---------- Lockup (mark + wordmark) ---------- */
+  .lockup{display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .mark{display:block;}
+  .mark.big{width:96px;height:96px;}
+  .mark.med{width:74px;height:74px;}
+
+  /* traits communs SVG */
+  .st{fill:none;stroke:var(--mark);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;}
+  .st-sharp{fill:none;stroke:var(--mark);stroke-width:2.6;stroke-linejoin:miter;stroke-linecap:butt;}
+  .stw{stroke-width:3.4;}
+  .fm{fill:var(--mark);stroke:none;}
+  .acc{stroke:var(--accent);}
+  .accf{fill:var(--accent);stroke:none;}
+  .glyph{fill:var(--mark);}
+  /* favicon : traits un peu plus gras pour rester lisibles en petit */
+  .mark.fav-svg .st,.mark.fav-svg .st-sharp{stroke-width:3.6;}
+
+  /* wordmarks */
+  .wm{text-align:center;color:var(--word);line-height:1;}
+  .wm-mr .l1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;letter-spacing:.01em;}
+  .wm-mr .l1 .amp{font-style:italic;color:var(--accent);padding:0 2px;}
+  .wm-mr .l2{font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:10.5px;
+    letter-spacing:.42em;text-transform:uppercase;margin-top:7px;padding-left:.42em;}
+  .wm-op{color:var(--word);}
+  .wm-op .lt{font-family:'Cinzel',serif;font-weight:400;font-size:9.5px;letter-spacing:.44em;padding-left:.44em;}
+  .wm-op .lm{font-family:'Cinzel',serif;font-weight:600;font-size:26px;letter-spacing:.16em;padding-left:.16em;margin:4px 0 3px;}
+  .wm-op .lb{font-family:'Cinzel',serif;font-weight:400;font-size:9.5px;letter-spacing:.44em;padding-left:.44em;}
+
+  /* favicon row */
+  .favrow{display:flex;align-items:center;gap:18px;}
+  .favrow .cell{display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .favrow .cell span{font-size:9px;letter-spacing:.1em;color:var(--txt-soft);}
+  .favrow .m48{width:48px;height:48px;}
+  .favrow .m32{width:32px;height:32px;}
+  .favrow .m20{width:20px;height:20px;}
+  .favrow .chip-ico{
+    width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  }
+  section.mr .favrow .chip-ico{background:var(--mr-terracotta);}
+  section.opus .favrow .chip-ico{background:var(--op-slate);}
+  .favrow .chip-ico .m28{width:28px;height:28px;--mark:#F6F1E8;--accent:#F6F1E8;}
+  section.opus .favrow .chip-ico .m28{--mark:#EDE8DC;--accent:var(--op-bronze);}
+
+  /* bronze vs acier */
+  .metal-note{
+    background:#FBFAF7;border:1px dashed var(--line);border-radius:12px;padding:16px 18px;margin-bottom:26px;
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .metal-note .txt{font-size:13px;color:var(--txt-soft);font-weight:300;max-width:340px;}
+  .metal-note .txt b{color:var(--op-slate);font-weight:500;}
+  .metal-opts{display:flex;gap:22px;}
+  .metal-opts .opt{display:flex;flex-direction:column;align-items:center;gap:8px;
+    --mark:var(--op-slate);--word:var(--op-slate);}
+  .metal-opts .opt.bronze{--accent:var(--op-bronze);}
+  .metal-opts .opt.acier{--accent:var(--op-acier);}
+  .metal-opts .opt span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-soft);}
+  .metal-opts .opt .mark{width:60px;height:60px;}
+
+  footer{padding:40px 24px 60px;text-align:center;color:var(--txt-soft);font-size:12px;font-weight:300;
+    border-top:1px solid var(--line);margin-top:20px;}
+  footer .note{max-width:640px;margin:0 auto 10px;}
+</style>
+</head>
+<body>
+
+<!-- ================= DÉFINITIONS SVG (symbols réutilisés) ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+  <!-- ============ MUSK & ROSE ============ -->
+
+  <!-- MR-1 Monogramme M·R (cartouche joaillerie) -->
+  <symbol id="mr-mono" viewBox="0 0 100 100">
+    <path class="st" d="M50 10 C68 10 78 27 78 50 C78 73 68 90 50 90 C32 90 22 73 22 50 C22 27 32 10 50 10 Z"/>
+    <path class="st" d="M50 15 C64 15 72 30 72 50 C72 70 64 85 50 85 C36 85 28 70 28 50 C28 30 36 15 50 15 Z" opacity=".45"/>
+    <text x="50" y="56" text-anchor="middle" class="glyph"
+          style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;letter-spacing:1px">M<tspan class="accf" dx="0">·</tspan>R</text>
+    <!-- petit bouton de rose bas -->
+    <path class="st acc" d="M50 68 C46 65 46 60 50 58 C54 60 54 65 50 68 Z"/>
+    <path class="st acc" d="M45 66 C43 68 43 71 46 72 M55 66 C57 68 57 71 54 72"/>
+  </symbol>
+
+  <!-- MR-2 Sceau de cire (rose médaillon) -->
+  <symbol id="mr-seal" viewBox="0 0 100 100">
+    <circle class="st" cx="50" cy="50" r="40"/>
+    <circle class="st acc" cx="50" cy="50" r="34"/>
+    <g class="st">
+      <!-- 5 pétales extérieurs -->
+      <g>
+        <path d="M50 50 C41 42 41 28 50 20 C59 28 59 42 50 50 Z"/>
+      </g>
+      <g transform="rotate(72 50 50)"><path d="M50 50 C41 42 41 28 50 20 C59 28 59 42 50 50 Z"/></g>
+      <g transform="rotate(144 50 50)"><path d="M50 50 C41 42 41 28 50 20 C59 28 59 42 50 50 Z"/></g>
+      <g transform="rotate(216 50 50)"><path d="M50 50 C41 42 41 28 50 20 C59 28 59 42 50 50 Z"/></g>
+      <g transform="rotate(288 50 50)"><path d="M50 50 C41 42 41 28 50 20 C59 28 59 42 50 50 Z"/></g>
+    </g>
+    <!-- coeur de rose : petits pétales internes -->
+    <g class="st acc">
+      <path d="M50 50 C46 46 46 39 50 35 C54 39 54 46 50 50 Z" transform="rotate(36 50 50)"/>
+      <path d="M50 50 C46 46 46 39 50 35 C54 39 54 46 50 50 Z" transform="rotate(108 50 50)"/>
+      <path d="M50 50 C46 46 46 39 50 35 C54 39 54 46 50 50 Z" transform="rotate(180 50 50)"/>
+      <path d="M50 50 C46 46 46 39 50 35 C54 39 54 46 50 50 Z" transform="rotate(252 50 50)"/>
+      <path d="M50 50 C46 46 46 39 50 35 C54 39 54 46 50 50 Z" transform="rotate(324 50 50)"/>
+    </g>
+    <circle class="fm" cx="50" cy="50" r="2.4"/>
+  </symbol>
+
+  <!-- MR-3 Spirale de pétale (rose une-ligne) -->
+  <symbol id="mr-spiral" viewBox="0 0 100 100">
+    <path class="st" d="M50 52
+      C50 47 55 44 59 47
+      C64 51 62 59 55 61
+      C45 63 40 53 44 45
+      C49 34 63 33 71 41
+      C80 51 76 68 62 74
+      C45 81 27 71 24 55
+      C21 38 33 21 51 19"/>
+    <!-- feuille -->
+    <path class="st acc" d="M51 19 C48 15 43 14 39 16 C42 20 47 21 51 19 Z"/>
+  </symbol>
+
+  <!-- MR-4 Arche & bouton -->
+  <symbol id="mr-arch" viewBox="0 0 100 100">
+    <path class="st" d="M35 86 L35 52 C35 36 42 26 50 18 C58 26 65 36 65 52 L65 86"/>
+    <line class="st" x1="30" y1="86" x2="70" y2="86"/>
+    <!-- tige -->
+    <line class="st acc" x1="50" y1="86" x2="50" y2="52"/>
+    <!-- bouton de rose -->
+    <path class="st acc" d="M50 52 C44 49 43 41 50 36 C57 41 56 49 50 52 Z"/>
+    <path class="st acc" d="M44 62 C40 60 40 55 44 55 C46 58 46 60 44 62 Z"/>
+    <path class="st acc" d="M56 62 C60 60 60 55 56 55 C54 58 54 60 56 62 Z"/>
+  </symbol>
+
+  <!-- MR-5 Blason losange Déco -->
+  <symbol id="mr-deco" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M50 12 L82 50 L50 88 L18 50 Z"/>
+    <path class="st-sharp" d="M50 20 L74 50 L50 80 L26 50 Z" opacity=".4"/>
+    <line class="st-sharp" x1="40" y1="8" x2="60" y2="8"/>
+    <line class="st-sharp" x1="40" y1="92" x2="60" y2="92"/>
+    <!-- rose géométrique centrale -->
+    <g class="st acc">
+      <path d="M50 50 C44 44 44 34 50 30 C56 34 56 44 50 50 Z"/>
+      <path d="M50 50 C44 44 44 34 50 30 C56 34 56 44 50 50 Z" transform="rotate(90 50 50)"/>
+      <path d="M50 50 C44 44 44 34 50 30 C56 34 56 44 50 50 Z" transform="rotate(180 50 50)"/>
+      <path d="M50 50 C44 44 44 34 50 30 C56 34 56 44 50 50 Z" transform="rotate(270 50 50)"/>
+    </g>
+    <circle class="accf" cx="50" cy="50" r="2.2"/>
+  </symbol>
+
+  <!-- MR-6 Rosette de zellige (8 branches) -->
+  <symbol id="mr-rosette" viewBox="0 0 100 100">
+    <g class="st">
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(45 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(90 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(135 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(180 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(225 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(270 50 50)"/>
+      <path d="M50 50 C57 40 57 26 50 16 C43 26 43 40 50 50 Z" transform="rotate(315 50 50)"/>
+    </g>
+    <circle class="st acc" cx="50" cy="50" r="9"/>
+    <circle class="accf" cx="50" cy="50" r="2.4"/>
+  </symbol>
+
+  <!-- MR-7 Couronne botanique -->
+  <symbol id="mr-wreath" viewBox="0 0 100 100">
+    <g class="st">
+      <!-- branche gauche -->
+      <path d="M50 86 C35 82 26 69 26 52 C26 41 30 31 37 23"/>
+      <path d="M31 64 C25 63 22 67 24 71 C29 71 32 68 31 64 Z"/>
+      <path d="M27 53 C21 51 18 55 19 59 C24 59 28 57 27 53 Z"/>
+      <path d="M30 41 C25 38 22 41 22 45 C27 46 31 45 30 41 Z"/>
+      <!-- branche droite (miroir) -->
+      <path d="M50 86 C65 82 74 69 74 52 C74 41 70 31 63 23"/>
+      <path d="M69 64 C75 63 78 67 76 71 C71 71 68 68 69 64 Z"/>
+      <path d="M73 53 C79 51 82 55 81 59 C76 59 72 57 73 53 Z"/>
+      <path d="M70 41 C75 38 78 41 78 45 C73 46 69 45 70 41 Z"/>
+    </g>
+    <!-- roses en haut (ouverture centrale) -->
+    <g class="st acc">
+      <circle cx="37" cy="22" r="5.5"/>
+      <path d="M37 22 C33.5 20 34.5 16.5 38 18 C40.4 19 40.2 22.5 37 24.5"/>
+      <circle cx="63" cy="22" r="5.5"/>
+      <path d="M63 22 C66.5 20 65.5 16.5 62 18 C59.6 19 59.8 22.5 63 24.5"/>
+    </g>
+  </symbol>
+
+  <!-- ============ MARRAKECH OPUS ============ -->
+
+  <!-- OP-1 Sceau Opus -->
+  <symbol id="op-seal" viewBox="0 0 100 100">
+    <circle class="st-sharp" cx="50" cy="50" r="40"/>
+    <circle class="st-sharp acc" cx="50" cy="50" r="33"/>
+    <text x="50" y="63" text-anchor="middle" class="glyph"
+          style="font-family:'Cinzel',serif;font-weight:600;font-size:36px">O</text>
+    <line class="st-sharp acc" x1="8" y1="50" x2="14" y2="50"/>
+    <line class="st-sharp acc" x1="86" y1="50" x2="92" y2="50"/>
+  </symbol>
+
+  <!-- OP-2 Partition (5 lignes qui montent) -->
+  <symbol id="op-staff" viewBox="0 0 100 100">
+    <line class="st-sharp" x1="24" y1="34" x2="24" y2="72"/>
+    <line class="st-sharp" x1="24" y1="72" x2="60" y2="72"/>
+    <line class="st-sharp" x1="24" y1="63" x2="66" y2="63"/>
+    <line class="st-sharp acc" x1="24" y1="54" x2="72" y2="54"/>
+    <line class="st-sharp" x1="24" y1="45" x2="78" y2="45"/>
+    <line class="st-sharp" x1="24" y1="36" x2="84" y2="36"/>
+    <circle class="fm" cx="60" cy="72" r="2.6"/>
+    <circle class="fm" cx="66" cy="63" r="2.6"/>
+    <circle class="accf" cx="72" cy="54" r="2.6"/>
+    <circle class="fm" cx="78" cy="45" r="2.6"/>
+    <circle class="fm" cx="84" cy="36" r="2.6"/>
+  </symbol>
+
+  <!-- OP-3 Geste du chef (baguette monoline) -->
+  <symbol id="op-baton" viewBox="0 0 100 100">
+    <path class="st" d="M26 76 C40 74 51 66 59 52 C64 43 68 34 71 26"/>
+    <circle class="accf" cx="72" cy="23" r="3.4"/>
+    <circle class="fm" cx="26" cy="76" r="2.6"/>
+  </symbol>
+
+  <!-- OP-4 Arche structurée + clé de voûte -->
+  <symbol id="op-arch" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M32 84 L32 46 L41 34 L50 28 L59 34 L68 46 L68 84"/>
+    <line class="st-sharp" x1="26" y1="84" x2="74" y2="84"/>
+    <path class="accf" d="M50 21 L56 28 L50 35 L44 28 Z"/>
+  </symbol>
+
+  <!-- OP-5 Diapason + onde -->
+  <symbol id="op-fork" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M40 54 L40 24 M60 54 L60 24"/>
+    <path class="st-sharp" d="M40 54 C41 60 45 63 50 63 C55 63 59 60 60 54"/>
+    <line class="st-sharp" x1="50" y1="63" x2="50" y2="82"/>
+    <line class="st-sharp" x1="43" y1="82" x2="57" y2="82"/>
+    <path class="st-sharp acc" d="M39 18 A12 12 0 0 1 61 18"/>
+    <path class="st-sharp acc" d="M43 13 A7 7 0 0 1 57 13"/>
+  </symbol>
+
+  <!-- OP-6 Blason à clé de voûte -->
+  <symbol id="op-crest" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M32 24 L68 24 L68 52 C68 66 60 78 50 85 C40 78 32 66 32 52 Z"/>
+    <line class="st-sharp" x1="43" y1="32" x2="43" y2="64"/>
+    <line class="st-sharp" x1="50" y1="32" x2="50" y2="70"/>
+    <line class="st-sharp" x1="57" y1="32" x2="57" y2="64"/>
+    <path class="accf" d="M44 24 L56 24 L53 33 L47 33 Z"/>
+  </symbol>
+
+  <!-- OP-7 Étoile de direction (boussole) -->
+  <symbol id="op-star" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M50 14 L54 50 L50 86 L46 50 Z"/>
+    <path class="st-sharp" d="M14 50 L50 46 L86 50 L50 54 Z"/>
+    <line class="st-sharp acc" x1="34" y1="34" x2="42" y2="42"/>
+    <line class="st-sharp acc" x1="66" y1="34" x2="58" y2="42"/>
+    <line class="st-sharp acc" x1="34" y1="66" x2="42" y2="58"/>
+    <line class="st-sharp acc" x1="66" y1="66" x2="58" y2="58"/>
+    <circle class="accf" cx="50" cy="50" r="3"/>
+  </symbol>
+
+  </defs>
+</svg>
+
+
+<header class="top">
+  <p class="eyebrow">Direction artistique · Pistes de logo</p>
+  <h1>Deux marques, deux mondes</h1>
+  <p>Logos dessinés en vecteur (SVG tracés à la main, pas d'images IA). Chaque piste est un vrai lockup symbole + nom, présenté sur fond blanc, sur fond sombre, en monochrome une couleur, et en réduction favicon.</p>
+  <p class="pole-switch">
+    <a class="mr" href="mariage.html">Page Musk &amp; Rose Events →</a>
+    <a class="op" href="opus.html">Page Marrakech Opus Events →</a>
+  </p>
+</header>
+
+<div class="wrap">
+
+<!-- ==================================================================== -->
+<!-- ======================== MUSK & ROSE =============================== -->
+<!-- ==================================================================== -->
+<section class="brand mr">
+  <div class="brand-head">
+    <div>
+      <div class="kicker">Univers Mariages · chaud, courbe, senteur</div>
+      <h2>Musk &amp; Rose Events</h2>
+    </div>
+    <div class="desc">Cormorant Garamond (titres) + Josefin Sans (label)</div>
+  </div>
+  <div class="swatches">
+    <span class="lab">Palette</span>
+    <div class="sw" style="background:#A8543A" title="Terracotta #A8543A"></div>
+    <div class="sw" style="background:#6E3B29" title="Terre brûlée #6E3B29"></div>
+    <div class="sw" style="background:#C18E4A" title="Ocre doux #C18E4A"></div>
+    <div class="sw" style="background:#2C2620" title="Encre #2C2620"></div>
+    <div class="sw" style="background:#F6F1E8" title="Crème #F6F1E8"></div>
+  </div>
+
+  <!-- --- template d'une piste, répété 7× via JS --- -->
+  <div id="mr-list"></div>
+</section>
+
+
+<!-- ==================================================================== -->
+<!-- ==================== MARRAKECH OPUS EVENTS ========================= -->
+<!-- ==================================================================== -->
+<section class="brand opus">
+  <div class="brand-head">
+    <div>
+      <div class="kicker">Univers Entreprises · froid, géométrique, musical</div>
+      <h2>Marrakech Opus Events</h2>
+    </div>
+    <div class="desc">Cinzel (gravé) · palette Lin &amp; ardoise</div>
+  </div>
+  <div class="swatches">
+    <span class="lab">Palette</span>
+    <div class="sw" style="background:#3A434C" title="Ardoise #3A434C"></div>
+    <div class="sw" style="background:#6B7480" title="Ardoise clair #6B7480"></div>
+    <div class="sw" style="background:#9A7B4F" title="Bronze #9A7B4F"></div>
+    <div class="sw" style="background:#8B939B" title="Acier #8B939B"></div>
+    <div class="sw" style="background:#EDE8DC" title="Lin #EDE8DC"></div>
+  </div>
+
+  <div class="metal-note">
+    <div class="txt"><b>Bronze ou acier ?</b> Décision non tranchée. Toutes les pistes ci-dessous sont montrées en <b>bronze</b> (plus chaud, plus premium) ; voici le même sceau en acier pour comparer le froid plus net.</div>
+    <div class="metal-opts">
+      <div class="opt bronze"><svg class="mark"><use href="#op-seal"/></svg><span>Bronze</span></div>
+      <div class="opt acier"><svg class="mark"><use href="#op-seal"/></svg><span>Acier</span></div>
+    </div>
+  </div>
+
+  <div id="op-list"></div>
+</section>
+
+</div>
+
+<footer>
+  <div class="note">Pistes de travail, dessinées à la main en SVG vectoriel. Aucune décision de marque (nom, couleur définitive Opus, bronze vs acier) n'est tranchée ici. Les noms sont posés en polices Google Fonts chargées dans la page.</div>
+  <div>Musk &amp; Rose Events · Marrakech Opus Events — agence de Salah</div>
+</footer>
+
+<script>
+// ---------- données des pistes ----------
+const MR = [
+  {id:'mr-mono',    name:'Monogramme M·R', sub:'Cartouche joaillerie, initiales gravées + bouton de rose', typo:'Cormorant Garamond'},
+  {id:'mr-seal',    name:'Sceau de cire',  sub:'Rose vue de dessus dans un médaillon à double filet', typo:'Cormorant Garamond'},
+  {id:'mr-spiral',  name:'Spirale de pétale', sub:'Rose réduite à une seule ligne continue, signature moderne', typo:'Cormorant Garamond'},
+  {id:'mr-arch',    name:'Arche & bouton', sub:'Arche mauresque abritant un bouton de rose', typo:'Cormorant Garamond'},
+  {id:'mr-deco',    name:'Blason losange Déco', sub:'Losange Art Déco + rose géométrique, filets jumeaux', typo:'Cormorant Garamond'},
+  {id:'mr-rosette', name:'Rosette de zellige', sub:'Rosace 8 branches qui se lit comme une fleur', typo:'Cormorant Garamond'},
+  {id:'mr-wreath',  name:'Couronne botanique', sub:'Deux rameaux fins ouverts, feuilles et petites roses', typo:'Cormorant Garamond'},
+];
+const OP = [
+  {id:'op-seal',   name:'Sceau Opus', sub:'Médaillon net avec « O » gravé et repères', typo:'Cinzel'},
+  {id:'op-staff',  name:'Partition', sub:'Cinq lignes de portée qui montent et s’ordonnent', typo:'Cinzel'},
+  {id:'op-baton',  name:'Geste du chef', sub:'Baguette du chef d’orchestre, une seule ligne maîtrisée', typo:'Cinzel'},
+  {id:'op-arch',   name:'Arche structurée', sub:'Arche mauresque réduite à sa structure + clé de voûte', typo:'Cinzel'},
+  {id:'op-fork',   name:'Diapason', sub:'Diapason et onde : justesse et harmonie sous contrôle', typo:'Cinzel'},
+  {id:'op-crest',  name:'Blason à clé de voûte', sub:'Colonnes et clé de voûte, gravité institutionnelle', typo:'Cinzel'},
+  {id:'op-star',   name:'Étoile de direction', sub:'Boussole 4 branches : cap, leadership, précision', typo:'Cinzel'},
+];
+
+function wordmark(brand){
+  if(brand==='mr'){
+    return '<div class="wm wm-mr"><div class="l1">Musk <span class="amp">&amp;</span> Rose</div><div class="l2">Events</div></div>';
+  }
+  return '<div class="wm wm-op"><div class="lt">Marrakech</div><div class="lm">Opus</div><div class="lb">Events</div></div>';
+}
+function markSvg(id, cls){ return '<svg class="mark '+cls+'"><use href="#'+id+'"/></svg>'; }
+
+function colorChips(brand){
+  if(brand==='mr'){
+    return '<span class="chip"><span class="dot" style="background:#A8543A"></span>Terracotta</span>'+
+           '<span class="chip"><span class="dot" style="background:#C18E4A"></span>Ocre</span>'+
+           '<span class="chip"><span class="dot" style="background:#2C2620"></span>Encre</span>';
+  }
+  return '<span class="chip"><span class="dot" style="background:#3A434C"></span>Ardoise</span>'+
+         '<span class="chip"><span class="dot" style="background:#9A7B4F"></span>Bronze</span>'+
+         '<span class="chip"><span class="dot" style="background:#EDE8DC;border-color:#ccc"></span>Lin</span>';
+}
+
+function pisteHtml(brand, p, idx){
+  const lock = (markCls, big) => '<div class="lockup">'+markSvg(p.id, markCls)+ (big?wordmark(brand):'') +'</div>';
+  const favRow =
+    '<div class="favrow">'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m48')+'<span>48</span></div>'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m32')+'<span>32</span></div>'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m20')+'<span>20</span></div>'+
+      '<div class="cell"><div class="chip-ico">'+markSvg(p.id,'m28')+'</div><span>icône</span></div>'+
+    '</div>';
+  return ''+
+  '<div class="piste">'+
+    '<div class="piste-head">'+
+      '<div class="num">'+String(idx+1).padStart(2,'0')+'</div>'+
+      '<div class="ttl"><h3>'+p.name+'</h3><div class="sub">'+p.sub+'</div></div>'+
+      '<div class="chips"><span class="chip">'+p.typo+'</span>'+colorChips(brand)+'</div>'+
+    '</div>'+
+    '<div class="tiles">'+
+      '<div class="tile"><div class="stage blanc">'+lock('big',true)+'</div><div class="cap">Fond blanc · lockup</div></div>'+
+      '<div class="tile"><div class="stage sombre">'+lock('big',true)+'</div><div class="cap">Fond sombre</div></div>'+
+      '<div class="tile"><div class="stage mono">'+lock('big',true)+'</div><div class="cap">Monochrome</div></div>'+
+      '<div class="tile"><div class="stage fav">'+favRow+'</div><div class="cap">Réduction favicon</div></div>'+
+    '</div>'+
+  '</div>';
+}
+
+document.getElementById('mr-list').innerHTML = MR.map((p,i)=>pisteHtml('mr',p,i)).join('');
+document.getElementById('op-list').innerHTML = OP.map((p,i)=>pisteHtml('opus',p,i)).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pistes de logo — Marrakech Opus Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Musk & Rose */
+    --mr-terracotta:#A8543A;
+    --mr-brulee:#6E3B29;
+    --mr-ocre:#C18E4A;
+    --mr-creme:#F6F1E8;
+    --mr-ink:#2C2620;
+    /* Opus */
+    --op-slate:#3A434C;
+    --op-slate2:#6B7480;
+    --op-lin:#EDE8DC;
+    --op-bronze:#9A7B4F;
+    --op-acier:#8B939B;
+    /* Gallery neutrals */
+    --page:#EFEDE7;
+    --card:#FFFFFF;
+    --line:#E2DED4;
+    --txt:#3A352F;
+    --txt-soft:#8A8072;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--txt);
+    font-family:'Josefin Sans',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header.top{
+    padding:64px 24px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#F6F4EF 0%,var(--page) 100%);
+  }
+  header.top .eyebrow{
+    font-size:12px;letter-spacing:.36em;text-transform:uppercase;
+    color:var(--txt-soft);margin:0 0 14px;
+  }
+  header.top h1{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 14px;
+    color:var(--op-slate);
+  }
+  header.top p{
+    max-width:640px;margin:0 auto;font-size:15px;color:var(--txt-soft);
+    font-weight:300;
+  }
+  /* lien vers l'autre pôle */
+  header.top .pole-switch{margin:26px 0 0;}
+  header.top .pole-switch a{
+    display:inline-block;font-family:'Josefin Sans',sans-serif;font-weight:400;
+    font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--op-bronze);text-decoration:none;
+    border:1px solid var(--line);border-radius:24px;padding:9px 20px;
+    transition:border-color .2s,background .2s;
+  }
+  header.top .pole-switch a:hover{border-color:var(--op-bronze);background:#fff;}
+
+  /* ---------- Section (par marque) ---------- */
+  section.brand{padding:56px 0 24px;}
+  .brand-head{
+    display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    padding-bottom:8px;margin-bottom:28px;border-bottom:1px solid var(--line);
+  }
+  .brand-head .kicker{
+    font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--txt-soft);
+  }
+  .brand-head h2{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:clamp(24px,4vw,34px);margin:0;color:var(--mr-ink);
+  }
+  .brand-head .desc{font-size:14px;color:var(--txt-soft);font-weight:300;margin-left:auto;}
+  section.opus h2{color:var(--op-slate);}
+  section.opus .swatches .sw.a{background:var(--op-slate);}
+
+  /* palette swatches */
+  .swatches{display:flex;gap:8px;align-items:center;margin:0 0 34px;flex-wrap:wrap;}
+  .swatches .lab{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--txt-soft);margin-right:6px;}
+  .swatches .sw{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.08);}
+  .swatches .sw small{display:none;}
+
+  /* ---------- Carte piste ---------- */
+  .piste{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 22px 26px;margin-bottom:26px;
+    box-shadow:0 1px 2px rgba(40,35,30,.03),0 10px 30px -22px rgba(40,35,30,.25);
+  }
+  .piste-head{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:18px;}
+  .piste-head .num{
+    font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1;color:var(--mr-terracotta);
+    font-weight:600;min-width:34px;
+  }
+  section.opus .piste-head .num{color:var(--op-bronze);}
+  .piste-head .ttl{flex:1;min-width:200px;}
+  .piste-head .ttl h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:21px;margin:0 0 3px;color:var(--mr-ink);
+  }
+  section.opus .piste-head .ttl h3{color:var(--op-slate);}
+  .piste-head .ttl .sub{font-size:13px;color:var(--txt-soft);font-weight:300;}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .chip{
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-soft);
+    border:1px solid var(--line);border-radius:20px;padding:4px 10px;white-space:nowrap;
+  }
+  .chip .dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle;margin-right:5px;border:1px solid rgba(0,0,0,.08);}
+
+  /* Grille des 4 tuiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.tiles{grid-template-columns:1fr;}}
+
+  .tile{
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .tile .stage{
+    flex:1;min-height:170px;display:flex;align-items:center;justify-content:center;
+    padding:24px 18px;
+  }
+  .tile .cap{
+    font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-soft);
+    text-align:center;padding:9px 8px;border-top:1px solid var(--line);background:#FBFAF7;
+  }
+
+  /* fonds des tuiles */
+  .stage.blanc{background:#FFFFFF;}
+  .stage.mono{background:#FFFFFF;}
+  .stage.fav{background:#FFFFFF;}
+  section.mr   .stage.sombre{background:var(--mr-ink);}
+  section.opus .stage.sombre{background:var(--op-slate);}
+
+  /* ---------- Recolor par contexte (variables) ---------- */
+  /* Musk & Rose */
+  section.mr .blanc  {--mark:var(--mr-terracotta);--accent:var(--mr-ocre);--word:var(--mr-ink);}
+  section.mr .sombre {--mark:var(--mr-creme);--accent:var(--mr-ocre);--word:var(--mr-creme);}
+  section.mr .mono   {--mark:var(--mr-ink);--accent:var(--mr-ink);--word:var(--mr-ink);}
+  section.mr .fav    {--mark:var(--mr-terracotta);--accent:var(--mr-ocre);--word:var(--mr-ink);}
+  /* Opus */
+  section.opus .blanc  {--mark:var(--op-slate);--accent:var(--op-bronze);--word:var(--op-slate);}
+  section.opus .sombre {--mark:var(--op-lin);--accent:var(--op-bronze);--word:var(--op-lin);}
+  section.opus .mono   {--mark:var(--op-slate);--accent:var(--op-slate);--word:var(--op-slate);}
+  section.opus .fav    {--mark:var(--op-slate);--accent:var(--op-bronze);--word:var(--op-slate);}
+
+  /* ---------- Lockup (mark + wordmark) ---------- */
+  .lockup{display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .mark{display:block;}
+  .mark.big{width:96px;height:96px;}
+  .mark.med{width:74px;height:74px;}
+
+  /* traits communs SVG */
+  .st{fill:none;stroke:var(--mark);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;}
+  .st-sharp{fill:none;stroke:var(--mark);stroke-width:2.6;stroke-linejoin:miter;stroke-linecap:butt;}
+  .stw{stroke-width:3.4;}
+  .fm{fill:var(--mark);stroke:none;}
+  .acc{stroke:var(--accent);}
+  .accf{fill:var(--accent);stroke:none;}
+  .glyph{fill:var(--mark);}
+  /* favicon : traits un peu plus gras pour rester lisibles en petit */
+  .mark.fav-svg .st,.mark.fav-svg .st-sharp{stroke-width:3.6;}
+
+  /* wordmarks */
+  .wm{text-align:center;color:var(--word);line-height:1;}
+  .wm-mr .l1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;letter-spacing:.01em;}
+  .wm-mr .l1 .amp{font-style:italic;color:var(--accent);padding:0 2px;}
+  .wm-mr .l2{font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:10.5px;
+    letter-spacing:.42em;text-transform:uppercase;margin-top:7px;padding-left:.42em;}
+  .wm-op{color:var(--word);}
+  .wm-op .lt{font-family:'Cinzel',serif;font-weight:400;font-size:9.5px;letter-spacing:.44em;padding-left:.44em;}
+  .wm-op .lm{font-family:'Cinzel',serif;font-weight:600;font-size:26px;letter-spacing:.16em;padding-left:.16em;margin:4px 0 3px;}
+  .wm-op .lb{font-family:'Cinzel',serif;font-weight:400;font-size:9.5px;letter-spacing:.44em;padding-left:.44em;}
+
+  /* favicon row */
+  .favrow{display:flex;align-items:center;gap:18px;}
+  .favrow .cell{display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .favrow .cell span{font-size:9px;letter-spacing:.1em;color:var(--txt-soft);}
+  .favrow .m48{width:48px;height:48px;}
+  .favrow .m32{width:32px;height:32px;}
+  .favrow .m20{width:20px;height:20px;}
+  .favrow .chip-ico{
+    width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  }
+  section.mr .favrow .chip-ico{background:var(--mr-terracotta);}
+  section.opus .favrow .chip-ico{background:var(--op-slate);}
+  .favrow .chip-ico .m28{width:28px;height:28px;--mark:#F6F1E8;--accent:#F6F1E8;}
+  section.opus .favrow .chip-ico .m28{--mark:#EDE8DC;--accent:var(--op-bronze);}
+
+  /* bronze vs acier */
+  .metal-note{
+    background:#FBFAF7;border:1px dashed var(--line);border-radius:12px;padding:16px 18px;margin-bottom:26px;
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .metal-note .txt{font-size:13px;color:var(--txt-soft);font-weight:300;max-width:340px;}
+  .metal-note .txt b{color:var(--op-slate);font-weight:500;}
+  .metal-opts{display:flex;gap:22px;}
+  .metal-opts .opt{display:flex;flex-direction:column;align-items:center;gap:8px;
+    --mark:var(--op-slate);--word:var(--op-slate);}
+  .metal-opts .opt.bronze{--accent:var(--op-bronze);}
+  .metal-opts .opt.acier{--accent:var(--op-acier);}
+  .metal-opts .opt span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-soft);}
+  .metal-opts .opt .mark{width:60px;height:60px;}
+
+  footer{padding:40px 24px 60px;text-align:center;color:var(--txt-soft);font-size:12px;font-weight:300;
+    border-top:1px solid var(--line);margin-top:20px;}
+  footer .note{max-width:640px;margin:0 auto 10px;}
+</style>
+</head>
+<body>
+
+<!-- ================= DÉFINITIONS SVG (symbols réutilisés) ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+  <!-- ============ MARRAKECH OPUS ============ -->
+
+  <!-- OP-1 Sceau Opus -->
+  <symbol id="op-seal" viewBox="0 0 100 100">
+    <circle class="st-sharp" cx="50" cy="50" r="40"/>
+    <circle class="st-sharp acc" cx="50" cy="50" r="33"/>
+    <text x="50" y="63" text-anchor="middle" class="glyph"
+          style="font-family:'Cinzel',serif;font-weight:600;font-size:36px">O</text>
+    <line class="st-sharp acc" x1="8" y1="50" x2="14" y2="50"/>
+    <line class="st-sharp acc" x1="86" y1="50" x2="92" y2="50"/>
+  </symbol>
+
+  <!-- OP-2 Partition (5 lignes qui montent) -->
+  <symbol id="op-staff" viewBox="0 0 100 100">
+    <line class="st-sharp" x1="24" y1="34" x2="24" y2="72"/>
+    <line class="st-sharp" x1="24" y1="72" x2="60" y2="72"/>
+    <line class="st-sharp" x1="24" y1="63" x2="66" y2="63"/>
+    <line class="st-sharp acc" x1="24" y1="54" x2="72" y2="54"/>
+    <line class="st-sharp" x1="24" y1="45" x2="78" y2="45"/>
+    <line class="st-sharp" x1="24" y1="36" x2="84" y2="36"/>
+    <circle class="fm" cx="60" cy="72" r="2.6"/>
+    <circle class="fm" cx="66" cy="63" r="2.6"/>
+    <circle class="accf" cx="72" cy="54" r="2.6"/>
+    <circle class="fm" cx="78" cy="45" r="2.6"/>
+    <circle class="fm" cx="84" cy="36" r="2.6"/>
+  </symbol>
+
+  <!-- OP-3 Geste du chef (baguette monoline) -->
+  <symbol id="op-baton" viewBox="0 0 100 100">
+    <path class="st" d="M26 76 C40 74 51 66 59 52 C64 43 68 34 71 26"/>
+    <circle class="accf" cx="72" cy="23" r="3.4"/>
+    <circle class="fm" cx="26" cy="76" r="2.6"/>
+  </symbol>
+
+  <!-- OP-4 Arche structurée + clé de voûte -->
+  <symbol id="op-arch" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M32 84 L32 46 L41 34 L50 28 L59 34 L68 46 L68 84"/>
+    <line class="st-sharp" x1="26" y1="84" x2="74" y2="84"/>
+    <path class="accf" d="M50 21 L56 28 L50 35 L44 28 Z"/>
+  </symbol>
+
+  <!-- OP-5 Diapason + onde -->
+  <symbol id="op-fork" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M40 54 L40 24 M60 54 L60 24"/>
+    <path class="st-sharp" d="M40 54 C41 60 45 63 50 63 C55 63 59 60 60 54"/>
+    <line class="st-sharp" x1="50" y1="63" x2="50" y2="82"/>
+    <line class="st-sharp" x1="43" y1="82" x2="57" y2="82"/>
+    <path class="st-sharp acc" d="M39 18 A12 12 0 0 1 61 18"/>
+    <path class="st-sharp acc" d="M43 13 A7 7 0 0 1 57 13"/>
+  </symbol>
+
+  <!-- OP-6 Blason à clé de voûte -->
+  <symbol id="op-crest" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M32 24 L68 24 L68 52 C68 66 60 78 50 85 C40 78 32 66 32 52 Z"/>
+    <line class="st-sharp" x1="43" y1="32" x2="43" y2="64"/>
+    <line class="st-sharp" x1="50" y1="32" x2="50" y2="70"/>
+    <line class="st-sharp" x1="57" y1="32" x2="57" y2="64"/>
+    <path class="accf" d="M44 24 L56 24 L53 33 L47 33 Z"/>
+  </symbol>
+
+  <!-- OP-7 Étoile de direction (boussole) -->
+  <symbol id="op-star" viewBox="0 0 100 100">
+    <path class="st-sharp" d="M50 14 L54 50 L50 86 L46 50 Z"/>
+    <path class="st-sharp" d="M14 50 L50 46 L86 50 L50 54 Z"/>
+    <line class="st-sharp acc" x1="34" y1="34" x2="42" y2="42"/>
+    <line class="st-sharp acc" x1="66" y1="34" x2="58" y2="42"/>
+    <line class="st-sharp acc" x1="34" y1="66" x2="42" y2="58"/>
+    <line class="st-sharp acc" x1="66" y1="66" x2="58" y2="58"/>
+    <circle class="accf" cx="50" cy="50" r="3"/>
+  </symbol>
+
+  </defs>
+</svg>
+
+
+<header class="top">
+  <p class="eyebrow">Direction artistique · Pistes de logo · Univers Entreprises</p>
+  <h1>Marrakech Opus Events</h1>
+  <p>Pistes de travail, aucune décision de marque tranchée. Logos dessinés en vecteur (SVG tracés à la main, pas d'images IA), présentés sur fond blanc, sur fond sombre, en monochrome une couleur, et en réduction favicon.</p>
+  <p class="pole-switch"><a href="mariage.html">Voir l'autre pôle · Musk &amp; Rose Events →</a></p>
+</header>
+
+<div class="wrap">
+
+<!-- ==================================================================== -->
+<!-- ==================== MARRAKECH OPUS EVENTS ========================= -->
+<!-- ==================================================================== -->
+<section class="brand opus">
+  <div class="brand-head">
+    <div>
+      <div class="kicker">Univers Entreprises · froid, géométrique, musical</div>
+      <h2>Marrakech Opus Events</h2>
+    </div>
+    <div class="desc">Cinzel (gravé) · palette Lin &amp; ardoise</div>
+  </div>
+  <div class="swatches">
+    <span class="lab">Palette</span>
+    <div class="sw" style="background:#3A434C" title="Ardoise #3A434C"></div>
+    <div class="sw" style="background:#6B7480" title="Ardoise clair #6B7480"></div>
+    <div class="sw" style="background:#9A7B4F" title="Bronze #9A7B4F"></div>
+    <div class="sw" style="background:#8B939B" title="Acier #8B939B"></div>
+    <div class="sw" style="background:#EDE8DC" title="Lin #EDE8DC"></div>
+  </div>
+
+  <div class="metal-note">
+    <div class="txt"><b>Bronze ou acier ?</b> Décision non tranchée. Toutes les pistes ci-dessous sont montrées en <b>bronze</b> (plus chaud, plus premium) ; voici le même sceau en acier pour comparer le froid plus net.</div>
+    <div class="metal-opts">
+      <div class="opt bronze"><svg class="mark"><use href="#op-seal"/></svg><span>Bronze</span></div>
+      <div class="opt acier"><svg class="mark"><use href="#op-seal"/></svg><span>Acier</span></div>
+    </div>
+  </div>
+
+  <div id="op-list"></div>
+</section>
+
+</div>
+
+<footer>
+  <div class="note">Pistes de travail, dessinées à la main en SVG vectoriel. Aucune décision de marque (nom, couleur définitive, bronze vs acier) n'est tranchée ici. Les noms sont posés en polices Google Fonts chargées dans la page.</div>
+  <div>Marrakech Opus Events — agence de Salah</div>
+</footer>
+
+<script>
+// ---------- données des pistes ----------
+const OP = [
+  {id:'op-seal',   name:'Sceau Opus', sub:'Médaillon net avec « O » gravé et repères', typo:'Cinzel'},
+  {id:'op-staff',  name:'Partition', sub:'Cinq lignes de portée qui montent et s’ordonnent', typo:'Cinzel'},
+  {id:'op-baton',  name:'Geste du chef', sub:'Baguette du chef d’orchestre, une seule ligne maîtrisée', typo:'Cinzel'},
+  {id:'op-arch',   name:'Arche structurée', sub:'Arche mauresque réduite à sa structure + clé de voûte', typo:'Cinzel'},
+  {id:'op-fork',   name:'Diapason', sub:'Diapason et onde : justesse et harmonie sous contrôle', typo:'Cinzel'},
+  {id:'op-crest',  name:'Blason à clé de voûte', sub:'Colonnes et clé de voûte, gravité institutionnelle', typo:'Cinzel'},
+  {id:'op-star',   name:'Étoile de direction', sub:'Boussole 4 branches : cap, leadership, précision', typo:'Cinzel'},
+];
+
+function wordmark(){
+  return '<div class="wm wm-op"><div class="lt">Marrakech</div><div class="lm">Opus</div><div class="lb">Events</div></div>';
+}
+function markSvg(id, cls){ return '<svg class="mark '+cls+'"><use href="#'+id+'"/></svg>'; }
+
+function colorChips(){
+  return '<span class="chip"><span class="dot" style="background:#3A434C"></span>Ardoise</span>'+
+         '<span class="chip"><span class="dot" style="background:#9A7B4F"></span>Bronze</span>'+
+         '<span class="chip"><span class="dot" style="background:#EDE8DC;border-color:#ccc"></span>Lin</span>';
+}
+
+function pisteHtml(p, idx){
+  const lock = (markCls, big) => '<div class="lockup">'+markSvg(p.id, markCls)+ (big?wordmark():'') +'</div>';
+  const favRow =
+    '<div class="favrow">'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m48')+'<span>48</span></div>'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m32')+'<span>32</span></div>'+
+      '<div class="cell">'+markSvg(p.id,'fav-svg m20')+'<span>20</span></div>'+
+      '<div class="cell"><div class="chip-ico">'+markSvg(p.id,'m28')+'</div><span>icône</span></div>'+
+    '</div>';
+  return ''+
+  '<div class="piste">'+
+    '<div class="piste-head">'+
+      '<div class="num">'+String(idx+1).padStart(2,'0')+'</div>'+
+      '<div class="ttl"><h3>'+p.name+'</h3><div class="sub">'+p.sub+'</div></div>'+
+      '<div class="chips"><span class="chip">'+p.typo+'</span>'+colorChips()+'</div>'+
+    '</div>'+
+    '<div class="tiles">'+
+      '<div class="tile"><div class="stage blanc">'+lock('big',true)+'</div><div class="cap">Fond blanc · lockup</div></div>'+
+      '<div class="tile"><div class="stage sombre">'+lock('big',true)+'</div><div class="cap">Fond sombre</div></div>'+
+      '<div class="tile"><div class="stage mono">'+lock('big',true)+'</div><div class="cap">Monochrome</div></div>'+
+      '<div class="tile"><div class="stage fav">'+favRow+'</div><div class="cap">Réduction favicon</div></div>'+
+    '</div>'+
+  '</div>';
+}
+
+document.getElementById('op-list').innerHTML = OP.map((p,i)=>pisteHtml(p,i)).join('');
+</script>
+</body>
+</html>
