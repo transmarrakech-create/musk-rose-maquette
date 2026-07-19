@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Plan de traduction EN / ES — Trans Marrakech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<style>
+  :root{
+    --acc:#216e7d; --acc-soft:rgba(33,110,125,.09); --acc-line:rgba(33,110,125,.22);
+    --ink:#1b2426; --ink2:#4a595d; --ink3:#7b8a8e;
+    --bg:#f6f8f8; --card:#fff; --line:#e3eaeb;
+    --ok:#2e7d5b; --ok-soft:rgba(46,125,91,.1);
+    --warn:#9a6a12; --warn-soft:rgba(154,106,18,.1);
+    --stop:#a5382f; --stop-soft:rgba(165,56,47,.09);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:400 16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:940px;margin:0 auto;padding:0 22px 90px}
+
+  /* ---------- en-tête ---------- */
+  header{background:linear-gradient(160deg,#1b5c69,#216e7d 60%,#2a8494);color:#fff;
+         padding:52px 0 44px;margin-bottom:34px}
+  header .wrap{padding-bottom:0}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;
+           letter-spacing:.09em;text-transform:uppercase;opacity:.85;margin-bottom:14px}
+  h1{margin:0 0 12px;font-size:clamp(27px,4.4vw,39px);line-height:1.18;font-weight:700;letter-spacing:-.02em}
+  .lede{margin:0;max-width:62ch;font-size:17.5px;line-height:1.6;opacity:.93}
+  .stamp{margin-top:22px;font-size:13.5px;opacity:.78}
+
+  /* ---------- sections ---------- */
+  section{margin:44px 0 0}
+  h2{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--acc);margin:0 0 6px}
+  h2 + .sub{margin:0 0 20px;color:var(--ink3);font-size:14.5px;max-width:64ch}
+  h3{font-size:19px;font-weight:650;margin:0 0 8px;letter-spacing:-.01em}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:22px 24px;margin-bottom:14px}
+  .card p:last-child{margin-bottom:0}
+  .card p{margin:0 0 11px;color:var(--ink2)}
+
+  /* ---------- le principe ---------- */
+  .principle{background:var(--acc-soft);border:1px solid var(--acc-line);border-radius:14px;
+             padding:24px 26px;margin-bottom:18px}
+  .principle h3{color:var(--acc)}
+  .principle p{color:#2c4348;margin:0 0 10px}
+  .principle p:last-child{margin:0}
+
+  table.kw{width:100%;border-collapse:collapse;margin:16px 0 4px;font-size:15px}
+  table.kw th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+              color:var(--ink3);font-weight:600;padding:0 12px 9px 0;border-bottom:1px solid var(--line)}
+  table.kw td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+  table.kw tr:last-child td{border-bottom:0}
+  table.kw td:first-child{color:var(--ink3)}
+  table.kw td strong{color:var(--ink);font-weight:600}
+
+  /* ---------- étapes / suivi ---------- */
+  .step{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);
+        border-radius:14px;padding:20px 22px;margin-bottom:12px;position:relative}
+  .step .num{flex:0 0 32px;height:32px;border-radius:9px;background:var(--acc-soft);color:var(--acc);
+             display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14.5px}
+  .step.done .num{background:var(--ok-soft);color:var(--ok)}
+  .step .body{flex:1;min-width:0}
+  .step h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+  .step p{margin:0 0 8px;color:var(--ink2);font-size:15.5px}
+  .step p:last-child{margin-bottom:0}
+  .step ul{margin:8px 0 0;padding-left:19px;color:var(--ink2);font-size:15.5px}
+  .step li{margin-bottom:5px}
+  .step li:last-child{margin-bottom:0}
+
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:650;letter-spacing:.05em;
+       text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+  .t-done{background:var(--ok-soft);color:var(--ok)}
+  .t-now{background:var(--acc-soft);color:var(--acc)}
+  .t-wait{background:var(--warn-soft);color:var(--warn)}
+  .t-next{background:#eef1f2;color:var(--ink3)}
+
+  .who{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--ink3);
+       margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);width:100%}
+  .who b{color:var(--ink2);font-weight:600}
+
+  /* ---------- règles ---------- */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .rules > div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .rules h3{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .rules .yes h3{color:var(--ok)} .rules .no h3{color:var(--stop)}
+  .rules ul{margin:0;padding-left:18px;color:var(--ink2);font-size:15px}
+  .rules li{margin-bottom:9px} .rules li:last-child{margin-bottom:0}
+  .rules .material-icons-outlined{font-size:19px}
+
+  /* ---------- décisions ---------- */
+  .dec{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--warn);
+       border-radius:0 12px 12px 0;padding:17px 20px;margin-bottom:11px}
+  .dec h3{font-size:16.5px;margin-bottom:5px}
+  .dec p{margin:0;color:var(--ink2);font-size:15px}
+  .dec .why{display:block;margin-top:7px;color:var(--ink3);font-size:14px}
+
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+         color:var(--ink3);font-size:13.5px}
+
+  @media (max-width:720px){
+    header{padding:40px 0 34px}
+    .rules{grid-template-columns:1fr}
+    .step{flex-direction:column;gap:11px}
+    .step .num{flex:0 0 auto;width:32px}
+    table.kw{font-size:14px}
+    table.kw th:first-child,table.kw td:first-child{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow"><span class="material-icons-outlined" style="font-size:16px">translate</span> Trans Marrakech · chantier multilingue</div>
+    <h1>Sortir le site en anglais et en espagnol</h1>
+    <p class="lede">Le plan, les consignes et l'avancement. Une règle tient tout le reste : on n'écrit pas la même chose selon la langue, parce qu'on ne cherche pas la même chose selon la langue.</p>
+    <div class="stamp">Mis à jour le 19 juillet 2026 · tenu par Jarvis</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ LE PRINCIPE ============ -->
+  <section style="margin-top:0">
+    <h2>Le principe</h2>
+    <p class="sub">À lire avant tout le reste. C'est ce qui décide si le travail rapporte des clients ou ne sert à rien.</p>
+
+    <div class="principle">
+      <h3>On adapte, on ne traduit pas</h3>
+      <p>Un Anglais ne tape pas la traduction de ce que tape un Français. Si on traduit mot à mot, on obtient des pages correctes qui ciblent des recherches que <strong>personne ne fait</strong>. Le site existe, il est juste, et il ne reçoit aucune visite.</p>
+      <p>Chaque langue est écrite autour de ses vraies expressions, relevées dans Google, pas devinées.</p>
+
+      <table class="kw">
+        <tr><th>Français (ce qu'on a)</th><th>Anglais (ce qu'ils tapent)</th><th>Espagnol</th></tr>
+        <tr>
+          <td>transfert aéroport Marrakech</td>
+          <td><strong>Marrakech airport transfer</strong><br>RAK airport taxi</td>
+          <td><strong>traslado aeropuerto Marrakech</strong></td>
+        </tr>
+        <tr>
+          <td>location minibus avec chauffeur</td>
+          <td><strong>private minivan with driver</strong></td>
+          <td><strong>alquiler minibús con chófer</strong></td>
+        </tr>
+        <tr>
+          <td>excursion désert Agafay</td>
+          <td><strong>Agafay desert day trip</strong></td>
+          <td><strong>excursión desierto Agafay</strong></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Deux pièges de vocabulaire, déjà tranchés</h3>
+      <p><strong>Marrakech ou Marrakesh ?</strong> Le marché anglophone est coupé en deux : Ryanair écrit « Marrakesh », easyJet et TripAdvisor écrivent « Marrakech ». On garde <strong>Marrakech</strong> partout, cohérent avec le nom de domaine et la marque, et Google traite les deux comme des synonymes. « Marrakesh » est cité une fois par page, sans jamais créer d'adresse en double.</p>
+      <p><strong>En espagnol</strong>, on écrit <strong>Marrakech</strong> (pas Marraquech) et <strong>traslado</strong> pour un transfert. Jamais <em>transferencia</em> : en espagnol, ça veut dire virement bancaire.</p>
+    </div>
+  </section>
+
+  <!-- ============ LE RACCOURCI ============ -->
+  <section>
+    <h2>Le raccourci qu'on n'avait pas vu</h2>
+    <p class="sub">Découvert le 19 juillet, en cherchant tout autre chose. Ça peut rapporter davantage, et plus vite, que les premières pages traduites.</p>
+
+    <div class="principle">
+      <h3>La fiche Google est notre premier atout à l'étranger, et elle est mal réglée</h3>
+      <p>Nous avons <strong>4,9 sur 621 avis TripAdvisor</strong> et <strong>4,9 sur 118 avis Google</strong>, une fiche vérifiée depuis quinze ans. Le concurrent le mieux installé en espagnol en a 56. Sur la preuve client, nous ne sommes pas outsiders, nous sommes devant.</p>
+      <p>Sauf que la fiche est rangée dans la catégorie <strong>« Agence de visites touristiques »</strong>. Google le dit lui-même : la catégorie décide des recherches sur lesquelles une fiche peut apparaître. Nous sommes donc classés sur les <em>excursions</em>, exactement le terrain où les grandes plateformes de réservation sont imbattables, et absents des recherches de <em>transport</em>, de <em>transfert aéroport</em> et de <em>groupe</em>, là où nous sommes les meilleurs.</p>
+      <p>Autrement dit : on paye une place dans la file où on ne peut pas gagner, et on n'est pas dans celle où on gagnerait.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ce qu'on en fait, prudemment</h3>
+      <p>Corriger cette catégorie n'est pas un geste anodin : Google peut réexaminer une fiche qui change, et une fiche à 118 avis ne se remplace pas. On procède donc par étapes, jamais tout d'un coup : d'abord ajouter les catégories secondaires, attendre deux semaines, puis changer la principale, et ne jamais toucher au nom en même temps.</p>
+      <p>Ce qui joue pour nous : on ne va pas se ranger dans une catégorie usurpée, on corrige vers ce que la société est réellement, agrément ministériel du transport à l'appui.</p>
+      <p>Une correction sans aucun risque, elle, peut se faire tout de suite : l'adresse écrite sur la fiche et celle écrite sur le site ne sont pas identiques. Même lieu, deux formulations. Google recoupe ces informations, autant qu'elles concordent.</p>
+    </div>
+  </section>
+
+  <!-- ============ LE SUIVI ============ -->
+  <section>
+    <h2>Les étapes</h2>
+    <p class="sub">L'ordre compte. On ne lance pas les deux langues en même temps : l'anglais d'abord, complet, puis l'espagnol.</p>
+
+    <div class="step done">
+      <div class="num"><span class="material-icons-outlined" style="font-size:19px">check</span></div>
+      <div class="body">
+        <h3>Extraire le texte français <span class="tag t-done">Fait</span></h3>
+        <p>35 pages récupérées mot pour mot sur le site en ligne, soit environ 25 000 mots. Le menu et le pied de page sont mis à part, ils ne se traduisent qu'une seule fois.</p>
+        <div class="who"><b>Jarvis</b>&nbsp;· terminé le 17 juillet</div>
+      </div>
+    </div>
+
+    <div class="step done">
+      <div class="num"><span class="material-icons-outlined" style="font-size:19px">check</span></div>
+      <div class="body">
+        <h3>Chercher les vrais mots-clés, langue par langue <span class="tag t-done">Fait</span></h3>
+        <p>Deux analyses séparées, anglaise et espagnole. Les expressions viennent de ce que les gens tapent réellement dans Google, relevé sur place. Aucune n'est inventée.</p>
+        <ul>
+          <li><strong>128 expressions anglaises</strong> et <strong>68 espagnoles</strong>, classées par intention et rattachées à une page.</li>
+          <li>Les concurrents réels de chaque langue ont été ouverts et analysés, un par un.</li>
+        </ul>
+        <div class="who"><b>Jarvis</b>&nbsp;· terminé le 19 juillet</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body">
+        <h3>Trancher les questions ouvertes <span class="tag t-wait">En attente de Salah</span></h3>
+        <p>Cinq décisions bloquent la suite. Elles sont listées plus bas, aucune ne demande de travail, seulement une réponse.</p>
+        <div class="who"><b>Salah</b>&nbsp;· c'est ce qui débloque tout le reste</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div class="body">
+        <h3>Choisir comment publier le multilingue <span class="tag t-wait">À décider</span></h3>
+        <p>Le site tourne sous WordPress. Il faut décider avant d'écrire une ligne, parce que ça fixe la forme des adresses, donc tout le référencement derrière.</p>
+        <ul>
+          <li>Recommandation : <strong>Polylang</strong>, version gratuite suffisante, adresses en <code>/en/</code>, balises de langue automatiques, pas d'abonnement.</li>
+          <li>WPML coûte environ 99 $ par an et sert surtout aux boutiques en ligne.</li>
+          <li>À vérifier avant de s'engager : le thème du site est ancien, la compatibilité doit être testée.</li>
+        </ul>
+        <div class="who"><b>Salah décide</b>&nbsp;· Jarvis teste la compatibilité</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div class="body">
+        <h3>Écrire l'anglais, page par page <span class="tag t-next">Ensuite</span></h3>
+        <p>On ne traduit pas les 31 pages d'un coup. On commence par celles qui rapportent, on mesure, puis on étend.</p>
+        <ul>
+          <li>D'abord les transferts aéroport, la location de minibus avec chauffeur et les excursions les plus demandées.</li>
+          <li>L'angle prioritaire est le <strong>groupe</strong> : personne, chez les concurrents anglophones, ne traite le cas « on est quinze sur le même vol ». Ils s'arrêtent à huit passagers.</li>
+          <li>Chaque page reçoit son titre, sa description et sa structure propres, pas la traduction de la version française.</li>
+        </ul>
+        <div class="who"><b>Jarvis</b>&nbsp;écrit&nbsp;· <b>relecture par une personne dont c'est la langue</b> avant publication</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">6</div>
+      <div class="body">
+        <h3>Brancher la technique <span class="tag t-next">Ensuite</span></h3>
+        <p>Une adresse par langue, et les balises qui disent à Google que ces pages sont la même page dans une autre langue. Sans ça, Google voit du contenu en double et déclasse tout le monde.</p>
+        <ul>
+          <li>Ces balises ne sont posées que lorsque la page existe vraiment dans l'autre langue. Jamais en avance.</li>
+          <li>Un défaut à corriger au passage, indépendant du multilingue : deux adresses françaises servent aujourd'hui exactement la même page et se font concurrence entre elles.</li>
+        </ul>
+        <div class="who"><b>Jarvis</b></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">7</div>
+      <div class="body">
+        <h3>Puis l'espagnol, en version courte <span class="tag t-next">Après l'anglais</span></h3>
+        <p>Huit pages pour commencer, pas vingt et une. Avec un point d'étape honnête : si ce noyau ne ramène ni visites ni demandes en six mois, on ne traduit pas le reste.</p>
+        <ul>
+          <li>L'Espagne est le deuxième marché touristique du Maroc et Marrakech est reliée à six villes espagnoles en vols directs à bas prix.</li>
+          <li>Mais on n'a pas de chauffeur hispanophone aujourd'hui. On vise donc d'abord les <strong>agences de voyages espagnoles</strong>, qui font elles-mêmes l'interface avec leurs clients et n'en ont pas besoin.</li>
+          <li>On n'écrit rien pour l'Amérique latine : pas de vol direct, et ces voyageurs achètent un circuit complet depuis leur pays.</li>
+        </ul>
+        <div class="who"><b>Jarvis</b>&nbsp;écrit&nbsp;· <b>Manar</b> relit l'espagnol et l'anglais</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LES CONSIGNES ============ -->
+  <section>
+    <h2>Les consignes</h2>
+    <p class="sub">Ce qui s'applique à chaque page, dans les deux langues, sans exception.</p>
+
+    <div class="rules">
+      <div class="yes">
+        <h3><span class="material-icons-outlined">check_circle</span> On fait</h3>
+        <ul>
+          <li>Écrire chaque langue autour de <strong>ses</strong> expressions, relevées dans Google.</li>
+          <li>Faire relire par quelqu'un dont c'est la langue, avant toute mise en ligne.</li>
+          <li>Mettre en avant nos avis publics : <strong>4,9 sur 621 avis TripAdvisor</strong> et <strong>4,9 sur 118 avis Google</strong>. Le concurrent le mieux installé en espagnol en a 56. Le site n'en parle nulle part aujourd'hui.</li>
+          <li>Afficher les prix par véhicule, et dire clairement que c'est par véhicule et non par personne. C'est notre avantage sur les groupes.</li>
+          <li>Répondre aux vraies questions des voyageurs, avec des chiffres. C'est ce que les intelligences artificielles citent quand on les interroge.</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3><span class="material-icons-outlined">cancel</span> On ne fait jamais</h3>
+        <ul>
+          <li>Publier une traduction automatique telle quelle. Google la repère et la déclasse : c'est pire que de ne rien publier.</li>
+          <li>Promettre ce qu'on ne peut pas tenir. Pas de chauffeur hispanophone annoncé tant qu'il n'est pas recruté.</li>
+          <li>Afficher un témoignage qu'on ne peut pas prouver, alors qu'on a 739 avis vérifiables.</li>
+          <li>Laisser un prix à <strong>0 €</strong> dans un tableau. Le visiteur lit « gratuit » ou « le site est cassé ». Quand une prestation est impossible avec un véhicule, on l'écrit, et on explique pourquoi.</li>
+          <li>Créer deux adresses pour la même page. C'est déjà le cas en français, on ne reproduit pas l'erreur.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DÉCISIONS ============ -->
+  <section>
+    <h2>Ce qui attend une réponse</h2>
+    <p class="sub">Sept points, presque aucun travail à fournir, seulement des réponses. Tant qu'ils ne sont pas tranchés, la rédaction ne peut pas démarrer.</p>
+
+    <div class="dec">
+      <h3>transmarrakech.net ou trans-marrakech.com ?</h3>
+      <p>Les deux ressortent dans Google sur notre propre nom.
+      <span class="why">Ajouter une langue sur deux sites qui se concurrencent double le problème au lieu de le résoudre.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Les trois témoignages de la page location minibus sont-ils authentiques ?</h3>
+      <p>Carole Bartt, Hilda El Bayed, Nicolas Berth.
+      <span class="why">S'ils ne le sont pas, on ne les traduit pas et on ne les signale pas à Google. Avec 739 avis publics et vérifiables notés 4,9, on n'a de toute façon aucun besoin d'eux.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Qui répond, aujourd'hui, à une demande écrite en espagnol ?</h3>
+      <p>Le chauffeur hispanophone sera recruté quand la demande viendra, c'est acté. Reste le bureau.
+      <span class="why">Une page espagnole qui convertit vers une boîte mail où personne ne parle espagnol achète de la mauvaise réputation au prix fort.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Quel véhicule ne peut pas faire quelle prestation, et pourquoi ?</h3>
+      <p>Les cases à 0 € correspondent à des incompatibilités, pas à des tarifs oubliés.
+      <span class="why">Expliquer pourquoi un autocar de 48 places ne passe pas sur un itinéraire donné est un contenu qu'aucun concurrent ne publie. Encore faut-il connaître la vraie raison, et on ne l'invente pas.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Que dit l'enseigne réelle de l'entreprise ?</h3>
+      <p>La fiche Google s'appelle « Trans Marrakech Location autocar Marrakech ».
+      <span class="why">Google interdit d'ajouter des mots-clés au nom d'un établissement et suspend les fiches concernées. Si c'est bien le nom porté par l'enseigne, le registre de commerce et les factures, la position est défendable. Sinon, il faudra corriger, en acceptant de perdre un peu de visibilité à court terme pour ne pas risquer la fiche entière.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Combien d'avis TripAdvisor sont écrits en anglais ?</h3>
+      <p>Le filtre par langue est dans la colonne de gauche de la fiche. Une capture d'écran suffit.
+      <span class="why">TripAdvisor bloque la lecture automatique, impossible de compter à ta place. L'enjeu est net : avec 30 avis anglais on illustre une page, avec 200 on alimente tout le site en preuves écrites par de vrais clients anglophones.</span></p>
+    </div>
+
+    <div class="dec">
+      <h3>Polylang sur le WordPress actuel ?</h3>
+      <p>Recommandation de Jarvis, gratuit et suffisant.
+      <span class="why">Ce choix fixe la forme des adresses. Le décider après avoir écrit les pages coûterait de tout reprendre.</span></p>
+    </div>
+  </section>
+
+  <footer>
+    Document de travail interne, non référencé. Tenu à jour par Jarvis à chaque avancée du chantier.
+  </footer>
+
+</div>
+</body>
+</html>
