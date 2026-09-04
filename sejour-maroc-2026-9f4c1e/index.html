@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- La page est servie par GitHub Pages, donc sur un depot public : n'importe
+     qui connaissant l'adresse peut l'ouvrir. Elle porte des prix de vente, on
+     evite donc au moins qu'un moteur ne la remonte a qui cherche autre chose.
+     Ce n'est pas une protection, c'est une precaution : le lien lui meme reste
+     a ne partager qu'aux personnes concernees. -->
+<meta name="robots" content="noindex, nofollow">
+<title data-en="Marrakech, the South, the Atlantic · 24 September to 6 October 2026">Marrakech, le Sud, l'Atlantique · 24 septembre au 6 octobre 2026</title>
+<meta name="description" content="Programme de séjour au Maroc du 24 septembre au 6 octobre 2026 : Marrakech, Telouet et Aït Ben Haddou, Skoura et les gorges du Dadès, Merzouga, la vallée du Drâa, Ouarzazate, puis Essaouira." data-en="Travel itinerary in Morocco from 24 September to 6 October 2026: Marrakech, Telouet and Aït Ben Haddou, Skoura and the Dadès gorges, Merzouga, the Drâa valley, Ouarzazate, then Essaouira.">
+<meta name="author" content="Trans Marrakech">
+<meta name="theme-color" content="#FAF4EA">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR" data-en="en_GB">
+<meta property="og:site_name" content="Trans Marrakech">
+<meta property="og:title" content="Marrakech, le Sud, l'Atlantique" data-en="Marrakech, the South, the Atlantic">
+<meta property="og:description" content="Treize jours au Maroc, du 24 septembre au 6 octobre 2026 : Marrakech, les kasbahs du Sud, les dunes de Merzouga, puis Essaouira." data-en="Thirteen days in Morocco, from 24 September to 6 October 2026: Marrakech, the kasbahs of the South, the dunes of Merzouga, then Essaouira.">
+<meta property="og:image" content="medias/couverture.jpg">
+<meta property="og:image:alt" content="Paysage du Maroc, ouverture du programme de séjour" data-en="Moroccan landscape, opening image of the itinerary">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF4EA'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23A6462A' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="polices.css">
+
+<!-- La classe "js" revele le bouton de langue. Sans script, il reste masque
+     et la page s'affiche en francais, entiere. -->
+<script>document.documentElement.className = "js";</script>
+
+<style>
+  :root{
+    --sable:#FAF4EA;        /* fond, sable pale */
+    --panneau:#F1E5D3;      /* terre crue claire : blocs hebergement */
+    --cadre:#E9DAC3;        /* sable plus dense : fond des images */
+    --encre:#2B1D15;        /* terre sombre, texte */
+    --terre:#6B5A4B;        /* texte secondaire */
+    --trait:#E6D7C2;        /* filets */
+    --ocre:#A6462A;         /* ocre rouge des remparts, accent general */
+    --dune:#96551F;         /* sable brule de l'erg Chebbi */
+    --palme:#3F5B4A;        /* vert des palmeraies */
+    --ocean:#2F5A78;        /* bleu d'Essaouira */
+    --teinte:var(--ocre);   /* teinte de la sequence en cours */
+    --mesure:720px;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--sable);
+    color:var(--encre);
+    font:300 16.5px/1.75 'Jost','Segoe UI',system-ui,sans-serif;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%}
+  a{color:var(--ocre);text-decoration:none;border-bottom:1px solid rgba(166,70,42,.32);padding-bottom:1px}
+  a:hover,a:focus-visible{border-bottom-color:var(--ocre)}
+  :focus-visible{outline:2px solid var(--ocre);outline-offset:3px}
+
+  .wrap{max-width:var(--mesure);margin:0 auto;padding:0 22px}
+
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;margin:0;letter-spacing:.005em}
+  h1{font-size:clamp(34px,9.2vw,56px);line-height:1.08;font-weight:300}
+  h2{font-size:clamp(27px,7.4vw,40px);line-height:1.12;font-weight:300}
+  h3{font-size:clamp(22px,5.6vw,28px);line-height:1.2}
+
+  .sur{
+    font-family:'Jost',sans-serif;font-weight:500;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--teinte);margin:0;
+  }
+  .sur-t{color:var(--terre)}
+
+  /* Teinte de chaque sequence : ocre des remparts, sable des dunes,
+     vert des palmeraies, bleu de l'Atlantique. Elle ne touche que les
+     petites capitales et le filet, jamais un aplat. */
+  .seq-sud{--teinte:var(--dune)}
+  .seq-atlas{--teinte:var(--palme)}
+  .seq-ocean{--teinte:var(--ocean)}
+
+  /* ---- bandeau d'identite ---- */
+  .bandeau{padding:18px 0 4px;text-align:center}
+  .bandeau p{
+    margin:0;font-family:'Jost',sans-serif;font-weight:400;
+    font-size:clamp(9.5px,2.6vw,11px);letter-spacing:.22em;
+    text-transform:uppercase;color:var(--terre);
+  }
+  .bandeau b{font-weight:500;color:var(--ocre)}
+
+  /* ---- images ---- */
+  .ph{margin:0}
+  /* Le cadre porte lui-meme la hauteur et un fond de sable : une image qui
+     manque laisse un rectangle propre, jamais un effondrement de la page.
+     Le pseudo-element ne s'affiche que sur une image cassee, et masque alors
+     l'icone du navigateur. */
+  .cadre{position:relative;background:var(--cadre);aspect-ratio:3/2;overflow:hidden}
+  .cadre img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;display:block;font-size:0;color:transparent;
+  }
+  .cadre img::before{content:"";position:absolute;inset:0;background:var(--cadre)}
+  .ph figcaption{
+    margin-top:9px;font-size:12px;line-height:1.5;color:var(--terre);
+    letter-spacing:.02em;
+  }
+  .couverture{margin:18px 0 0}
+  .couverture .cadre{aspect-ratio:4/5}
+
+  /* ---- ouverture ---- */
+  /* padding-top seul : la forme raccourcie remettait a zero les marges
+     laterales du .wrap, et le titre touchait les bords en mobile. */
+  .ouverture{padding-top:44px;text-align:center}
+  .ouverture h1{margin-bottom:16px}
+  .sous{
+    margin:0 auto;max-width:34em;color:var(--terre);
+    font-size:15px;line-height:1.72;
+  }
+  .filet{width:42px;height:1px;border:0;background:var(--ocre);margin:30px auto}
+  .lead{
+    font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;
+    font-size:clamp(19px,5vw,23px);line-height:1.55;color:#3D2D22;
+    margin:0 auto;max-width:26em;
+  }
+
+  /* ---- sequences ---- */
+  .seq{padding-top:66px}
+  .seq-tete{text-align:center;padding-bottom:6px}
+  .seq-tete h2{margin:12px 0 0}
+  .chapeau{
+    font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+    font-size:clamp(18px,4.6vw,21px);line-height:1.6;color:#4C3A2C;
+    margin:14px auto 0;max-width:27em;
+  }
+
+  /* ---- journee ---- */
+  .jour{border-top:1px solid var(--trait);margin-top:38px;padding-top:26px}
+  .jour h3{margin:8px 0 0}
+  .jour .txt{margin:14px 0 0}
+  .meta{
+    margin:12px 0 0;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--terre);font-weight:400;
+  }
+  .jour .ph{margin-top:26px}
+  .jour .ph + .ph{margin-top:20px}
+
+  /* ---- lieux (depliants) ---- */
+  .lieux{margin-top:30px;border-bottom:1px solid var(--trait)}
+  .lieu{border-top:1px solid var(--trait)}
+  .lieu summary{
+    list-style:none;cursor:pointer;position:relative;
+    padding:14px 30px 14px 0;
+    font-size:12.5px;font-weight:400;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--encre);
+  }
+  .lieu summary::-webkit-details-marker{display:none}
+  .lieu summary::after{
+    content:"+";position:absolute;right:2px;top:50%;
+    transform:translateY(-50%);
+    color:var(--ocre);font-size:15px;line-height:1;letter-spacing:0;
+  }
+  .lieu[open] summary::after{content:"\2212"}
+  .lieu summary:hover{color:var(--ocre)}
+  .lieu-corps{padding:0 0 22px}
+  .lieu-corps p{margin:0 0 12px}
+  .lieu-corps p:last-child{margin-bottom:0}
+  .savoir{font-size:14.5px;color:var(--terre)}
+  .savoir b{font-weight:500;color:var(--ocre);letter-spacing:.02em}
+  .renvoi{font-size:13.5px}
+
+  /* ---- hebergement ---- */
+  .nuit{margin-top:30px;background:var(--panneau);padding:20px 20px 22px}
+  .nuit-nom{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:23px;line-height:1.3;margin:8px 0 0;color:var(--encre);
+  }
+  .nuit-prix{margin:10px 0 0;font-size:15px;line-height:1.65;color:var(--terre)}
+  .nuit-prix b{font-weight:500;color:var(--encre)}
+  .nuit-note{margin:8px 0 0;font-size:13.5px;line-height:1.6;color:var(--terre)}
+  .nuit .ph{margin-top:18px}
+  .nuit .cadre{aspect-ratio:16/9}
+  /* Nuit a deux options : les deux maisons sont au meme tarif, annonce une
+     seule fois au dessus, pour qu'aucune ne paraisse la variante de l'autre. */
+  .nuit-choix{display:grid;gap:26px;margin-top:20px}
+  .nuit-choix .nuit-nom{font-size:20px;margin:0}
+  .nuit-choix .ph{margin-top:12px}
+  .nuit-choix .nuit-note{margin-top:6px}
+
+  /* ---- idees pour Marrakech ---- */
+  /* Quatre entrees sur six portent une photo. Les deux dernieres n'en ont
+     pas : elles prennent alors l'aplat de terre crue et respirent davantage,
+     ce qui leur donne le meme rang qu'une vignette illustree sans avoir a
+     emprunter l'image d'un autre lieu. */
+  .idees{display:grid;grid-template-columns:1fr;gap:34px;margin-top:24px}
+  .idee{margin:0}
+  .idee .cadre{margin-bottom:13px}
+  .idee h4{
+    font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;
+    font-size:21px;line-height:1.25;letter-spacing:.005em;margin:0;
+  }
+  .idee p{margin:9px 0 0;font-size:15px;line-height:1.68}
+  .idee .savoir{font-size:14px;line-height:1.62}
+  .idee .renvoi{font-size:13.5px;line-height:1.55}
+  .idee-plaque{background:var(--panneau);padding:24px 22px 26px}
+  .idee-plaque h4{font-size:22px}
+  .idee-plaque p{margin-top:11px}
+
+  /* ---- cloture ---- */
+  /* padding-top seul : un raccourci remettrait a zero les marges laterales
+     du .wrap et collerait tout le pied de page aux bords sur mobile. */
+  .fin{padding-top:70px;text-align:center}
+  .fin .filet{margin-top:0}
+  .clot{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:clamp(19px,4.8vw,22px);line-height:1.6;color:#3D2D22;
+    margin:0 auto;max-width:29em;
+  }
+  .note-heb{
+    margin:26px auto 0;max-width:33em;
+    font-size:14px;line-height:1.7;color:var(--terre);
+  }
+  .contact{margin-top:44px;padding:34px 0 60px;border-top:1px solid var(--trait)}
+  .contact p{margin:0}
+  .contact .lignes{margin-top:14px;font-size:15px;line-height:2.1;color:var(--terre)}
+
+  /* ---- credits photo ---- */
+  /* Les licences Creative Commons exigent le nom de l'auteur. Il est donc
+     sur la page, mais replie : une seule ligne visible, le detail au clic. */
+  .credits{margin-top:32px}
+  .credits .credits-ligne{font-size:12px;line-height:1.6;color:var(--terre)}
+  .credits summary{
+    list-style:none;cursor:pointer;display:inline-block;
+    margin-top:8px;padding:4px 0;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--terre);
+  }
+  .credits summary::-webkit-details-marker{display:none}
+  .credits summary::after{content:"\00a0+";color:var(--ocre);letter-spacing:0}
+  .credits details[open] summary::after{content:"\00a0\2212"}
+  .credits summary:hover{color:var(--ocre)}
+  .credits .corps{
+    max-width:34em;margin:14px auto 0;text-align:left;
+    font-size:12px;line-height:1.62;color:var(--terre);
+  }
+  .credits .corps p{margin:0 0 8px}
+  .credits .corps p:last-child{margin:10px 0 0}
+  .credits ul{list-style:none;margin:0;padding:0}
+  .credits li{margin-top:5px;padding-left:13px;text-indent:-13px}
+  .credits li:first-child{margin-top:0}
+  .credits a{color:var(--terre);border-bottom-color:rgba(107,90,75,.3)}
+  .credits a:hover,.credits a:focus-visible{color:var(--ocre);border-bottom-color:var(--ocre)}
+
+  /* ---- bascule de langue ---- */
+  /* Deux libelles courts, dans la typographie des petites capitales de la page.
+     Le bouton ne s'affiche que si le script tourne : sans JavaScript, aucune
+     commande morte, et la page reste en francais. */
+  .langue{display:none}
+  .js .langue{display:inline-flex;align-items:baseline;gap:7px}
+  .langue button{
+    appearance:none;-webkit-appearance:none;background:none;border:0;
+    font-family:'Jost',sans-serif;font-weight:400;font-size:11px;line-height:1;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--terre);
+    margin:0;padding:4px 0 3px;cursor:pointer;position:relative;
+    border-bottom:1px solid transparent;
+  }
+  /* La cible tactile est portee a 30 px de haut par un pseudo-element : la zone
+     cliquable grandit, le trait dessine ne bouge pas. */
+  .langue button::after{
+    content:"";position:absolute;left:-6px;right:-6px;top:50%;
+    height:30px;transform:translateY(-50%);
+  }
+  .langue button:hover{color:var(--ocre)}
+  .langue button[aria-pressed="true"]{
+    color:var(--encre);font-weight:500;
+    border-bottom-color:var(--ocre);cursor:default;
+  }
+  .langue span{font-size:11px;line-height:1;color:rgba(107,90,75,.45)}
+  .bandeau .langue{margin-top:10px}
+  .contact .langue{margin-top:26px}
+
+  /* ---- desktop ---- */
+  @media (min-width:760px){
+    body{font-size:17px}
+    .wrap{padding:0 32px}
+    .bandeau{padding:26px 0 6px}
+    .couverture{margin-top:26px}
+    .couverture .cadre{aspect-ratio:16/7}
+    .ouverture{padding-top:68px}
+    .sous{font-size:16px}
+    .seq{padding-top:104px}
+    .jour{margin-top:54px;padding-top:34px}
+    .jour .ph{margin-top:32px}
+    .jour .ph + .ph{margin-top:24px}
+    .nuit{padding:26px 28px 28px}
+    .nuit-choix{grid-template-columns:1fr 1fr;gap:30px}
+    .idees{grid-template-columns:1fr 1fr;gap:42px 30px;margin-top:28px}
+    .idee-plaque{padding:28px 26px 30px}
+    .fin{padding-top:104px}
+    .contact{margin-top:56px;padding-bottom:80px}
+  }
+
+  @media print{
+    /* Meme specificite que ".js .langue" plus haut, sinon la regle d'affichage
+       l'emporterait et le bouton s'imprimerait. */
+    .js .langue{display:none}
+    body{background:#fff;font-size:11pt;line-height:1.55}
+    .seq{padding-top:26px}
+    .jour{margin-top:20px;padding-top:16px;break-inside:avoid;page-break-inside:avoid}
+    .seq-tete{break-after:avoid;page-break-after:avoid}
+    .nuit{background:#F5F1E8;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .cadre{aspect-ratio:16/9}
+    .idees{grid-template-columns:1fr 1fr;gap:18px 20px;margin-top:16px}
+    .idee{break-inside:avoid;page-break-inside:avoid}
+    .idee-plaque{background:#F5F1E8;padding:16px 18px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .fin{padding-top:30px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bandeau">
+  <div class="wrap"><p data-en="&lt;b&gt;Trans Marrakech&lt;/b&gt; · Trip itinerary"><b>Trans Marrakech</b> &middot; Programme de séjour</p>
+      <div class="langue" role="group" aria-label="Langue de la page" data-en-aria="Page language">
+        <button type="button" data-langue="fr" lang="fr" aria-pressed="true">FR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-langue="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+</div>
+
+<header>
+  <figure class="ph couverture">
+    <div class="cadre">
+      <img src="medias/couverture.jpg" alt="Paysage du Maroc, ouverture du programme de séjour" fetchpriority="high" decoding="async" data-en-alt="Moroccan landscape, opening image of the itinerary">
+    </div>
+  </figure>
+
+  <div class="wrap ouverture">
+    <h1 data-en="Marrakech, the South, the Atlantic">Marrakech, le Sud, l'Atlantique</h1>
+    <p class="sous" data-en="From 24 September to 6 October 2026: Marrakech, Telouet and Aït Ben Haddou, Skoura and the Dadès gorges, Merzouga, the Drâa valley, Ouarzazate, then Essaouira.">Du 24 septembre au 6 octobre 2026&#160;: Marrakech, Telouet et Aït Ben Haddou, Skoura et les gorges du Dadès, Merzouga, la vallée du Drâa, Ouarzazate, puis Essaouira.</p>
+    <hr class="filet">
+    <p class="lead" data-en="Thirteen days in four movements. Marrakech first, its narrow streets, time enough to settle in. Then the road south, the Atlas passes and the earthen kasbahs. After that the dunes of erg Chebbi and a night under canvas. Essaouira last, the wind and the Atlantic, a quiet ending.">Treize jours, quatre temps. D'abord Marrakech et ses ruelles, le temps de s'installer. Puis la route du sud, les cols de l'Atlas et les kasbahs de terre. Viennent ensuite les dunes de l'erg Chebbi et une nuit sous tente. Enfin Essaouira, le vent et l'Atlantique, pour finir au calme.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- Marrakech -->
+<section class="seq">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="24 to 26 September">24 au 26 septembre</p>
+    <h2 data-en="Marrakech">Marrakech</h2>
+    <p class="chapeau" data-en="Three nights in the city: a late-night arrival, a day of sightseeing, and a day with nothing fixed.">Trois nuits sur place, le temps d'une arrivée de nuit, d'une journée de visite et d'une journée sans rien de fixé.</p>
+  </div>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Thursday 24 September">Jeudi 24 septembre</p>
+    <h3 data-en="Arrival in Marrakech">Arrivée à Marrakech</h3>
+    <p class="txt" data-en="Arrival at 23:50 with Air Europa. Private transfer from the airport to Moro Marrakech Boutique Hôtel.">Arrivée à 23h50 avec Air Europa. Transfert privé de l'aéroport vers Moro Marrakech Boutique Hôtel.</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/01-marrakech.jpg" alt="Marrakech, ville aux murs ocre" loading="lazy" decoding="async" data-en-alt="Marrakech, a city of ochre walls"></div>
+      <figcaption data-en="Marrakech">Marrakech</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Marrakech">Marrakech</summary>
+        <div class="lieu-corps">
+          <p data-en="The anchor point of the trip. Held inside nineteen kilometres of earthen ramparts, Marrakech reveals itself in fragments: a lane that opens onto a walled garden, an ochre wall turning pink at the end of the day. On a clear day the Atlas is visible from the rooftops. You arrive late on 24 September and come back here the day before you fly home.">Point d'ancrage du séjour. Enfermée dans dix-neuf kilomètres de remparts de terre, Marrakech se donne par fragments&#160;: une ruelle qui débouche sur un jardin clos, un mur ocre qui vire au rose en fin de journée. Par temps net, on voit l'Atlas depuis les terrasses. Vous arrivez tard le 24 septembre et vous revenez ici la veille du départ.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; founded in the eleventh century by the Almoravids, the city gave Morocco its name."><b>À savoir&#160;:</b> fondée au XIe siècle par les Almoravides, elle a donné son nom au Maroc.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Marrakech" data-en-href="https://en.wikipedia.org/wiki/Marrakesh" target="_blank" rel="noopener noreferrer" data-en="Marrakech, Wikipedia">Marrakech, Wikipédia</a></p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Friday 25 September">Vendredi 25 septembre</p>
+    <h3 data-en="Exploring Marrakech">Découverte de Marrakech</h3>
+    <p class="txt" data-en="Preferably with a local guide. The medina, the souks, Jemaa el-Fna square, the Koutoubia and the main historic monuments.">Avec guide local, de préférence. Visite de la médina, des souks, de la place Jemaa el-Fna, de la Koutoubia et des principaux monuments historiques.</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/02-jemaa-el-fna.jpg" alt="La place Jemaa el-Fna à Marrakech" loading="lazy" decoding="async" data-en-alt="Jemaa el-Fna square in Marrakech"></div>
+      <figcaption data-en="Jemaa el-Fna square">La place Jemaa el-Fna</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/03-medina-souks.jpg" alt="Ruelle des souks de la médina de Marrakech" loading="lazy" decoding="async" data-en-alt="A lane in the souks of the Marrakech medina"></div>
+      <figcaption data-en="The medina and the souks">La médina et les souks</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Jemaa el-Fna square">Place Jemaa el-Fna</summary>
+        <div class="lieu-corps">
+          <p data-en="The square opens the medina and changes face several times a day. Orange juice sellers in the morning, Gnaoua musicians and snake charmers in the afternoon, open-air kitchens as soon as dusk falls, with the smoke of the grills rising through the lamplight. From the terraces of the cafés around it you can take in the whole movement of the place.">La place ouvre la médina et change de visage plusieurs fois par jour. Marchands de jus d'orange le matin, musiciens gnaouas et charmeurs de serpents l'après-midi, cuisines en plein air dès la tombée du soir, avec la fumée des grillades qui monte dans la lumière des lampes. Depuis les terrasses des cafés voisins, on saisit le mouvement d'ensemble.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; UNESCO recognised it as intangible cultural heritage as early as 2001."><b>À savoir&#160;:</b> l'UNESCO l'a distinguée dès 2001 au titre du patrimoine culturel immatériel.</p>
+          <p class="renvoi"><a href="https://ich.unesco.org/fr/RL/lespace-culturel-de-la-place-jemaa-el-fna-00014" data-en-href="https://ich.unesco.org/en/RL/cultural-space-of-jemaa-el-fna-square-00014" target="_blank" rel="noopener noreferrer" data-en="Cultural Space of Jemaa el-Fna Square, UNESCO">L'espace culturel de la place Jemaa el-Fna, UNESCO</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="The medina and the souks">La médina et les souks</summary>
+        <div class="lieu-corps">
+          <p data-en="Behind the square begins a tangle of lanes where the trades are still grouped by quarter: dyers, ironworkers, slipper makers. The smells change every twenty metres, leather, then thuya wood, then cumin. A local guide gets you into fondouks and workshops you would otherwise walk straight past, and makes the haggling easier.">Derrière la place commence un lacis de ruelles où les métiers restent groupés par quartier&#160;: teinturiers, ferronniers, babouchiers. Les odeurs changent tous les vingt mètres, le cuir puis le bois de thuya puis le cumin. Avec un guide local, on entre dans des fondouks et des ateliers que l'on passerait sans les voir, et l'on négocie plus tranquillement.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the 700 hectares of the medina have been on the World Heritage list since 1985."><b>À savoir&#160;:</b> les 700 hectares de la médina sont inscrits au patrimoine mondial depuis 1985.</p>
+          <p class="renvoi"><a href="https://whc.unesco.org/fr/list/331" target="_blank" rel="noopener noreferrer" data-en-href="https://whc.unesco.org/en/list/331" data-en="Medina of Marrakech, UNESCO">Médina de Marrakech, UNESCO</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="The Koutoubia">La Koutoubia</summary>
+        <div class="lieu-corps">
+          <p data-en="The minaret has served as a landmark for eight centuries: wherever you stand in the medina, it points the way back to the main square. The Almohads built it in Guéliz sandstone, and no two of its four faces carry the same decoration. The mosque itself is not open to visitors, but the gardens alongside it are open to everyone, and quieter towards the end of the day.">Le minaret sert de repère depuis huit siècles&#160;: où que l'on soit dans la médina, il indique la direction de la grande place. Les Almohades l'ont bâti en grès de Guéliz, et ses quatre faces ne portent pas le même décor. La mosquée ne se visite pas, mais on traverse librement les jardins qui la bordent, plus calmes en fin de journée.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the minaret stands 77 metres tall and was finished around 1196."><b>À savoir&#160;:</b> le minaret culmine à 77 mètres, son chantier s'achève vers 1196.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Mosqu%C3%A9e_Koutoubia" data-en-href="https://en.wikipedia.org/wiki/Kutubiyya_Mosque" target="_blank" rel="noopener noreferrer" data-en="Koutoubia Mosque, Wikipedia">Mosquée Koutoubia, Wikipédia</a></p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Saturday 26 September">Samedi 26 septembre</p>
+    <h3 data-en="Free day in Marrakech">Journée libre à Marrakech</h3>
+    <p class="txt" data-en="An activity or an additional visit can be added if you would like one.">Possibilité de prévoir une activité ou une visite complémentaire selon les envies.</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/04-marrakech-jardins.jpg" alt="La cour de la médersa Ben Youssef à Marrakech, marbre, zellige et bassin central" loading="lazy" decoding="async" data-en-alt="The courtyard of the Ben Youssef Madrasa in Marrakech, marble, zellige tilework and central pool"></div>
+      <figcaption data-en="The Ben Youssef Madrasa">La médersa Ben Youssef</figcaption>
+    </figure>
+
+    <div class="nuit">
+      <p class="sur sur-t" data-en="Option · a break in the Agafay desert">Option &middot; une échappée dans le désert d'Agafay</p>
+      <p class="nuit-nom" data-en="Le Bédouin Agafay">Le Bédouin Agafay</p>
+      <p class="nuit-prix" data-en="&lt;b&gt;€55 per person&lt;/b&gt;, including dinner, the show and the pools. Transport to be confirmed."><b>55 &euro; par personne</b>, dîner, spectacle et piscine compris. Transport à confirmer.</p>
+      <p class="nuit-note"><span data-en="Forty-five minutes from Marrakech, a camp set down in the stony desert of Agafay, facing the foothills of the Atlas. The afternoon at the pools, which open straight onto the landscape, then dinner under the tents and a show of music and dance.">À trois quarts d'heure de Marrakech, un camp posé dans le désert de pierres d'Agafay, face aux contreforts de l'Atlas. L'après-midi aux piscines ouvertes sur le paysage, puis le dîner sous les tentes et un spectacle de musique et de danse.</span><br>
+        <a href="https://lebedouinagafay.com/" target="_blank" rel="noopener noreferrer" data-en="lebedouinagafay.com">lebedouinagafay.com</a></p>
+
+      <div class="nuit-choix">
+        <div>
+          <figure class="ph">
+            <div class="cadre"><img src="medias/option-agafay-feu.jpg" alt="Le brasero suspendu du camp Le Bédouin, allumé à la nuit tombée devant la piscine" loading="lazy" decoding="async" data-en-alt="The hanging fire pit at Le Bédouin camp, lit at nightfall in front of the pool"></div>
+          </figure>
+        </div>
+        <div>
+          <figure class="ph">
+            <div class="cadre"><img src="medias/option-agafay-piscine-2.jpg" alt="Le second bassin du camp Le Bédouin, en lagune, face au plateau d'Agafay" loading="lazy" decoding="async" data-en-alt="The second pool at Le Bédouin camp, a lagoon pool facing the Agafay plateau"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Idees pour les journees a Marrakech -->
+<section class="seq" id="idees-marrakech">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="Alongside the programme">En marge du programme</p>
+    <h2 data-en="Ideas for Marrakech">Idées pour Marrakech</h2>
+    <p class="chapeau" data-en="A few suggestions for the moments with nothing fixed, to take or leave.">Quelques pistes pour les moments sans rien de fixé, à prendre ou à laisser.</p>
+  </div>
+
+  <article class="wrap jour">
+    <h3 data-en="Places to visit">Visites</h3>
+    <p class="txt" data-en="None of these visits is booked, and none is included in the programme. They are ideas for the guided day, for the free day on 26 September, or for the late afternoon of 5 October.">Aucune de ces visites n'est réservée ni comprise dans le programme&#160;: ce sont des pistes pour la journée avec guide, pour la journée libre du 26 septembre, ou pour la fin de journée du 5 octobre.</p>
+
+    <div class="idees">
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/marrakech-majorelle.jpg" alt="La villa bleue et le bassin du Jardin Majorelle, entre cactus et poteries jaunes" loading="lazy" decoding="async" data-en-alt="The blue villa and the pool of the Jardin Majorelle, among cacti and yellow pots"></div>
+        <h4 data-en="Jardin Majorelle">Jardin Majorelle</h4>
+        <p data-en="Jacques Majorelle planted this garden of cacti and bamboo in the 1920s, then painted his studio an ultramarine blue that ended up spreading across the whole place. Yves Saint Laurent and Pierre Bergé bought it in 1980. Under the bamboo the air is noticeably cooler than out in the street.">Jacques Majorelle a planté ce jardin de cactus et de bambous dans les années 1920, puis peint son atelier d'un bleu outremer qui a fini par gagner tout le lieu. Yves Saint Laurent et Pierre Bergé l'ont racheté en 1980. Sous les bambous, l'air est nettement plus frais que dans la rue.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a botanical garden in the middle of the city, with a museum alongside it. Tickets are sold online only, with a time slot to choose: book a few days ahead and aim for opening time, 8 am."><b>En pratique&#160;:</b> un jardin botanique en pleine ville, doublé d'un musée. Les billets se vendent uniquement en ligne, avec un créneau horaire à choisir&#160;: prenez-les quelques jours avant et visez l'ouverture, à 8&#160;h.</p>
+        <p class="renvoi"><a href="https://www.jardinmajorelle.com/" target="_blank" rel="noopener noreferrer" data-en="Jardin Majorelle, official website">Jardin Majorelle, site officiel</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/marrakech-musee-ysl.jpg" alt="La façade de brique du musée Yves Saint Laurent Marrakech, au motif de dentelle" loading="lazy" decoding="async" data-en-alt="The lace-patterned brick façade of the Musée Yves Saint Laurent Marrakech"></div>
+        <h4 data-en="Musée Yves Saint Laurent">Musée Yves Saint Laurent</h4>
+        <p data-en="Five minutes' walk from the Jardin Majorelle, a pale brick building by Studio KO whose façade imitates the weave of a fabric. Inside, the gallery is kept dim: dresses, sketches and accessories come out of the house archives in rotation, under low raking light.">À cinq minutes à pied du Jardin Majorelle, un bâtiment de brique claire signé Studio KO, dont la façade imite la trame d'un tissu. À l'intérieur, la salle est tenue dans la pénombre&#160;: robes, croquis et accessoires sortent des archives de la maison par rotation, sous une lumière rasante.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a fashion museum, on the street that bears his name. Closed on Wednesdays, and a combined ticket with the Jardin Majorelle is available from the same box office. An hour there is enough."><b>En pratique&#160;:</b> un musée de mode, dans la rue qui porte son nom. Fermé le mercredi, billet combinable avec le Jardin Majorelle sur la même billetterie. Une heure sur place suffit.</p>
+        <p class="renvoi"><a href="https://www.museeyslmarrakech.com/fr/" target="_blank" rel="noopener noreferrer" data-en-href="https://www.museeyslmarrakech.com/en/" data-en="Musée Yves Saint Laurent Marrakech, official website">Musée Yves Saint Laurent Marrakech, site officiel</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/marrakech-menara.jpg" alt="Le pavillon aux tuiles vertes de la Ménara et son reflet dans le bassin" loading="lazy" decoding="async" data-en-alt="The green-tiled pavilion of the Ménara reflected in the basin"></div>
+        <h4 data-en="The Ménara">La Ménara</h4>
+        <p data-en="An almost square basin set in the middle of an olive grove, with a green-tiled pavilion at one end. The water comes down from the Atlas through a network of Almohad canals. When the air is clear, the mountains are reflected in the water. It is the postcard image of Morocco, and it survives the close-up.">Un bassin presque carré, posé au milieu d'une oliveraie, avec un pavillon à toit de tuiles vertes à son extrémité. L'eau descend de l'Atlas par un réseau de canaux almohade. Quand l'air est net, la montagne se réfléchit dans le bassin. C'est la carte postale du Maroc, et de près elle tient.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a hundred or so hectares of olive trees around a reservoir, three kilometres from the medina. Nothing to book, an hour is enough, and the late afternoon gives the best light on the peaks."><b>En pratique&#160;:</b> une centaine d'hectares d'oliviers autour d'un bassin de réserve, à trois kilomètres de la médina. Rien à réserver, une heure suffit, et la fin d'après-midi donne la meilleure lumière sur les sommets.</p>
+        <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/M%C3%A9nara_%28jardin%29" data-en-href="https://en.wikipedia.org/wiki/Menara_Gardens" target="_blank" rel="noopener noreferrer" data-en="Ménara (garden), Wikipedia">Ménara (jardin), Wikipédia</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/marrakech-palmeraie.jpg" alt="Dromadaires au repos sous les palmiers de la Palmeraie de Marrakech" loading="lazy" decoding="async" data-en-alt="Camels at rest under the palms of the Marrakech Palmeraie"></div>
+        <h4 data-en="The Palmeraie">La Palmeraie</h4>
+        <p data-en="North-east of the city, palms planted at the same time as Marrakech itself are still standing, watered by hand-dug underground channels known as khettaras. Hotels and villas have eaten into it over the past thirty years. The interest lies in the tracks, between two earth walls, away from the tarmac.">Au nord-est de la ville, les palmiers plantés en même temps que Marrakech tiennent encore, arrosés par des galeries souterraines creusées à la main, les khettaras. Les hôtels et les villas ont mordu dessus depuis trente ans. L'intérêt reste dans les pistes, entre deux murs de terre, loin du bitume.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a lived-in palm grove crossed by roads and tracks, with no gate and no ticket office. You can go through it by car, on camelback or by horse-drawn carriage, ideally early in the morning or at the end of the day."><b>En pratique&#160;:</b> une palmeraie habitée, traversée de routes et de chemins, sans entrée ni guichet. Elle se parcourt en voiture, à dromadaire ou en calèche, plutôt tôt le matin ou en fin de journée.</p>
+        <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Palmeraie_de_Marrakech" data-en-href="https://en.wikipedia.org/wiki/Palmeraie_(Marrakesh)" target="_blank" rel="noopener noreferrer" data-en="Palmeraie of Marrakech, Wikipedia">Palmeraie de Marrakech, Wikipédia</a></p>
+      </article>
+
+      <!-- Entrees sans photo, groupees en fin de liste : supprimables d'un bloc -->
+      <article class="idee idee-plaque">
+        <h4 data-en="Le Jardin Secret">Le Jardin Secret</h4>
+        <p data-en="A riad on rue Mouassine, left in ruins for decades and then rebuilt exactly as it was. Two walled gardens behind the same door: one exotic, the other laid out in four parts on the Islamic plan and fed by the medina's old water network. There is a tower to climb, for the view over the roofs.">Un riad de la rue Mouassine, laissé en ruine pendant des décennies puis remonté à l'identique. Deux jardins clos derrière la même porte&#160;: l'un exotique, l'autre dessiné en quatre parties selon le plan islamique, irrigué par le vieux réseau hydraulique de la médina. Une tour se monte, pour les toits.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a historic garden in the middle of the souks. Tickets are sold on site only, so there is nothing to book. Open until 7.30 pm in September, 6.30 pm in October."><b>En pratique&#160;:</b> un jardin historique au milieu des souks. Billets en vente sur place uniquement, donc rien à réserver. Ouvert jusqu'à 19&#160;h&#160;30 en septembre, 18&#160;h&#160;30 en octobre.</p>
+        <p class="renvoi"><a href="https://www.lejardinsecretmarrakech.com/" target="_blank" rel="noopener noreferrer" data-en="Le Jardin Secret, official website">Le Jardin Secret, site officiel</a></p>
+      </article>
+
+      <article class="idee idee-plaque">
+        <h4 data-en="Musée des Confluences, Dar El Bacha">Musée des Confluences, Dar El Bacha</h4>
+        <p data-en="The Marrakech residence of Thami El Glaoui, the pasha whose kasbah at Telouet you will see on the way south. A courtyard with a fountain, zellige walls, painted ceilings, and decorative arts exhibitions in the state rooms. One wing is given over to a coffee house with an outsized menu.">L'ancienne demeure marrakchie de Thami El Glaoui, le pacha dont vous verrez la kasbah à Telouet en partant vers le sud. Cour à fontaine, murs de zellige, plafonds peints, expositions d'arts décoratifs dans les salles d'apparat. Une aile est occupée par un salon de café à la carte démesurée.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; a pasha's palace turned museum, in the west of the medina. Open Tuesday to Sunday and closed on Mondays, worth noting if you had it in mind for 5 October."><b>En pratique&#160;:</b> un palais de pacha devenu musée, à l'ouest de la médina. Ouvert du mardi au dimanche, fermé le lundi&#160;: à retenir si vous y pensiez pour le 5 octobre.</p>
+        <p class="renvoi"><a href="https://fnm.ma/museums/26" target="_blank" rel="noopener noreferrer" data-en="Musée des Confluences Dar El Bacha, Fondation Nationale des Musées">Musée des Confluences Dar El Bacha, Fondation Nationale des Musées</a></p>
+      </article>
+      <!-- fin des entrees sans photo -->
+
+    </div>
+  </article>
+
+  <article class="wrap jour">
+    <h3 data-en="Restaurants">Restaurants</h3>
+    <p class="txt" data-en="Six addresses in different registers, none of them booked at this stage: you can reserve yourself, or tell us and we will make the call for you.">Six adresses de registres différents, aucune retenue à ce jour&#160;: vous réservez vous-même, ou vous nous le dites et nous appelons pour vous.</p>
+
+    <div class="idees">
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/resto-al-fassia.jpg" alt="La salle du restaurant Al Fassia à Guéliz, tables rondes nappées de blanc sous un lustre de cuivre" loading="lazy" decoding="async" data-en-alt="The dining room of Al Fassia in Guéliz, round tables in white linen under a copper chandelier"></div>
+        <h4 data-en="Al Fassia">Al Fassia</h4>
+        <p data-en="A restaurant run by women, in the kitchen and front of house alike, which was a first in Marrakech when it opened. Fès cooking: pigeon pastilla, tagines, couscous. You order à la carte, rather than the single set menu imposed by many riads.">Une maison tenue par des femmes, en cuisine comme en salle, ce qui était une première à Marrakech quand elle a ouvert. Cuisine de Fès&#160;: pastilla au pigeon, tajines, couscous. On choisit à la carte, au lieu du menu unique imposé dans beaucoup de riads.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; Guéliz, boulevard Mohammed Zerktouni, with a second address in Aguedal. Do book: it is one of the few tables in the city where Marrakchis eat too."><b>En pratique&#160;:</b> Guéliz, boulevard Mohammed Zerktouni, avec une seconde adresse à l'Aguedal. Réservez&#160;: c'est une des rares tables de la ville où les Marrakchis viennent aussi.</p>
+        <p class="renvoi"><a href="https://alfassia.com/" target="_blank" rel="noopener noreferrer" data-en="Al Fassia, official website">Al Fassia, site officiel</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/resto-le-comptoir.jpg" alt="La salle du Comptoir Darna éclairée à la bougie, tables de cuivre gravé et lanternes" loading="lazy" decoding="async" data-en-alt="The candlelit dining room of Comptoir Darna, engraved copper tables and lanterns"></div>
+        <h4 data-en="Le Comptoir">Le Comptoir</h4>
+        <p data-en="Comptoir Darna, avenue Echouhada. Dinner is the opening act: the dancers come down the grand staircase, the Gnaoua take over, and as the hours pass the place slides into a nightclub. Moroccan and international cooking.">Comptoir Darna, avenue Echouhada. Le dîner sert d'ouverture&#160;: les danseuses descendent le grand escalier, les Gnaoua prennent le relais, et la maison glisse vers la boîte de nuit au fil des heures. Cuisine marocaine et internationale.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; Hivernage, ten minutes from the medina. Booking strongly advised, smart dress expected, no shorts or sportswear."><b>En pratique&#160;:</b> Hivernage, à dix minutes de la médina. Réservation fortement recommandée, tenue soignée demandée, ni short ni tenue de sport.</p>
+        <p class="renvoi"><a href="https://www.comptoirmarrakech.com/fr" target="_blank" rel="noopener noreferrer" data-en-href="https://www.comptoirmarrakech.com/en" data-en="Comptoir Darna, official website">Comptoir Darna, site officiel</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/resto-jad-mahal.jpg" alt="Le salon du Palais Jad Mahal, fauteuils rouges et murs ocre à la lumière des bougies" loading="lazy" decoding="async" data-en-alt="The lounge at Palais Jad Mahal, red armchairs and ochre walls by candlelight"></div>
+        <h4 data-en="Jad Mahal">Jad Mahal</h4>
+        <p data-en="A palace in Hivernage, in a different register from Le Comptoir: Moroccan, French and Thai fusion cooking, and a show that moves through the room between courses, belly dancing and fire included. The live band takes the stage around 11.30 pm.">Un palais de l'Hivernage, dans un autre registre que Le Comptoir&#160;: cuisine fusion marocaine, française et thaïlandaise, spectacle qui traverse la salle entre les plats, danse orientale et feu compris. Le groupe live prend la scène vers 23&#160;h&#160;30.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; Hivernage, rue Haroun Errachid. Open every evening from 7.30 pm, booking advised, smart dress."><b>En pratique&#160;:</b> Hivernage, rue Haroun Errachid. Ouvert tous les soirs à partir de 19&#160;h&#160;30, réservation conseillée, tenue élégante.</p>
+        <p class="renvoi"><a href="https://www.palaisjadmahal.com/fr" target="_blank" rel="noopener noreferrer" data-en-href="https://www.palaisjadmahal.com/en" data-en="Palais Jad Mahal, official website">Palais Jad Mahal, site officiel</a></p>
+      </article>
+
+      <article class="idee">
+        <div class="cadre"><img src="medias/resto-cafe-arabe.jpg" alt="La terrasse du Café Arabe sur les toits de la médina de Marrakech, tables dressées sous des voiles beiges" loading="lazy" decoding="async" data-en-alt="The Café Arabe roof terrace above the Marrakech medina, tables laid under beige canopies"></div>
+        <h4 data-en="Café Arabe">Café Arabe</h4>
+        <p data-en="A riad on rue Mouassine, open from morning to night: a patio downstairs, a roof terrace facing the Koutoubia. The menu runs on two kitchens, Moroccan and Italian. A good address for a dinner without a show, after a day in the souks.">Un riad de la rue Mouassine ouvert du matin au soir&#160;: patio en bas, terrasse en haut face à la Koutoubia. La carte tient sur deux cuisines, marocaine et italienne. Une bonne adresse pour un dîner sans spectacle, après une journée dans les souks.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; medina, 184 rue Mouassine, a few steps from Le Jardin Secret. Booking advised in the evening, especially for the terrace."><b>En pratique&#160;:</b> médina, 184 rue Mouassine, à quelques pas du Jardin Secret. Réservation conseillée le soir, surtout pour la terrasse.</p>
+        <p class="renvoi"><a href="https://www.cafearabe.com/" target="_blank" rel="noopener noreferrer" data-en="Café Arabe, official website">Café Arabe, site officiel</a></p>
+      </article>
+
+      <!-- Entrees sans photo, groupees en fin de liste : supprimables d'un bloc -->
+      <article class="idee idee-plaque">
+        <h4 data-en="Nomad">Nomad</h4>
+        <p data-en="A former carpet shop on the place des Épices, stripped out and rebuilt over four floors up to the roof terraces. Moroccan cooking reworked here, lighter than in the riads. Handy for sitting down in the middle of the souks at lunchtime.">Un ancien magasin de tapis de la place des Épices, vidé et refait sur quatre niveaux jusqu'aux terrasses. La cuisine marocaine y est revisitée, plus légère que dans les riads. Pratique pour s'asseoir au milieu des souks, à midi.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; medina, 1 Derb Aarjane, on the place des Épices. Booking advised, asking for the top-floor terrace."><b>En pratique&#160;:</b> médina, 1 Derb Aarjane, sur la place des Épices. Réservation conseillée, en demandant la terrasse du dernier étage.</p>
+        <p class="renvoi"><a href="https://www.nomadmarrakech.com/" target="_blank" rel="noopener noreferrer" data-en="Nomad, official website">Nomad, site officiel</a></p>
+      </article>
+
+      <article class="idee idee-plaque">
+        <h4 data-en="Le Grand Café de la Poste">Le Grand Café de la Poste</h4>
+        <p data-en="A French brasserie in a 1920s building, on the corner of two Guéliz avenues. Ceiling fans, banquettes, a veranda onto the street, and service running from morning until late at night. A music room upstairs. You can walk in at any hour.">Une brasserie française dans un bâtiment des années 1920, à l'angle de deux avenues de Guéliz. Ventilateurs au plafond, banquettes, véranda sur la rue, service en continu du matin jusque tard le soir. Salon musical à l'étage. On y entre à toute heure.</p>
+        <p class="savoir" data-en="&lt;b&gt;Practical details:&lt;/b&gt; Guéliz, corner of boulevard El Mansour Eddahbi and avenue Imam Malik. Booking advised in the evening."><b>En pratique&#160;:</b> Guéliz, angle du boulevard El Mansour Eddahbi et de l'avenue Imam Malik. Réservation conseillée le soir.</p>
+        <p class="renvoi"><a href="https://www.grandcafedelaposte.restaurant/fr/" target="_blank" rel="noopener noreferrer" data-en-href="https://www.grandcafedelaposte.restaurant/en/" data-en="Le Grand Café de la Poste, official website">Le Grand Café de la Poste, site officiel</a></p>
+      </article>
+      <!-- fin des entrees sans photo -->
+
+    </div>
+  </article>
+</section>
+
+<!-- Le circuit du sud -->
+<section class="seq seq-sud">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="27 to 29 September">27 au 29 septembre</p>
+    <h2 data-en="The southern circuit">Le circuit du sud</h2>
+    <p class="chapeau" data-en="Three days on the road to the south-east, from the kasbahs of the Atlas to the dunes of Merzouga, then back west through the Drâa valley.">Trois jours de route vers le sud-est, des kasbahs de l'Atlas aux dunes de Merzouga, puis retour vers l'ouest par la vallée du Drâa.</p>
+  </div>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Sunday 27 September">Dimanche 27 septembre</p>
+    <h3 data-en="Marrakech, Telouet, Aït Ben Haddou, Skoura">Marrakech, Telouet, Aït Ben Haddou, Skoura</h3>
+    <p class="txt" data-en="Departure for the circuit. Visit to the Kasbah of Telouet, then the Ksar of Aït Ben Haddou, a UNESCO World Heritage site. On to Skoura.">Départ pour le circuit. Visite de la Kasbah de Telouet, puis découverte du Ksar d'Aït Ben Haddou, classé au patrimoine mondial de l'UNESCO. Continuation vers Skoura.</p>
+    <p class="meta" data-en="Driving time: about 4 hrs 45 min">Route&#160;: environ 4h45</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/05-telouet.jpg" alt="La kasbah de Telouet, dans le Haut Atlas" loading="lazy" decoding="async" data-en-alt="The kasbah of Telouet, in the High Atlas"></div>
+      <figcaption data-en="The kasbah of Telouet">La kasbah de Telouet</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/06-ait-ben-haddou.jpg" alt="Le ksar d'Aït Ben Haddou, village fortifié de terre crue" loading="lazy" decoding="async" data-en-alt="The ksar of Aït Ben Haddou, a fortified village built of raw earth"></div>
+      <figcaption data-en="The ksar of Aït Ben Haddou">Le ksar d'Aït Ben Haddou</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/07-skoura.jpg" alt="La palmeraie de Skoura et ses kasbahs" loading="lazy" decoding="async" data-en-alt="The Skoura palm grove and its kasbahs"></div>
+      <figcaption data-en="The Skoura palm grove">La palmeraie de Skoura</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Kasbah of Telouet">Kasbah de Telouet</summary>
+        <div class="lieu-corps">
+          <p data-en="The first stop of the circuit, at 1,870 metres, on the old caravan road that the Tichka pass replaced. From outside, the kasbah is no more than a crumbling mass of earth. Inside, the Glaoui state rooms survive: zellige on the floors and walls, carved stucco, painted cedar ceilings, inlaid wooden doors, left as they were since the family fell.">Première halte du circuit, à 1 870 mètres, sur l'ancienne route caravanière que le Tichka a détrônée. De l'extérieur, la kasbah n'est qu'une masse de terre qui s'effrite. À l'intérieur subsistent les salles d'apparat des Glaoui&#160;: zelliges au sol et aux murs, stucs découpés, plafonds de cèdre peint, portes de bois marqueté, laissés dans leur état depuis la chute de la famille.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the Glaoui stronghold, abandoned since the death of the pasha in 1956."><b>À savoir&#160;:</b> fief des Glaoui, la kasbah est abandonnée depuis la mort du pacha, en 1956.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Telouet" data-en-href="https://en.wikipedia.org/wiki/Telouet_Kasbah" target="_blank" rel="noopener noreferrer" data-en="Telouet, Wikipedia">Telouet, Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Ksar of Aït Ben Haddou">Ksar d'Aït Ben Haddou</summary>
+        <div class="lieu-corps">
+          <p data-en="A fortified village built of raw earth, clinging to a hillside above the Ounila river, some thirty kilometres from Ouarzazate. Sloping lanes climb to the communal granary at the very top, from where the valley reads at a single glance. Rammed earth needs constant upkeep: what you see has been repaired, season after season, for generations.">Un village fortifié de terre crue, accroché à une colline face à l'oued Ounila, à une trentaine de kilomètres de Ouarzazate. On monte par des ruelles en pente jusqu'au grenier collectif, tout en haut, d'où la vallée se lit d'un seul regard. Le pisé exige un entretien permanent&#160;: ce que vous voyez a été réparé, saison après saison, depuis des générations.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; a World Heritage site since 1987, and the setting for Lawrence of Arabia and Gladiator."><b>À savoir&#160;:</b> inscrit au patrimoine mondial en 1987&#160;; Lawrence d'Arabie et Gladiator y ont été tournés.</p>
+          <p class="renvoi"><a href="https://whc.unesco.org/fr/list/444" target="_blank" rel="noopener noreferrer" data-en-href="https://whc.unesco.org/en/list/444" data-en="Ksar of Aït-Ben-Haddou, UNESCO">Ksar d'Aït-Ben-Haddou, UNESCO</a></p>
+        </div>
+      </details>
+    </div>
+
+    <div class="nuit">
+      <p class="sur sur-t" data-en="Accommodation · night of 27 September">Hébergement &middot; nuit du 27 septembre</p>
+      <p class="nuit-prix" data-en="Two guesthouses to choose from, both in the Skoura palm grove and both at the same rate: &lt;b&gt;€40 to €50 per person&lt;/b&gt;, half board.">Deux maisons d'hôtes au choix, l'une et l'autre dans la palmeraie de Skoura, au même tarif&#160;: <b>40 à 50 &euro; par personne</b>, en demi-pension.</p>
+
+      <div class="nuit-choix">
+        <div>
+          <p class="nuit-nom" data-en="Skoura Lodge">Skoura Lodge</p>
+          <figure class="ph">
+            <div class="cadre"><img src="medias/hotel-skoura.jpg" alt="Le Skoura Lodge, maison d'hôtes dans la palmeraie de Skoura" loading="lazy" decoding="async" data-en-alt="Skoura Lodge, a guesthouse in the Skoura palm grove"></div>
+          </figure>
+          <p class="nuit-note"><a href="https://skouralodge.com/" target="_blank" rel="noopener noreferrer" data-en="skouralodge.com">skouralodge.com</a></p>
+        </div>
+        <div>
+          <p class="nuit-nom" data-en="Kasbah Ait Ben Hadda">Kasbah Ait Ben Hadda</p>
+          <figure class="ph">
+            <div class="cadre"><img src="medias/hotel-ait-ben-hadda.jpg" alt="La Kasbah Ait Ben Hadda, maison d'hôtes dans la palmeraie de Skoura" loading="lazy" decoding="async" data-en-alt="Kasbah Ait Ben Hadda, a guesthouse in the Skoura palm grove"></div>
+          </figure>
+          <p class="nuit-note" data-en="Ten minutes from the Kasbah Amridil.">À dix minutes de la Kasbah Amridil.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Monday 28 September">Lundi 28 septembre</p>
+    <h3 data-en="Skoura, Dadès Gorges, Merzouga">Skoura, Gorges du Dadès, Merzouga</h3>
+    <p class="txt" data-en="Visit to the Kasbah Amridil, then the Dadès Gorges and the Tissadrine road. On to Merzouga via Erfoud. Camel ride at sunset. Night at the La Belle Étoile Xaluca camp.">Visite de la Kasbah Amridil, découverte des Gorges du Dadès et de la route de Tissadrine. Continuation vers Merzouga via Erfoud. Excursion en dromadaire au coucher du soleil. Nuit au bivouac La Belle Étoile Xaluca.</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/08-dades.jpg" alt="Les gorges du Dadès et leurs parois de calcaire" loading="lazy" decoding="async" data-en-alt="The Dadès gorges and their limestone walls"></div>
+      <figcaption data-en="The Dadès gorges">Les gorges du Dadès</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/09-merzouga.jpg" alt="Les dunes de l'erg Chebbi, près de Merzouga" loading="lazy" decoding="async" data-en-alt="The dunes of erg Chebbi, near Merzouga"></div>
+      <figcaption data-en="The dunes of erg Chebbi">Les dunes de l'erg Chebbi</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/10-dromadaires.jpg" alt="Dromadaires dans les dunes au coucher du soleil" loading="lazy" decoding="async" data-en-alt="Camels in the dunes at sunset"></div>
+      <figcaption data-en="The camel ride">L'excursion en dromadaire</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Skoura and the Kasbah Amridil">Skoura et la Kasbah Amridil</summary>
+        <div class="lieu-corps">
+          <p data-en="A palm grove of twenty-five square kilometres, still lived in and still farmed, where the kasbahs hide among the trees instead of commanding a rocky spur. Amridil is the best known: built in the seventeenth century and held by the same family ever since, with its oil press and its counterweighted well still in place.">Une palmeraie de vingt-cinq kilomètres carrés, toujours habitée et cultivée, où les kasbahs se cachent entre les arbres au lieu de dominer un piton. Amridil est la plus connue&#160;: bâtie au XVIIe siècle, tenue par la même famille depuis, avec son pressoir à huile et son puits à balancier encore en place.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; its crenellated towers appeared on the back of the old fifty dirham note."><b>À savoir&#160;:</b> ses tours crénelées figuraient au dos de l'ancien billet de cinquante dirhams.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Skoura" data-en-href="https://en.wikipedia.org/wiki/Skoura" target="_blank" rel="noopener noreferrer" data-en="Skoura, Wikipedia">Skoura, Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Dadès Gorges and the Tissadrine road">Gorges du Dadès et route de Tissadrine</summary>
+        <div class="lieu-corps">
+          <p data-en="The river has cut several hundred metres down into the limestone. The road follows the canyon upstream between walls that close in, passes the foot of the &quot;monkey fingers&quot;, rocks eroded into columns, then takes on the Tissadrine hairpins, stacked up the mountainside. Seen from above, the road looks like a ribbon folded back on itself.">La rivière a entaillé le calcaire sur plusieurs centaines de mètres. La route remonte le canyon entre des parois qui se resserrent, passe au pied des «&#160;doigts de singe&#160;», ces roches érodées en colonnes, puis attaque les lacets de Tissadrine, empilés à flanc de montagne. Vue d'en haut, la route ressemble à un ruban replié sur lui-même.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the gorges cut 200 to 500 metres down into the limestone."><b>À savoir&#160;:</b> les gorges entaillent le calcaire sur 200 à 500 mètres de profondeur.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Gorges_du_Dad%C3%A8s" data-en-href="https://en.wikipedia.org/wiki/Dad%C3%A8s_Gorges" target="_blank" rel="noopener noreferrer" data-en="Dadès Gorges, Wikipedia">Gorges du Dadès, Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Merzouga and erg Chebbi">Merzouga et l'erg Chebbi</summary>
+        <div class="lieu-corps">
+          <p data-en="After hours of stony plateaux, the dunes rise all at once, orange, up to a hundred and fifty metres for the highest of them. The camel ride is planned for the end of the day, when the sand turns red and the shadows of the crests lengthen. The night is spent at the La Belle Étoile Xaluca camp. Once the fires are out, the silence is complete.">Après des heures de plateaux caillouteux, les dunes se lèvent d'un coup, orange, jusqu'à cent cinquante mètres pour les plus hautes. La sortie en dromadaire est prévue en fin de journée, quand le sable rougit et que l'ombre des crêtes s'allonge. La nuit se passe au bivouac La Belle Étoile Xaluca. Le silence, une fois les feux éteints, est complet.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; erg Chebbi runs 22 kilometres long and 5 wide."><b>À savoir&#160;:</b> l'erg Chebbi s'étend sur 22 kilomètres de long et 5 de large.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Erg_Chebbi" data-en-href="https://en.wikipedia.org/wiki/Erg_Chebbi" target="_blank" rel="noopener noreferrer" data-en="Erg Chebbi, Wikipedia">Erg Chebbi, Wikipédia</a></p>
+        </div>
+      </details>
+    </div>
+
+    <div class="nuit">
+      <p class="sur sur-t" data-en="Accommodation · night of 28 September">Hébergement &middot; nuit du 28 septembre</p>
+      <p class="nuit-nom" data-en="Bivouac La Belle Étoile, Xaluca group">Bivouac La Belle Étoile, groupe Xaluca</p>
+      <p class="nuit-prix" data-en="&lt;b&gt;€200 per person&lt;/b&gt;, half board, including the night, the 4x4 transfer and the camel ride"><b>200 &euro; par personne</b>, en demi-pension, comprenant la nuitée, le transport en 4x4 et la balade en dromadaire</p>
+      <p class="nuit-note" data-en="Merzouga, at the foot of the erg Chebbi dunes.">Merzouga, au pied des dunes de l'erg Chebbi.</p>
+      <figure class="ph">
+        <div class="cadre"><img src="medias/hotel-xaluca-bivouac.jpg" alt="Le bivouac La Belle Étoile Xaluca, tentes dans le désert près de Merzouga" loading="lazy" decoding="async" data-en-alt="The La Belle Étoile Xaluca camp, tents in the desert near Merzouga"></div>
+      </figure>
+    </div>
+  </article>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Tuesday 29 September">Mardi 29 septembre</p>
+    <h3 data-en="Merzouga, Rissani, Nkob, Drâa Valley, Ouarzazate">Merzouga, Rissani, Nkob, Vallée du Drâa, Ouarzazate</h3>
+    <p class="txt" data-en="A stop at Rissani and its traditional souk, then on to Nkob. Lunch and the crossing of the Drâa Valley before arriving in Ouarzazate.">Passage par Rissani, découverte du souk traditionnel, puis continuation vers Nkob. Déjeuner et traversée de la Vallée du Drâa avant l'arrivée à Ouarzazate.</p>
+    <p class="meta" data-en="Driving time: about 5 hrs 15 min">Route&#160;: environ 5h15</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/11-rissani.jpg" alt="Le souk de Rissani, dans le Tafilalet" loading="lazy" decoding="async" data-en-alt="The souk at Rissani, in the Tafilalet"></div>
+      <figcaption data-en="The souk at Rissani">Le souk de Rissani</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/12-vallee-draa.jpg" alt="La vallée du Drâa et sa palmeraie" loading="lazy" decoding="async" data-en-alt="The Drâa valley and its palm groves"></div>
+      <figcaption data-en="The Drâa valley">La vallée du Drâa</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/13-ouarzazate.jpg" alt="Ouarzazate, au pied de l'Atlas" loading="lazy" decoding="async" data-en-alt="Ouarzazate, at the foot of the Atlas"></div>
+      <figcaption data-en="Ouarzazate">Ouarzazate</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Rissani">Rissani</summary>
+        <div class="lieu-corps">
+          <p data-en="The old capital of the Tafilalet, sitting on the ruins of Sijilmassa, the caravan city that took in gold and salt from the south. What remains is a very large souk, selling dates, donkeys, tools and carpets, in the dust and the smell of charcoal. Nothing here is dressed up: it is a trading town and it looks like one.">Ancienne capitale du Tafilalet, posée sur les ruines de Sijilmassa, la cité caravanière qui recevait l'or et le sel venus du sud. Il en reste un très grand souk, où l'on vend des dattes, des ânes, des outils et des tapis, dans la poussière et l'odeur du charbon de bois. Rien d'apprêté, c'est une ville de commerce et elle le montre.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the main souk is held on Tuesdays, Thursdays and Sundays, and you pass through on a Tuesday."><b>À savoir&#160;:</b> le grand souk se tient mardi, jeudi et dimanche, votre passage tombe un mardi.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Er-Rissani" data-en-href="https://en.wikipedia.org/wiki/Rissani" target="_blank" rel="noopener noreferrer" data-en="Rissani (Moulay Ali Cherif), Wikipedia">Rissani (Moulay Ali Cherif), Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Nkob">Nkob</summary>
+        <div class="lieu-corps">
+          <p data-en="An earthen village at the foot of Jbel Saghro, between two oases, on the road that joins the Drâa valley. The lunch stop is planned somewhere around here. The kasbahs stand tight against one another, a few restored as guesthouses, the rest slowly returning to the earth they are made of.">Un village de terre au pied du Jbel Saghro, entre deux oasis, sur la route qui rejoint la vallée du Drâa. La halte du déjeuner est prévue par là. Les kasbahs y sont serrées les unes contre les autres, quelques-unes restaurées en maisons d'hôtes, les autres retournant lentement à la terre dont elles sont faites.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; Nkob is nicknamed the valley of forty-five kasbahs."><b>À savoir&#160;:</b> on surnomme Nkob la vallée des quarante-cinq kasbahs.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Nkob" data-en-href="https://en.wikipedia.org/wiki/N%27Kob" target="_blank" rel="noopener noreferrer" data-en="Nkob, Wikipedia">Nkob, Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Drâa Valley">Vallée du Drâa</summary>
+        <div class="lieu-corps">
+          <p data-en="The river comes down from the Atlas and runs south between two walls of dark mountains, trailing an almost unbroken band of palm groves behind it. The road follows that edge, between rammed-earth ksour and terraced crops under the palms. Green and ochre answer each other for tens of kilometres.">Le fleuve descend de l'Atlas et file vers le sud entre deux murs de montagnes sombres, en traînant derrière lui une bande de palmeraies presque continue. La route longe cette lisière, entre ksour de pisé et cultures en terrasses sous les palmiers. Le vert et l'ocre se répondent sur des dizaines de kilomètres.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; at 1,100 kilometres, the Drâa is the longest river in Morocco."><b>À savoir&#160;:</b> avec 1 100 kilomètres, le Drâa est le plus long fleuve du Maroc.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Dr%C3%A2a" data-en-href="https://en.wikipedia.org/wiki/Draa_River" target="_blank" rel="noopener noreferrer" data-en="Drâa, Wikipedia">Drâa, Wikipédia</a></p>
+        </div>
+      </details>
+      <details class="lieu">
+        <summary data-en="Ouarzazate">Ouarzazate</summary>
+        <div class="lieu-corps">
+          <p data-en="A staging town at 1,150 metres, where the Drâa, Dadès and Atlas roads meet. Film crews have kept their sets here since the 1980s, for the light and for landscapes that stand in for Sinai or ancient Rome. The Taourirt kasbah, once a Glaoui residence, guards the eastern entrance to the town.">Ville-étape à 1 150 mètres, à la jonction des routes du Drâa, du Dadès et de l'Atlas. Le cinéma y a installé ses décors depuis les années 1980, pour la lumière et pour des paysages qui tiennent lieu de Sinaï ou de Rome antique. La kasbah de Taourirt, ancienne demeure des Glaoui, garde l'entrée est de la ville.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; Atlas Studios have been filming here since 1983, under nearly 300 days of sunshine a year."><b>À savoir&#160;:</b> les Atlas Studios y tournent depuis 1983, sous près de 300 jours de soleil par an.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Ouarzazate" data-en-href="https://en.wikipedia.org/wiki/Ouarzazate" target="_blank" rel="noopener noreferrer" data-en="Ouarzazate, Wikipedia">Ouarzazate, Wikipédia</a></p>
+        </div>
+      </details>
+    </div>
+
+    <div class="nuit">
+      <p class="sur sur-t" data-en="Accommodation · night of 29 September">Hébergement &middot; nuit du 29 septembre</p>
+      <p class="nuit-nom" data-en="Hôtel Sultana Royal Golf">Hôtel Sultana Royal Golf</p>
+      <p class="nuit-prix" data-en="&lt;b&gt;€100 to €110 per person&lt;/b&gt;, half board"><b>100 à 110 &euro; par personne</b>, en demi-pension</p>
+      <p class="nuit-note"><a href="https://hotelsultanaroyalgolf.com/" target="_blank" rel="noopener noreferrer" data-en="hotelsultanaroyalgolf.com">hotelsultanaroyalgolf.com</a></p>
+      <figure class="ph">
+        <div class="cadre"><img src="medias/hotel-ouarzazate.jpg" alt="L'hôtel Sultana Royal Golf, à Ouarzazate" loading="lazy" decoding="async" data-en-alt="Hôtel Sultana Royal Golf, in Ouarzazate"></div>
+      </figure>
+    </div>
+  </article>
+</section>
+
+<!-- La route vers l'ocean -->
+<section class="seq seq-atlas">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="30 September">30 septembre</p>
+    <h2 data-en="The road to the ocean">La route vers l'océan</h2>
+    <p class="chapeau" data-en="A long crossing from Ouarzazate to Essaouira over the Tizi n'Tichka, with a possible stop at an argan oil cooperative.">Une longue traversée de Ouarzazate à Essaouira par le Tizi n'Tichka, avec une halte possible dans une coopérative d'huile d'argan.</p>
+  </div>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Wednesday 30 September">Mercredi 30 septembre</p>
+    <h3 data-en="Ouarzazate, Tizi n'Tichka, Essaouira">Ouarzazate, Tizi n'Tichka, Essaouira</h3>
+    <p class="txt" data-en="Crossing the Atlas over the Tizi n'Tichka pass. A visit to an argan oil cooperative is possible. Arrival in Essaouira, with the Skala du Port and the medina depending on what time you get there.">Traversée de l'Atlas par le col du Tizi n'Tichka. Possibilité de visiter une coopérative d'huile d'argan. Arrivée à Essaouira et découverte de la Skala du port et de la médina selon l'heure d'arrivée.</p>
+    <p class="meta" data-en="Driving time: about 7 hrs 15 min">Route&#160;: environ 7h15</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/14-tizi-n-tichka.jpg" alt="La route du col du Tizi n'Tichka dans l'Atlas" loading="lazy" decoding="async" data-en-alt="The Tizi n'Tichka pass road in the Atlas"></div>
+      <figcaption data-en="The Tizi n'Tichka pass">Le col du Tizi n'Tichka</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/15-essaouira-skala.jpg" alt="La Skala du port d'Essaouira, face à l'Atlantique" loading="lazy" decoding="async" data-en-alt="The Skala du Port in Essaouira, facing the Atlantic"></div>
+      <figcaption data-en="The Skala du Port, Essaouira">La Skala du port, Essaouira</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Tizi n'Tichka pass">Col du Tizi n'Tichka</summary>
+        <div class="lieu-corps">
+          <p data-en="The only way over the Atlas for more than two hundred kilometres. The road climbs in stages to 2,260 metres, past earthen villages pinned to the slopes, then tips over onto the northern side, greener and more wooded. Every level stretch opens onto a different valley. The mineral sellers set up in the lay-bys at the summit are part of the scene.">Le seul franchissement de l'Atlas sur plus de deux cents kilomètres. La route s'élève par paliers jusqu'à 2 260 mètres, longe des villages de terre plantés à flanc de pente, puis bascule sur le versant nord, plus vert et plus boisé. Chaque replat ouvre une vallée différente. Les marchands de minéraux installés sur les aires du sommet font partie du décor.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; the pass tops out at 2,260 metres, and &quot;Tichka&quot; means pastures in Berber."><b>À savoir&#160;:</b> le col culmine à 2 260 mètres, «&#160;Tichka&#160;» signifie pâturages en berbère.</p>
+          <p class="renvoi"><a href="https://fr.wikipedia.org/wiki/Tizi_n%27Tichka" data-en-href="https://en.wikipedia.org/wiki/Tizi_n%27Tichka" target="_blank" rel="noopener noreferrer" data-en="Tizi n'Tichka, Wikipedia">Tizi n'Tichka, Wikipédia</a></p>
+        </div>
+      </details>
+    </div>
+
+  </article>
+</section>
+
+<!-- Essaouira -->
+<section class="seq seq-ocean">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="1 to 4 October">1er au 4 octobre</p>
+    <h2 data-en="Essaouira">Essaouira</h2>
+    <p class="chapeau" data-en="Four full days on the Atlantic coast, with nothing imposed, before the return to Marrakech on 5 October at 13:00.">Quatre journées entières au bord de l'Atlantique, sans rien d'imposé, avant le retour sur Marrakech le 5 octobre à 13 h.</p>
+  </div>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Thursday 1 to Sunday 4 October">Du jeudi 1er au dimanche 4 octobre</p>
+    <h3 data-en="Free time in Essaouira">Séjour libre à Essaouira</h3>
+    <p class="txt" data-en="The medina, the port, the Skala, the souks and the beaches. Guided activities or visits can be organised if you would like them.">Découverte de la médina, du port, de la Skala, des souks et des plages. Possibilité d'organiser des activités ou visites avec guide selon les souhaits.</p>
+
+    <figure class="ph">
+      <div class="cadre"><img src="medias/16-essaouira-medina.jpg" alt="Ruelle blanche et bleue de la médina d'Essaouira" loading="lazy" decoding="async" data-en-alt="A white and blue lane in the Essaouira medina"></div>
+      <figcaption data-en="The Essaouira medina">La médina d'Essaouira</figcaption>
+    </figure>
+    <figure class="ph">
+      <div class="cadre"><img src="medias/17-essaouira-plage.jpg" alt="La plage d'Essaouira et l'océan Atlantique" loading="lazy" decoding="async" data-en-alt="The beach at Essaouira and the Atlantic Ocean"></div>
+      <figcaption data-en="The beach and the Atlantic">La plage et l'Atlantique</figcaption>
+    </figure>
+
+    <div class="lieux">
+      <details class="lieu">
+        <summary data-en="Essaouira: medina, Skala, port">Essaouira&#160;: médina, Skala, port</summary>
+        <div class="lieu-corps">
+          <p data-en="A white and blue town, built in one go in the eighteenth century on a regular grid, which makes it easy to cover on foot. The Skala du Port lines up its bronze cannon facing the Atlantic. Below, the boats come in late morning and the fish goes straight onto the grills on the quay. The wind blows almost every day, so bring a jacket.">Une ville blanche et bleue, bâtie d'un seul jet au XVIIIe siècle sur un plan régulier, ce qui la rend facile à parcourir à pied. La Skala du port aligne ses canons de bronze face à l'Atlantique. En contrebas, les barques rentrent en fin de matinée et le poisson part au gril sur le quai. Le vent souffle presque tous les jours, prévoyez une veste.</p>
+          <p class="savoir" data-en="&lt;b&gt;Worth knowing:&lt;/b&gt; founded in 1760, laid out by the French engineer Théodore Cornut, and UNESCO-listed in 2001."><b>À savoir&#160;:</b> fondée en 1760, dessinée par l'ingénieur français Théodore Cornut, inscrite à l'UNESCO en 2001.</p>
+          <p class="renvoi"><a href="https://whc.unesco.org/fr/list/753" target="_blank" rel="noopener noreferrer" data-en-href="https://whc.unesco.org/en/list/753" data-en="Medina of Essaouira (formerly Mogador), UNESCO">Médina d'Essaouira (ancienne Mogador), UNESCO</a></p>
+        </div>
+      </details>
+    </div>
+  </article>
+</section>
+
+<!-- Le retour -->
+<section class="seq">
+  <div class="wrap seq-tete">
+    <p class="sur" data-en="5 and 6 October">5 et 6 octobre</p>
+    <h2 data-en="The return">Le retour</h2>
+  </div>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Monday 5 October">Lundi 5 octobre</p>
+    <h3 data-en="Essaouira, Marrakech">Essaouira, Marrakech</h3>
+    <p class="txt" data-en="Departure from Essaouira at 13:00. Private transfer to Marrakech. Check-in at a hotel in Marrakech, to be confirmed.">Départ à 13h00 d'Essaouira. Transfert privé vers Marrakech. Installation dans un hôtel à Marrakech, à confirmer.</p>
+  </article>
+
+  <article class="wrap jour">
+    <p class="sur" data-en="Tuesday 6 October">Mardi 6 octobre</p>
+    <h3 data-en="Departure from Marrakech">Départ de Marrakech</h3>
+    <p class="txt" data-en="Private transfer from the hotel to Marrakech airport. The TAP Airways flight leaves at 10:45.">Transfert privé de l'hôtel vers l'aéroport de Marrakech. Départ du vol TAP Airways à 10h45.</p>
+  </article>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap fin">
+    <hr class="filet">
+    <p class="clot" data-en="This programme is still open. The guide on 25 September, several of the places to stay and all of the rates are still to be confirmed, and the free days can be filled or left as they are, whichever you prefer. Tell us what you would like to add, trim or move, and we will adjust it and send you the revised version.">Ce programme reste ouvert. Le guide du 25 septembre, plusieurs hébergements et l'ensemble des tarifs sont encore à confirmer, et les journées libres peuvent se remplir ou rester telles quelles, comme vous le préférez. Dites-nous ce que vous souhaitez ajouter, alléger ou décaler&#160;: nous ajustons et nous vous renvoyons la version corrigée.</p>
+
+    <p class="note-heb" data-en="The three nights at Skoura, Merzouga and Ouarzazate are the only ones covered by this accommodation proposal. The nights in Marrakech and Essaouira are booked by you.">Les trois nuits de Skoura, Merzouga et Ouarzazate sont les seules comprises dans cette proposition d'hébergement. Les nuits de Marrakech et d'Essaouira sont réservées par vos soins.</p>
+
+    <div class="contact">
+      <p class="sur" data-en="Trans Marrakech">Trans Marrakech</p>
+      <p class="lignes">
+        <a href="mailto:transmarrakech@gmail.com" data-en="transmarrakech@gmail.com">transmarrakech@gmail.com</a><br>
+        <a href="https://wa.me/212645147247" target="_blank" rel="noopener noreferrer">+212 645 147 247</a> &middot; WhatsApp<br>
+        <a href="https://www.transmarrakech.net" target="_blank" rel="noopener noreferrer" data-en="transmarrakech.net">transmarrakech.net</a>
+      </p>
+
+      <div class="langue" role="group" aria-label="Langue de la page" data-en-aria="Page language">
+        <button type="button" data-langue="fr" lang="fr" aria-pressed="true">FR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-langue="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <div class="credits">
+        <p class="credits-ligne" data-en="Photographs: Wikimedia Commons and the establishments' own websites.">Photographies&#160;: Wikimedia Commons et sites officiels des établissements.</p>
+        <details>
+          <summary data-en="Credits and licences">Auteurs et licences</summary>
+          <div class="corps">
+            <p data-en="Landscapes, from Wikimedia Commons:">Paysages, depuis Wikimedia Commons&#160;:</p>
+            <ul>
+              <li><a href="https://commons.wikimedia.org/wiki/File:%22Ein_beeindruckender_Teil_der_Sahara%22._18.jpg" target="_blank" rel="noopener noreferrer" data-en="Cover, Sahara dunes">Couverture, dunes du Sahara</a> &middot; Holger Uwe Schmitt &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Koutoubia_minaret_from_the_city.JPG" target="_blank" rel="noopener noreferrer" data-en="Marrakech, the Koutoubia minaret">Marrakech, le minaret de la Koutoubia</a> &middot; Schorle &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Jemaa_el-Fnaa.jpg" target="_blank" rel="noopener noreferrer" data-en="Jemaa el-Fna square">La place Jemaa el-Fna</a> &middot; Hamed Gamaoun &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Im_Souk_der_Medina_von_Marrakesch._-_panoramio.jpg" target="_blank" rel="noopener noreferrer" data-en="The souk in the Marrakech medina">Le souk de la médina de Marrakech</a> &middot; Martin Furtschegger &middot; CC BY 3.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Marrakesh,_Ben_Youssef_Medersa_(5364699119).jpg" target="_blank" rel="noopener noreferrer" data-en="Marrakech, the Ben Youssef Madrasa">Marrakech, la médersa Ben Youssef</a> &middot; Michal Osmenda from Brussels, Belgium &middot; CC BY-SA 2.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Kasbah_Glaoui_in_T%C3%A9louet_Morocco.jpg" target="_blank" rel="noopener noreferrer" data-en="The kasbah of Telouet">La kasbah de Telouet</a> &middot; Pedro Carvalho &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Ksar_A%C3%AFt_Benhaddou,_Marocco_(%D8%A3%D9%8A%D8%AA_%D8%A8%D9%86_%D8%AD%D8%AF%D9%88%D8%8C_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8,_%E2%B4%B0%E2%B5%A2%E2%B5%9C_%E2%B5%83%E2%B4%B0%E2%B4%B7%E2%B4%B7%E2%B5%93).jpg" target="_blank" rel="noopener noreferrer" data-en="The ksar of Aït Ben Haddou">Le ksar d'Aït Ben Haddou</a> &middot; Petar Milošević &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Amerhidil_Qasbah.jpg" target="_blank" rel="noopener noreferrer" data-en="The Amridil kasbah, Skoura">La kasbah Amridil, Skoura</a> &middot; Maureen &middot; CC BY 2.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Dad%C3%A8s_Gorges_Road_in_Morocco.jpg" target="_blank" rel="noopener noreferrer" data-en="The Dadès gorges road">La route des gorges du Dadès</a> &middot; csanjuanfer &middot; CC0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:%22Ein_beeindruckender_Teil_der_Sahara%22._11.jpg" target="_blank" rel="noopener noreferrer" data-en="The dunes of erg Chebbi">Les dunes de l'erg Chebbi</a> &middot; Holger Uwe Schmitt &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Cavalier_de_chameaux_au_passage_dans_une_dune_de_sable_au_Maroc.jpg" target="_blank" rel="noopener noreferrer" data-en="Camels in the dunes">Dromadaires dans les dunes</a> &middot; Merzougaloisirs &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Gate_rissani.jpg" target="_blank" rel="noopener noreferrer" data-en="The gate at Rissani">La porte de Rissani</a> &middot; Baca12 &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Extreme_Environments_-_Looking_south_along_the_Dr%C3%A2a_Valley_from_Agdz,_Morocco_(32527406943).jpg" target="_blank" rel="noopener noreferrer" data-en="The Drâa valley from Agdz">La vallée du Drâa depuis Agdz</a> &middot; Richard Allaway &middot; CC BY 2.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Ksar_of_Taourirt,_Ouarzazate,_Morocco_(%D9%82%D8%B5%D8%A8%D8%A9_%D8%AA%D8%A7%D9%88%D8%B1%D9%8A%D8%B1%D8%AA,_%E2%B5%9C%E2%B4%B0%E2%B5%A1%E2%B5%94%E2%B5%89%E2%B5%94%E2%B5%9C).jpg" target="_blank" rel="noopener noreferrer" data-en="The ksar of Taourirt, Ouarzazate">Le ksar de Taourirt, Ouarzazate</a> &middot; Petar Milošević &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Tizi_n%27Tichka_Pass_-_1.jpg" target="_blank" rel="noopener noreferrer" data-en="The Tizi n'Tichka pass">Le col du Tizi n'Tichka</a> &middot; Ingo Mehling &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Essaouira_Citadel.jpg" target="_blank" rel="noopener noreferrer" data-en="The citadel of Essaouira">La citadelle d'Essaouira</a> &middot; Ahmed.magdy &middot; CC BY-SA 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Essaouira_Medina_-_panoramio_(21).jpg" target="_blank" rel="noopener noreferrer" data-en="The Essaouira medina">La médina d'Essaouira</a> &middot; Patrick Nouhailler's… &middot; CC BY-SA 3.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Fishing_boats_in_Essaouira_01.jpg" target="_blank" rel="noopener noreferrer" data-en="The fishing boats of Essaouira">Les barques de pêche d'Essaouira</a> &middot; Adam Harangozó &middot; CC BY-SA 4.0</li>
+            </ul>
+            <p data-en="Marrakech sites, from Wikimedia Commons:">Sites de Marrakech, depuis Wikimedia Commons&#160;:</p>
+            <ul>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Le_jardin_des_majorelle_21.JPG" target="_blank" rel="noopener noreferrer" data-en="The Jardin Majorelle">Le Jardin Majorelle</a> &middot; Viault &middot; CC BY-SA 3.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Architetti_studio_ko,_museo_YSL_a_Marrakech.jpg" target="_blank" rel="noopener noreferrer" data-en="The Musée Yves Saint Laurent">Le musée Yves Saint Laurent</a> &middot; Pivari &middot; CC BY 4.0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Pavilion_of_the_Menara_Gardens.jpg" target="_blank" rel="noopener noreferrer" data-en="The Ménara pavilion">Le pavillon de la Ménara</a> &middot; Mustang Joe &middot; CC0</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:La_Palmeraie_de_Marrakech_709.JPG" target="_blank" rel="noopener noreferrer" data-en="The Marrakech palm grove">La palmeraie de Marrakech</a> &middot; Viault &middot; CC BY-SA 3.0</li>
+            </ul>
+            <p data-en="The ten photographs of accommodation, restaurants and the Agafay camp come from the official websites of the establishments shown, or from their booking listing: Skoura Lodge, Kasbah Ait Ben Hadda, Bivouac La Belle Étoile (Xaluca), Sultana Royal Golf, Al Fassia, Comptoir Darna, Palais Jad Mahal, Café Arabe and Le Bédouin Agafay.">Les dix photographies d'hébergements, de restaurants et du camp d'Agafay proviennent des sites officiels des établissements présentés, ou de leur fiche de réservation&#160;: Skoura Lodge, Kasbah Ait Ben Hadda, Bivouac La Belle Étoile (Xaluca), Sultana Royal Golf, Al Fassia, Comptoir Darna, Palais Jad Mahal, Café Arabe et Le Bédouin Agafay.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* Bascule francais / anglais. Le francais est le contenu du document ;
+   l'anglais vit dans les attributs data-en, data-en-alt, data-en-href et
+   data-en-aria. Aucune ressource reseau, aucune bibliotheque. */
+(function () {
+  'use strict';
+  var d = document;
+  var racine = d.documentElement;
+  var CLE = 'programme-langue';
+
+  var textes = [].slice.call(d.querySelectorAll('[data-en]'));
+  var frTextes = textes.map(function (n) {
+    if (n.tagName === 'META') return n.getAttribute('content');
+    if (n.tagName === 'TITLE') return n.textContent;
+    return n.innerHTML;
+  });
+  var images = [].slice.call(d.querySelectorAll('[data-en-alt]'));
+  var frAlt = images.map(function (n) { return n.getAttribute('alt'); });
+  var liens = [].slice.call(d.querySelectorAll('[data-en-href]'));
+  var frHref = liens.map(function (n) { return n.getAttribute('href'); });
+  var reperes = [].slice.call(d.querySelectorAll('[data-en-aria]'));
+  var frAria = reperes.map(function (n) { return n.getAttribute('aria-label'); });
+  var boutons = [].slice.call(d.querySelectorAll('[data-langue]'));
+
+  function pose(langue) {
+    var en = langue === 'en';
+    textes.forEach(function (n, i) {
+      var v = en ? n.getAttribute('data-en') : frTextes[i];
+      if (n.tagName === 'META') { n.setAttribute('content', v); }
+      else if (n.tagName === 'TITLE') { n.textContent = v; }
+      else { n.innerHTML = v; }
+    });
+    images.forEach(function (n, i) {
+      n.setAttribute('alt', en ? n.getAttribute('data-en-alt') : frAlt[i]);
+    });
+    liens.forEach(function (n, i) {
+      n.setAttribute('href', en ? n.getAttribute('data-en-href') : frHref[i]);
+    });
+    reperes.forEach(function (n, i) {
+      n.setAttribute('aria-label', en ? n.getAttribute('data-en-aria') : frAria[i]);
+    });
+    racine.setAttribute('lang', en ? 'en' : 'fr');
+    boutons.forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-langue') === langue ? 'true' : 'false');
+    });
+    try { localStorage.setItem(CLE, langue); } catch (e) { /* stockage refuse : sans effet */ }
+  }
+
+  var choix = null;
+  try { choix = localStorage.getItem(CLE); } catch (e) { choix = null; }
+  if (choix === 'en') { pose('en'); }
+
+  boutons.forEach(function (b) {
+    b.addEventListener('click', function () { pose(b.getAttribute('data-langue')); });
+  });
+}());
+</script>
+
+</body>
+</html>
