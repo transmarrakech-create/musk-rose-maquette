@@ -1,0 +1,436 @@
+/* Direction 1 - TRAVELE | Trans Marrakech. Ambre profond, bleu nuit, sable.
+   Polices systeme. Motifs zellige, icones et etoiles en CSS pur : rien n est
+   telecharge, la page tient meme si le reseau ne repond pas. */
+
+:root{
+  --nuit:#0e1b2e; --nuit-2:#17293f;
+  --ambre:#e0791a; --ambre-clair:#f0a23f;
+  --ambre-fonce:#b35c0a; /* seul orange assez fonce pour porter du texte blanc en AA */
+  --ambre-nuit:#96490a;
+  --sable:#faf4ea; --sable-2:#f0e5d4;
+  --texte:#23303c; --texte-doux:#5c6b7a;
+  --bordure:#e3d9cb; --bordure-2:#d5c8b5;
+  --clair:#cfdae4; --clair-2:#a5b3c1;
+  --filet:rgba(255,255,255,.15);
+  --etoile-vide:#d8cdbd;
+  --rayon:4px; --rayon-2:6px;
+  --ombre:0 1px 3px rgba(14,27,46,.07);
+  --ombre-2:0 14px 34px rgba(14,27,46,.16);
+  --ombre-3:0 20px 48px rgba(14,27,46,.24);
+  --conteneur:1190px;
+  --police:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --zellige:repeating-linear-gradient(45deg,rgba(255,255,255,.045) 0 1px,transparent 1px 14px),
+             repeating-linear-gradient(-45deg,rgba(255,255,255,.045) 0 1px,transparent 1px 14px);
+  --zellige-clair:repeating-linear-gradient(45deg,rgba(179,92,10,.07) 0 1px,transparent 1px 14px),
+                   repeating-linear-gradient(-45deg,rgba(179,92,10,.07) 0 1px,transparent 1px 14px)
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; font-family:var(--police); font-size:16px; line-height:1.65;
+  color:var(--texte); background:#fff; overflow-wrap:break-word; -webkit-text-size-adjust:100%
+}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--ambre-fonce); text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--ambre); outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--police); font-weight:700; line-height:1.22; letter-spacing:-.012em; margin:0 0 .55em; color:var(--nuit)}
+h1{font-size:clamp(1.95rem,4.3vw,3.05rem); font-weight:800}
+h2{font-size:clamp(1.45rem,2.9vw,2.05rem)}
+h3{font-size:1.14rem}
+h4{font-size:1rem}
+p{margin:0 0 1.05em}
+ul{margin:0 0 1.2em; padding-left:1.15em}
+li{margin-bottom:.38em}
+table{max-width:100%}
+.conteneur{width:100%; max-width:var(--conteneur); margin:0 auto; padding-inline:22px}
+.conteneur-etroit{max-width:840px}
+.saut{position:absolute; left:-9999px; top:0; z-index:100; background:var(--nuit); color:#fff; padding:12px 20px}
+.saut:focus{left:0}
+
+/* Sur-titres, entetes de section */
+.sur-titre,.champ,.devis label,.carte-badge,.carte-plus,.avis-attente-titre,.pied h3{text-transform:uppercase; font-weight:800}
+.sur-titre{
+  display:flex; align-items:center; gap:10px; margin:0 0 .8em;
+  letter-spacing:.16em; font-size:.73rem; color:var(--ambre-fonce)
+}
+.sur-titre::before{content:''; width:26px; height:2px; background:currentColor; flex:none}
+.sur-titre-clair{color:var(--ambre-clair)}
+.section-entete{max-width:660px; margin-bottom:34px}
+.section-entete h2{margin-bottom:.35em}
+.section-entete > p:last-child,.section-entete-ligne > div > p:last-child{color:var(--texte-doux); margin:0}
+.section-entete-centre{margin-inline:auto; text-align:center}
+.section-entete-centre .sur-titre{justify-content:center}
+.section-entete-ligne{display:flex; align-items:flex-end; justify-content:space-between; gap:34px; max-width:none}
+.section-entete-ligne > div{max-width:660px}
+
+/* Boutons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; padding:13px 24px;
+  border:2px solid transparent; border-radius:var(--rayon); font-family:inherit;
+  font-weight:700; font-size:.9rem; letter-spacing:.02em; line-height:1.2;
+  cursor:pointer; text-align:center; transition:background .18s,color .18s,border-color .18s
+}
+.btn:hover{text-decoration:none}
+.btn-grand{padding:16px 30px; font-size:.96rem}
+.btn-petit{padding:9px 16px; font-size:.8rem}
+.btn-plein{background:var(--ambre-fonce); color:#fff}
+.btn-plein:hover{background:var(--ambre-nuit); color:#fff}
+.btn-contour{border-color:var(--ambre-fonce); color:var(--ambre-fonce); background:transparent}
+.btn-contour:hover{background:var(--ambre-fonce); color:#fff}
+.btn-fantome{border-color:rgba(255,255,255,.7); color:#fff; background:rgba(255,255,255,.08)}
+.btn-fantome:hover{background:#fff; color:var(--nuit); border-color:#fff}
+
+/* Frise zellige */
+.frise{
+  height:8px; background-color:var(--ambre); background-size:16px 16px;
+  background-image:linear-gradient(135deg,var(--nuit) 25%,transparent 25%),
+                    linear-gradient(225deg,var(--nuit) 25%,transparent 25%)
+}
+
+/* Entete */
+.entete{position:relative; z-index:60; background:#fff; box-shadow:0 2px 10px rgba(14,27,46,.09)}
+.barre-haute{background:var(--nuit); background-image:var(--zellige); color:#b9c6d4; font-size:.8rem}
+.barre-haute-inner{display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:38px; flex-wrap:wrap}
+.barre-haute a{color:#fff}
+.bh-liens{display:flex; align-items:center; gap:20px; flex-wrap:wrap}
+.bh-note b{color:var(--ambre-clair)}
+.entete-inner{display:flex; align-items:center; gap:20px; min-height:76px}
+.logo{display:flex; align-items:center; gap:12px; color:var(--nuit)}
+.logo:hover{text-decoration:none}
+.logo-mark{position:relative; flex:none; width:26px; height:26px}
+.logo-mark::before,.logo-mark::after{content:''; position:absolute; inset:0; background:var(--ambre-fonce); border-radius:3px}
+.logo-mark::after{background:var(--ambre); transform:rotate(45deg)}
+.logo-nom{display:block; font-size:1.38rem; font-weight:800; letter-spacing:-.02em}
+.logo-accent{color:var(--ambre-fonce)}
+.logo-baseline{display:block; font-size:.67rem; color:var(--texte-doux); letter-spacing:.07em; text-transform:uppercase; white-space:nowrap}
+.nav{background:var(--nuit-2); background-image:var(--zellige)}
+.nav > ul{display:flex; gap:2px; list-style:none}
+.nav > ul > li > a{display:flex; align-items:center; padding:13px 14px; color:#fff; font-size:.93rem; font-weight:600; white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.12); text-decoration:none}
+.nav a.actif{color:var(--ambre-clair); background:rgba(255,255,255,.08)}
+.a-sous-menu{position:relative}
+.chevron{display:inline-block; margin-left:7px; border:4px solid transparent; border-top-color:currentColor; transform:translateY(2px)}
+.sous-menu{
+  position:absolute; left:0; top:100%; min-width:260px; margin:0; padding:8px; list-style:none;
+  background:#fff; border:1px solid var(--bordure); border-top:3px solid var(--ambre); box-shadow:var(--ombre-2);
+  opacity:0; visibility:hidden; transform:translateY(6px); transition:.16s
+}
+.sous-menu-2col{display:grid; grid-template-columns:1fr 1fr; min-width:470px; left:auto; right:0}
+.a-sous-menu:hover .sous-menu,.a-sous-menu:focus-within .sous-menu{opacity:1; visibility:visible; transform:none}
+.sous-menu li{margin:0}
+.sous-menu a{display:block; padding:8px 12px; font-size:.88rem; color:var(--texte); border-radius:3px}
+.sous-menu a:hover{background:var(--sable); color:var(--ambre-fonce)}
+.entete-appel{display:flex; align-items:center; gap:16px; margin-left:auto}
+.entete-tel{font-weight:800; font-size:1.02rem; color:var(--nuit); white-space:nowrap}
+.btn-entete{padding:12px 20px; font-size:.86rem; white-space:nowrap}
+.burger{display:none; width:46px; height:42px; padding:11px 10px; background:#fff; border:1px solid var(--bordure-2); border-radius:var(--rayon); cursor:pointer}
+.burger span{display:block; height:2px; margin:0 0 5px; background:var(--nuit)}
+.burger span:last-child{margin-bottom:0}
+.burger.ouvert{background:var(--nuit); border-color:var(--nuit)}
+.burger.ouvert span{background:#fff}
+
+/* Hero accueil */
+.hero{position:relative; background:var(--nuit); color:#fff; padding:92px 0 116px; overflow:hidden}
+.hero-fond,.hero-int-fond{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.hero-voile,.hero-int-voile{position:absolute; inset:0}
+.hero-voile{background:linear-gradient(101deg,rgba(14,27,46,.94) 0%,rgba(14,27,46,.84) 44%,rgba(14,27,46,.38) 100%),var(--zellige)}
+.hero-inner{position:relative; max-width:740px}
+.hero h1{color:#fff; margin-bottom:.3em}
+.hero-chapeau{font-size:1.1rem; color:#dfe7ef; max-width:620px; margin-bottom:1.5em}
+.hero-preuve{
+  display:inline-flex; align-items:center; gap:11px; flex-wrap:wrap; margin-bottom:28px;
+  padding:8px 18px; border-radius:999px; background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.22); --etoile-vide:rgba(255,255,255,.3)
+}
+.hero-preuve strong{color:#fff; font-size:.98rem}
+.hero-preuve span{font-size:.88rem; color:var(--clair)}
+.hero-actions{display:flex; gap:14px; flex-wrap:wrap}
+
+/* Barre de recherche */
+.recherche-zone{position:relative; z-index:5; margin-top:-66px}
+.recherche{padding:22px 26px 18px; background:#fff; border-radius:var(--rayon-2); border-top:4px solid var(--ambre); box-shadow:var(--ombre-3)}
+.recherche-titre{margin:0 0 16px; font-size:1.02rem; font-weight:700; color:var(--nuit)}
+.recherche-grille{display:grid; grid-template-columns:1.05fr .85fr .6fr 1.5fr auto; gap:14px; align-items:end}
+.recherche-go{padding:14px 26px; white-space:nowrap}
+.recherche-note{margin:14px 0 0; font-size:.8rem; color:var(--texte-doux)}
+
+/* Champs de formulaire */
+.champ,.devis label{display:block; font-size:.71rem; letter-spacing:.09em; color:var(--texte-doux)}
+.champ input,.champ select,.devis input,.devis select{
+  display:block; width:100%; margin-top:6px; padding:12px; font:inherit; font-size:.93rem;
+  color:var(--texte); background:var(--sable); border:1px solid var(--bordure-2); border-radius:var(--rayon)
+}
+.champ input:focus,.champ select:focus,.devis input:focus,.devis select:focus{outline:3px solid var(--ambre); outline-offset:1px; background:#fff}
+
+/* Sections */
+.section,.pourquoi{padding:66px 0}
+.section-sable,.etapes{background:var(--sable); background-image:var(--zellige-clair)}
+.section-texte{background:var(--sable)}
+.section-texte h2,.section-texte-nu h2{margin-top:1.6em}
+.section-texte h2:first-child,.section-texte-nu h2:first-child{margin-top:0}
+.section-texte-nu{padding-block:54px}
+
+/* Cartes */
+.grille{display:grid; gap:24px}
+.grille-3{grid-template-columns:repeat(3,1fr)}
+.grille-4{grid-template-columns:repeat(4,1fr)}
+.carte{background:#fff; border:1px solid var(--bordure); border-radius:var(--rayon); overflow:hidden; transition:box-shadow .2s,transform .2s,border-color .2s}
+.carte:hover{box-shadow:var(--ombre-2); transform:translateY(-3px); border-color:var(--bordure-2)}
+.carte-lien{display:block; color:inherit}
+.carte-lien:hover{text-decoration:none}
+.carte-image{position:relative; aspect-ratio:3 / 2; background:var(--sable-2); overflow:hidden}
+.carte-image img{width:100%; height:100%; object-fit:cover}
+.carte-badge{
+  position:absolute; left:12px; top:12px; z-index:2; padding:5px 10px;
+  background:var(--ambre-fonce); color:#fff; border-radius:3px; line-height:1.3;
+  font-size:.68rem; letter-spacing:.09em
+}
+.carte-corps{padding:18px 20px 20px}
+.carte-corps h3{margin-bottom:.4em}
+.carte-corps p{font-size:.89rem; color:var(--texte-doux); margin-bottom:.9em}
+.carte-plus{display:inline-flex; align-items:center; gap:9px; font-size:.78rem; letter-spacing:.09em; color:var(--ambre-fonce)}
+.carte-plus::after{content:''; width:6px; height:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(-45deg); transition:transform .18s}
+.carte:hover .carte-plus::after{transform:rotate(-45deg) translate(3px,3px)}
+.carte-flotte .carte-corps h3{margin:0}
+
+/* Pourquoi nous, icones CSS */
+.pourquoi{background:#fff; border-top:1px solid var(--bordure)}
+.pourquoi-grille{gap:30px}
+.pourquoi-item h3{font-size:1.04rem; margin-bottom:.35em}
+.pourquoi-item p{font-size:.88rem; color:var(--texte-doux); margin:0}
+.ico{position:relative; display:block; width:52px; height:52px; margin-bottom:16px; border-radius:50%; background:var(--sable-2); color:var(--ambre-fonce)}
+.ico i{position:absolute; inset:0}
+.ico::before,.ico::after,.ico i::before,.ico i::after{content:''; position:absolute}
+.ico-prix::before{left:15px; top:15px; width:22px; height:22px; border:2px solid currentColor; border-radius:4px; transform:rotate(45deg)}
+.ico-prix::after{left:20px; top:20px; width:6px; height:6px; border-radius:50%; background:currentColor}
+.ico-horloge::before,.ico-volant::before{left:12px; top:12px; width:24px; height:24px; border:2px solid currentColor; border-radius:50%}
+.ico-horloge i::before{left:25px; top:18px; width:2px; height:9px; background:currentColor}
+.ico-horloge i::after{left:26px; top:25px; width:8px; height:2px; background:currentColor}
+.ico-volant::after{left:22px; top:22px; width:8px; height:8px; border-radius:50%; background:currentColor}
+.ico-volant i::before{left:25px; top:28px; width:2px; height:10px; background:currentColor}
+.ico-volant i::after{left:14px; top:25px; width:24px; height:2px; background:currentColor}
+.ico-ecusson::before{left:15px; top:13px; width:22px; height:26px; border:2px solid currentColor; border-radius:4px 4px 11px 11px / 4px 4px 18px 18px}
+.ico-ecusson i::before{left:22px; top:21px; width:6px; height:11px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(42deg)}
+
+/* Etoiles CSS, 5e a 90 % */
+.etoiles{display:inline-flex; gap:3px; vertical-align:-2px}
+.etoile{width:15px; height:15px; background:var(--ambre-clair); clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.etoile-partielle{background:linear-gradient(90deg,var(--ambre-clair) 90%,var(--etoile-vide) 90%)}
+
+/* Bandeau de chiffres */
+.chiffres{background:var(--nuit); background-image:var(--zellige); color:#fff}
+.chiffres-grille{display:grid; grid-template-columns:repeat(4,1fr); padding:48px 22px}
+.chiffre{text-align:center; padding-inline:14px}
+.chiffre + .chiffre{border-left:1px solid var(--filet)}
+.chiffre strong{display:block; font-size:2.35rem; font-weight:800; color:var(--ambre-clair); line-height:1.1; letter-spacing:-.02em}
+.chiffre span{display:block; font-size:.85rem; color:#c3ced9; margin-top:4px}
+
+/* Bandeau evenementiel, arc CSS */
+.bandeau-evenement{background:var(--nuit-2); background-image:var(--zellige); color:#e6ecf2}
+.bandeau-inner{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; padding:64px 22px}
+.bandeau-texte h2{color:#fff}
+.bandeau-texte p{color:#c9d4de}
+.bandeau-texte .btn{margin-top:8px}
+.bandeau-image{position:relative}
+.bandeau-image::before{content:''; position:absolute; left:22px; right:-18px; top:-18px; bottom:22px; border:2px solid rgba(240,162,63,.5); border-radius:120px 120px 6px 6px}
+.bandeau-image img{position:relative; width:100%; border-radius:110px 110px 6px 6px; box-shadow:var(--ombre-3)}
+
+/* Avis : chiffre reel, zone d attente vide */
+.avis-grille{display:grid; grid-template-columns:.82fr 1.18fr; gap:28px}
+.avis-note{padding:34px; text-align:center; border-radius:var(--rayon-2); background:var(--nuit); background-image:var(--zellige); color:#d9e2ea; --etoile-vide:rgba(255,255,255,.3)}
+.avis-note .sur-titre{justify-content:center; color:var(--ambre-clair)}
+.avis-chiffre{display:block; font-size:3.6rem; font-weight:800; color:#fff; line-height:1; letter-spacing:-.03em}
+.avis-note .etoiles{margin:14px 0 16px}
+.avis-legende{font-size:.92rem}
+.avis-legende strong{color:#fff}
+.avis-note .btn-contour{border-color:var(--ambre-clair); color:var(--ambre-clair)}
+.avis-note .btn-contour:hover{background:var(--ambre-clair); color:var(--nuit)}
+.avis-attente{display:flex; flex-direction:column; justify-content:center; padding:34px; background:var(--sable); border:2px dashed var(--bordure-2); border-radius:var(--rayon-2)}
+.avis-attente-titre{margin-bottom:.8em; font-size:.78rem; letter-spacing:.12em; color:var(--texte-doux)}
+.avis-attente p:last-child{margin:0; color:var(--texte-doux)}
+
+/* Etapes, page reservation */
+.etapes{border-bottom:1px solid var(--bordure)}
+.etapes-grille{display:grid; grid-template-columns:repeat(3,1fr); gap:30px; padding:40px 22px}
+.etape{display:flex; gap:16px; align-items:flex-start}
+.etape-num{flex:none; display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:var(--ambre-fonce); color:#fff; font-weight:800; font-size:1.05rem}
+.etape h2{font-size:1.05rem; margin-bottom:.2em}
+.etape p{font-size:.88rem; color:var(--texte-doux); margin:0}
+
+/* Hero interieur */
+.hero-int{position:relative; background:var(--nuit); color:#fff; padding:52px 0 50px; overflow:hidden}
+.hero-int-voile{background:linear-gradient(94deg,rgba(14,27,46,.94) 0%,rgba(14,27,46,.82) 60%,rgba(14,27,46,.62) 100%),var(--zellige)}
+.hero-int-inner{position:relative; max-width:830px}
+.hero-int h1{color:#fff; margin-bottom:.3em}
+.hero-int-chapeau{margin:0; font-size:1.02rem; color:var(--clair)}
+.hero-int-nu{background:var(--sable); background-image:var(--zellige-clair); color:var(--texte)}
+.hero-int-nu h1{color:var(--nuit)}
+.hero-int-nu .hero-int-chapeau{color:var(--texte-doux)}
+.fil{display:flex; gap:9px; flex-wrap:wrap; margin-bottom:16px; font-size:.8rem; color:#a9b8c6}
+.fil a{color:var(--ambre-clair)}
+.hero-int-nu .fil{color:var(--texte-doux)}
+.hero-int-nu .fil a{color:var(--ambre-fonce)}
+
+/* Colonnes interieures */
+.colonnes{display:grid; grid-template-columns:minmax(0,1fr) 342px; gap:44px; padding-block:54px; align-items:start}
+.colonnes-reservation{padding-top:46px}
+.colonne-contenu h2{margin-top:1.6em}
+.colonne-contenu h2:first-child{margin-top:0}
+.colonne-contenu h3{margin-top:1.5em}
+.colonne-cote{position:sticky; top:24px; display:grid; gap:22px}
+.fiche-photo{position:relative; margin:0 0 30px}
+.fiche-photo img{width:100%; aspect-ratio:5 / 3; object-fit:cover; border-radius:var(--rayon-2)}
+.carte-badge-fiche{left:16px; top:16px; font-size:.72rem; padding:7px 13px}
+.liste-puces{list-style:none; padding:0; margin:0 0 1.3em}
+.liste-puces li{position:relative; padding-left:24px; margin-bottom:.45em}
+.liste-puces li::before{content:''; position:absolute; left:2px; top:.6em; width:8px; height:8px; background:var(--ambre); border-radius:1px; transform:rotate(45deg)}
+
+/* Encarts */
+.encart{padding:22px 24px; background:var(--sable); border:1px solid var(--bordure); border-radius:var(--rayon-2)}
+.encart h3{margin-bottom:.6em}
+.encart ul{list-style:none; padding:0; margin:0}
+.encart li{margin:0; padding:9px 0; border-bottom:1px solid var(--bordure); font-size:.91rem}
+.encart li:last-child{border-bottom:0}
+.encart-contact{background:var(--nuit); background-image:var(--zellige); color:var(--clair); border-color:var(--nuit); --etoile-vide:rgba(255,255,255,.3)}
+.encart-contact h3,.encart-contact a{color:#fff}
+.encart-contact p{font-size:.9rem}
+.encart-contact .btn-plein{width:100%; font-size:1.02rem}
+.encart-note{margin:16px 0 0; font-size:.82rem; color:var(--clair-2)}
+.encart-note strong{color:#fff}
+.liste-contact li{border-color:var(--filet)}
+.liste-contact small{color:var(--clair-2)}
+
+/* Formulaire de devis */
+.devis{padding:24px; background:#fff; border:1px solid var(--bordure); border-top:4px solid var(--ambre); border-radius:var(--rayon-2); box-shadow:var(--ombre)}
+.devis h3{margin-bottom:.8em}
+.devis-grille{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:18px}
+.devis-compact .devis-grille{grid-template-columns:1fr 1fr}
+.colonne-cote .devis-compact .devis-grille{grid-template-columns:1fr; gap:12px}
+.devis .btn-plein{width:100%}
+.devis-note{margin:11px 0 0; font-size:.78rem; color:var(--texte-doux); text-align:center}
+.colonne-contenu .devis{margin-top:12px}
+
+/* Tarifs */
+.tarifs-titre{margin-top:1.7em}
+.tarifs-cadre{margin:0 0 1.9em; background:#fff; border:1px solid var(--bordure); border-radius:var(--rayon-2); overflow:hidden}
+.tarifs{width:100%; border-collapse:collapse; font-size:.94rem}
+.tarifs th{padding:11px 18px; background:var(--nuit); color:#fff; text-align:left; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.11em}
+.tarifs th:last-child{text-align:right}
+.tarifs td{padding:11px 18px; border-top:1px solid var(--bordure)}
+.tarifs tbody tr:nth-child(odd){background:var(--sable)}
+.tarif-vehicule{font-weight:600}
+.tarif-prix{text-align:right; font-weight:800; font-size:1.02rem; color:var(--ambre-fonce); white-space:nowrap}
+.tarif-nd{text-align:right; font-size:.84rem; color:var(--texte-doux); white-space:nowrap}
+.tarifs-pied{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:13px 18px; background:var(--sable-2); border-top:1px solid var(--bordure)}
+.tarifs-pied .btn{flex:none}
+.tarifs-note{margin:0; font-size:.79rem; color:var(--texte-doux)}
+.tarif-devis{margin-bottom:1.6em; padding:15px 20px; background:var(--sable); border-left:4px solid var(--ambre); border-radius:0 var(--rayon) var(--rayon) 0; font-size:.93rem}
+
+/* Pied de page */
+.pied{background:var(--nuit); background-image:var(--zellige); color:var(--clair-2); font-size:.89rem; --etoile-vide:rgba(255,255,255,.3)}
+.pied-grille{display:grid; grid-template-columns:1.7fr repeat(4,1fr) 1.35fr; gap:30px; padding:52px 22px 40px}
+.pied h3{margin-bottom:1.1em; color:#fff; font-size:.8rem; letter-spacing:.12em}
+.pied ul{list-style:none; padding:0; margin:0}
+.pied li{margin-bottom:.5em; font-size:.86rem; line-height:1.5}
+.pied a{color:#c8d3de}
+.pied a:hover{color:#fff}
+.pied-identite .logo-nom{color:#fff; margin-bottom:.5em}
+.pied-identite .logo-accent{color:var(--ambre-clair)}
+.pied-identite p{font-size:.84rem; line-height:1.6}
+.pied-avis{display:flex; align-items:center; gap:9px; flex-wrap:wrap}
+.pied-avis strong{color:#fff}
+.pied-mention{font-size:.8rem !important; color:#8a99a8}
+.pied-bas{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-block:18px; border-top:1px solid rgba(255,255,255,.13); font-size:.81rem}
+
+/* WhatsApp */
+.whatsapp{
+  position:fixed; right:18px; bottom:18px; z-index:70; display:flex; align-items:center; gap:9px;
+  padding:12px 20px; background:#157f43; color:#fff; border-radius:999px;
+  font-size:.86rem; font-weight:700; box-shadow:var(--ombre-2)
+}
+.whatsapp:hover{background:#0f6835; color:#fff; text-decoration:none}
+.whatsapp-point{width:9px; height:9px; border-radius:50%; background:#b6f0cd}
+
+/* Responsive */
+
+@media (max-width:1150px){
+  .nav > ul > li > a{padding:13px 11px; font-size:.88rem}
+  .colonnes{grid-template-columns:minmax(0,1fr) 306px; gap:32px}
+  .pied-grille{grid-template-columns:1.6fr 1fr 1fr 1fr}
+}
+
+@media (max-width:980px){
+  .burger{display:block}
+  .entete-inner{min-height:68px}
+  .entete-tel{display:none}
+  .nav{max-height:0; overflow:hidden; transition:max-height .25s ease}
+  .nav.ouvert{max-height:80vh; overflow-y:auto}
+  .nav > ul{flex-direction:column; gap:0; padding-block:6px 14px}
+  .nav > ul > li > a{padding:12px 2px; border-bottom:1px solid rgba(255,255,255,.14); font-size:.95rem}
+  .chevron{display:none}
+  .sous-menu{
+    position:static; display:block; min-width:0; padding:2px 0 10px 14px; background:none;
+    opacity:1; visibility:visible; transform:none; box-shadow:none; border:0; border-radius:0;
+  }
+  .sous-menu a{padding:7px 2px; font-size:.86rem; color:#b9c6d4}
+  .sous-menu a:hover{background:none; color:#fff}
+  .grille-4{grid-template-columns:repeat(2,1fr)}
+  .recherche-grille{grid-template-columns:1fr 1fr}
+  .recherche-go{grid-column:1 / -1}
+  .bandeau-inner{grid-template-columns:1fr; gap:34px}
+  .colonnes{grid-template-columns:1fr}
+  .colonne-cote{position:static}
+  .avis-grille{grid-template-columns:1fr}
+  .hero{padding:66px 0 104px}
+  .section-entete-ligne{flex-direction:column; align-items:flex-start; gap:20px}
+}
+
+@media (max-width:780px){
+  .grille-3{grid-template-columns:repeat(2,1fr)}
+  .chiffres-grille{grid-template-columns:repeat(2,1fr); gap:28px 0; padding:38px 22px}
+  .chiffre + .chiffre{border-left:0}
+  .chiffre:nth-child(even){border-left:1px solid var(--filet)}
+  .etapes-grille{grid-template-columns:1fr; gap:20px}
+  .pied-grille{grid-template-columns:1fr 1fr; gap:26px}
+  .devis-grille{grid-template-columns:1fr 1fr}
+  .bh-agrement{display:none}
+  .barre-haute-inner{justify-content:center}
+}
+
+@media (max-width:600px){
+  .entete-appel{display:none}
+  .burger{margin-left:auto}
+  .section,.pourquoi{padding:46px 0}
+  .grille-3,.grille-4{grid-template-columns:1fr; gap:20px}
+  .pourquoi-grille{gap:26px}
+  .recherche-grille{grid-template-columns:1fr}
+  .recherche-zone{margin-top:-52px}
+  .hero{padding:54px 0 92px}
+  .hero-actions .btn{width:100%}
+  .bh-liens{gap:14px; font-size:.78rem}
+  .avis-note,.avis-attente{padding:26px 22px}
+  .bandeau-inner{padding:48px 22px}
+  .bandeau-image::before{left:14px; right:-10px; top:-12px; bottom:16px; border-radius:80px 80px 6px 6px}
+  .bandeau-image img{border-radius:74px 74px 6px 6px}
+  .tarifs-pied{flex-direction:column; align-items:stretch; text-align:center}
+  .whatsapp{right:12px; bottom:12px; padding:11px 16px; font-size:.8rem}
+}
+
+@media (max-width:460px){
+  .conteneur,.chiffres-grille,.bandeau-inner,.etapes-grille,.pied-grille{padding-inline:16px}
+  .devis-grille,.chiffres-grille,.pied-grille{grid-template-columns:1fr}
+  .devis,.recherche{padding:18px 16px}
+  .chiffres-grille{gap:22px}
+  .chiffre{border-top:1px solid rgba(255,255,255,.14); padding-top:20px}
+  .chiffre:first-child{border-top:0; padding-top:0}
+  .chiffre:nth-child(even){border-left:0}
+  .logo-baseline{display:none}
+  .logo-nom{font-size:1.24rem}
+  .tarifs th,.tarifs td{padding:10px 12px}
+  .tarif-prix{font-size:.96rem}
+  .encart,.avis-note,.avis-attente{padding:20px 18px}
+  .hero-preuve{padding:7px 14px}
+}
+
+@media print{.entete,.pied,.whatsapp,.devis,.recherche-zone,.avis-attente{display:none} }

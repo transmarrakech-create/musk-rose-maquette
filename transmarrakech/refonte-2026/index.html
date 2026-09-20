@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refonte transmarrakech.net, 4 directions</title>
+<style>
+:root{--ocre:#c1632b;--nuit:#16212e;--sable:#f6f1ea;--bordure:#e2dcd3;--doux:#5b6672;
+--police:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+--titre:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--police);color:#23282d;background:var(--sable);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ocre)}
+.conteneur{width:100%;max-width:1220px;margin:0 auto;padding-inline:20px}
+.tete{background:var(--nuit);color:#fff;padding-block:46px 40px}
+.tete h1{font-family:var(--titre);font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 .3em;color:#fff}
+.tete p{color:#c7d1da;max-width:760px;margin:0 0 .6em}
+.tete strong{color:#fff}
+.grille{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;padding-block:44px}
+.direction{background:#fff;border:1px solid var(--bordure);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.direction-vide{opacity:.6}
+.direction-tete{padding:22px 22px 6px}
+.temperament{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--ocre);margin-bottom:.5em}
+.direction h2{font-family:var(--titre);font-size:1.5rem;margin:0 0 .15em}
+.source{font-size:.82rem;color:var(--doux);margin:0}
+.apercus{display:flex;gap:10px;align-items:flex-start;padding:16px 22px;background:var(--sable);border-block:1px solid var(--bordure)}
+.apercu{position:relative;display:block;flex:1 1 auto;min-width:0;border:1px solid var(--bordure);border-radius:8px;overflow:hidden;background:#fff}
+.apercu-mobile{flex:0 0 27%}
+.apercu img{width:100%;display:block}
+.apercu-vue{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--doux);padding:5px 8px;background:#fff;border-top:1px solid var(--bordure)}
+.apercu-absent{margin:16px 22px;padding:26px 16px;background:var(--sable);border:1px dashed var(--bordure);border-radius:8px;text-align:center;font-size:.86rem;color:var(--doux)}
+.description{padding:16px 22px;margin:0;font-size:.9rem;color:var(--doux);flex:1}
+.direction-pied{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 22px 22px}
+.compte{font-size:.82rem;color:var(--doux)}
+.btn{display:inline-block;background:var(--ocre);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:11px 20px;border-radius:9px}
+.btn:hover{background:#a9531f}
+.section-tableau{background:#fff;border-top:1px solid var(--bordure);padding-block:44px}
+.section-tableau h2{font-family:var(--titre);margin:0 0 .3em}
+.section-tableau p.intro{color:var(--doux);margin:0 0 24px}
+.cadre{overflow-x:auto;border:1px solid var(--bordure);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:9px 14px;text-align:left;border-top:1px solid var(--bordure)}
+thead th{background:var(--nuit);color:#fff;border:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+tbody th{font-weight:600}
+tbody tr:nth-child(odd){background:var(--sable)}
+.rubrique{color:var(--doux);font-size:.82rem}
+.vide{color:#b6bdc4}
+.pied{padding-block:30px;color:var(--doux);font-size:.85rem}
+@media (max-width:980px){.grille{grid-template-columns:1fr;gap:22px}}
+@media (max-width:430px){.conteneur{padding-inline:16px}.apercus{flex-direction:column}.apercu-mobile{flex:1 1 auto;max-width:180px}}
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="conteneur">
+    <h1>Refonte de transmarrakech.net</h1>
+    <p>Quatre directions visuelles, chacune appliquée au <strong>site entier</strong> :
+      32 pages navigables, avec le contenu et l’architecture du site actuel,
+      tes photos, et les 739 avis à 4,9
+      qui n’apparaissent aujourd’hui nulle part.</p>
+    <p>Elles portent exactement le même texte : ce qui change d’une direction à l’autre,
+      c’est le design, rien d’autre. Ouvre les accueils, puis compare la même page
+      intérieure dans chacune.</p>
+  </div>
+</header>
+
+<div class="conteneur">
+  <div class="grille">
+<article class="direction">
+  <header class="direction-tete">
+    <span class="temperament">La plus commerciale</span>
+    <h2>Travele</h2>
+    <p class="source">D’après Envato, Travele (BosaThemes)</p>
+  </header>
+  <div class="apercus">
+        <a class="apercu apercu-desktop" href="direction-1-travele/index.html">
+          <img src="_vignettes/direction-1-travele-desktop.jpg" alt="Apercu ordinateur de la direction Travele" loading="lazy">
+          <span class="apercu-vue">Ordinateur</span>
+        </a>
+        <a class="apercu apercu-mobile" href="direction-1-travele/index.html">
+          <img src="_vignettes/direction-1-travele-mobile.jpg" alt="Apercu telephone de la direction Travele" loading="lazy">
+          <span class="apercu-vue">Telephone</span>
+        </a>
+      </div>
+  <p class="description">Agence de voyage classique, riche et rassurante. Palette chaude, orange ambre et bleu nuit. Barre de recherche proéminente au premier écran, beaucoup de sections, cartes à badges. Celle qui pousse à la demande de devis.</p>
+  <div class="direction-pied">
+    <span class="compte">32 pages</span>
+    <a class="btn" href="direction-1-travele/index.html">Ouvrir le site</a>
+  </div>
+</article>
+<article class="direction">
+  <header class="direction-tete">
+    <span class="temperament">La plus moderne</span>
+    <h2>Tripix</h2>
+    <p class="source">D’après Envato, Tripix (vecuro_themes)</p>
+  </header>
+  <div class="apercus">
+        <a class="apercu apercu-desktop" href="direction-2-tripix/index.html">
+          <img src="_vignettes/direction-2-tripix-desktop.jpg" alt="Apercu ordinateur de la direction Tripix" loading="lazy">
+          <span class="apercu-vue">Ordinateur</span>
+        </a>
+        <a class="apercu apercu-mobile" href="direction-2-tripix/index.html">
+          <img src="_vignettes/direction-2-tripix-mobile.jpg" alt="Apercu telephone de la direction Tripix" loading="lazy">
+          <span class="apercu-vue">Telephone</span>
+        </a>
+      </div>
+  <p class="description">Contemporaine et aérée. Grands arrondis, blancs généreux, typographie très contrastée, images en ratio portrait, superpositions assumées. Moins de sections, chacune plus ample.</p>
+  <div class="direction-pied">
+    <span class="compte">32 pages</span>
+    <a class="btn" href="direction-2-tripix/index.html">Ouvrir le site</a>
+  </div>
+</article>
+<article class="direction">
+  <header class="direction-tete">
+    <span class="temperament">La plus épurée</span>
+    <h2>Reservation</h2>
+    <p class="source">D’après Envato, My Hotel</p>
+  </header>
+  <div class="apercus">
+        <a class="apercu apercu-desktop" href="direction-3-reservation/index.html">
+          <img src="_vignettes/direction-3-reservation-desktop.jpg" alt="Apercu ordinateur de la direction Reservation" loading="lazy">
+          <span class="apercu-vue">Ordinateur</span>
+        </a>
+        <a class="apercu apercu-mobile" href="direction-3-reservation/index.html">
+          <img src="_vignettes/direction-3-reservation-mobile.jpg" alt="Apercu telephone de la direction Reservation" loading="lazy">
+          <span class="apercu-vue">Telephone</span>
+        </a>
+      </div>
+  <p class="description">Sobriété haut de gamme, l’acte de réservation au centre. Beaucoup de blanc, filets fins, un seul accent. Le formulaire est le héros, et les tableaux de tarifs y sont les plus soignés.</p>
+  <div class="direction-pied">
+    <span class="compte">32 pages</span>
+    <a class="btn" href="direction-3-reservation/index.html">Ouvrir le site</a>
+  </div>
+</article>
+<article class="direction">
+  <header class="direction-tete">
+    <span class="temperament">La plus institutionnelle</span>
+    <h2>Corporate</h2>
+    <p class="source">D’après Direction B2B, produite en parallele</p>
+  </header>
+  <div class="apercus">
+        <a class="apercu apercu-desktop" href="direction-4-corporate/index.html">
+          <img src="_vignettes/direction-4-corporate-desktop.jpg" alt="Apercu ordinateur de la direction Corporate" loading="lazy">
+          <span class="apercu-vue">Ordinateur</span>
+        </a>
+        <a class="apercu apercu-mobile" href="direction-4-corporate/index.html">
+          <img src="_vignettes/direction-4-corporate-mobile.jpg" alt="Apercu telephone de la direction Corporate" loading="lazy">
+          <span class="apercu-vue">Telephone</span>
+        </a>
+      </div>
+  <p class="description">Adressée aux agences, aux entreprises et aux organisateurs de séminaires plutôt qu’au voyageur particulier. Met en avant la capacité, l’agrément et la logistique de groupe.</p>
+  <div class="direction-pied">
+    <span class="compte">32 pages</span>
+    <a class="btn" href="direction-4-corporate/index.html">Ouvrir le site</a>
+  </div>
+</article>
+  </div>
+</div>
+
+<section class="section-tableau">
+  <div class="conteneur">
+    <h2>Les 32 pages, dans chaque direction</h2>
+    <p class="intro">Même contenu partout. Utile pour vérifier qu’une page précise tient dans la direction choisie.</p>
+    <div class="cadre">
+      <table>
+        <thead><tr><th>Page</th><th>Rubrique</th><th>Travele</th><th>Tripix</th><th>Reservation</th><th>Corporate</th></tr></thead>
+        <tbody>
+<tr><th scope="row">Accueil</th><td class="rubrique">accueil</td><td><a href="direction-1-travele/index.html">voir</a></td><td><a href="direction-2-tripix/index.html">voir</a></td><td><a href="direction-3-reservation/index.html">voir</a></td><td><a href="direction-4-corporate/index.html">voir</a></td></tr>
+<tr><th scope="row">Location avec chauffeur</th><td class="rubrique">location</td><td><a href="direction-1-travele/location-minibus-avec-chauffeur.html">voir</a></td><td><a href="direction-2-tripix/location-minibus-avec-chauffeur.html">voir</a></td><td><a href="direction-3-reservation/location-minibus-avec-chauffeur.html">voir</a></td><td><a href="direction-4-corporate/location-minibus-avec-chauffeur.html">voir</a></td></tr>
+<tr><th scope="row">Transport de personnel</th><td class="rubrique">location</td><td><a href="direction-1-travele/location-longue-duree.html">voir</a></td><td><a href="direction-2-tripix/location-longue-duree.html">voir</a></td><td><a href="direction-3-reservation/location-longue-duree.html">voir</a></td><td><a href="direction-4-corporate/location-longue-duree.html">voir</a></td></tr>
+<tr><th scope="row">Transport evenementiel</th><td class="rubrique">evenementiel</td><td><a href="direction-1-travele/transport-evenementiel.html">voir</a></td><td><a href="direction-2-tripix/transport-evenementiel.html">voir</a></td><td><a href="direction-3-reservation/transport-evenementiel.html">voir</a></td><td><a href="direction-4-corporate/transport-evenementiel.html">voir</a></td></tr>
+<tr><th scope="row">Navettes aeroport</th><td class="rubrique">transfert</td><td><a href="direction-1-travele/navettes-aeroport.html">voir</a></td><td><a href="direction-2-tripix/navettes-aeroport.html">voir</a></td><td><a href="direction-3-reservation/navettes-aeroport.html">voir</a></td><td><a href="direction-4-corporate/navettes-aeroport.html">voir</a></td></tr>
+<tr><th scope="row">Transferts inter-ville</th><td class="rubrique">transfert</td><td><a href="direction-1-travele/transferts-inter-ville.html">voir</a></td><td><a href="direction-2-tripix/transferts-inter-ville.html">voir</a></td><td><a href="direction-3-reservation/transferts-inter-ville.html">voir</a></td><td><a href="direction-4-corporate/transferts-inter-ville.html">voir</a></td></tr>
+<tr><th scope="row">Transferts golf</th><td class="rubrique">transfert</td><td><a href="direction-1-travele/transferts-golf.html">voir</a></td><td><a href="direction-2-tripix/transferts-golf.html">voir</a></td><td><a href="direction-3-reservation/transferts-golf.html">voir</a></td><td><a href="direction-4-corporate/transferts-golf.html">voir</a></td></tr>
+<tr><th scope="row">Transfert Marrakech</th><td class="rubrique">transfert</td><td><a href="direction-1-travele/transfert-marrakech.html">voir</a></td><td><a href="direction-2-tripix/transfert-marrakech.html">voir</a></td><td><a href="direction-3-reservation/transfert-marrakech.html">voir</a></td><td><a href="direction-4-corporate/transfert-marrakech.html">voir</a></td></tr>
+<tr><th scope="row">Taxi prive Marrakech</th><td class="rubrique">transfert</td><td><a href="direction-1-travele/transfert-marrakech-maroc.html">voir</a></td><td><a href="direction-2-tripix/transfert-marrakech-maroc.html">voir</a></td><td><a href="direction-3-reservation/transfert-marrakech-maroc.html">voir</a></td><td><a href="direction-4-corporate/transfert-marrakech-maroc.html">voir</a></td></tr>
+<tr><th scope="row">Excursions</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursions.html">voir</a></td><td><a href="direction-2-tripix/excursions.html">voir</a></td><td><a href="direction-3-reservation/excursions.html">voir</a></td><td><a href="direction-4-corporate/excursions.html">voir</a></td></tr>
+<tr><th scope="row">Excursions pas cheres</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursions-pas-cher.html">voir</a></td><td><a href="direction-2-tripix/excursions-pas-cher.html">voir</a></td><td><a href="direction-3-reservation/excursions-pas-cher.html">voir</a></td><td><a href="direction-4-corporate/excursions-pas-cher.html">voir</a></td></tr>
+<tr><th scope="row">Decouvrir Marrakech</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-decouvrir-marrakech.html">voir</a></td><td><a href="direction-2-tripix/excursion-decouvrir-marrakech.html">voir</a></td><td><a href="direction-3-reservation/excursion-decouvrir-marrakech.html">voir</a></td><td><a href="direction-4-corporate/excursion-decouvrir-marrakech.html">voir</a></td></tr>
+<tr><th scope="row">Desert d Agafay</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-agafay.html">voir</a></td><td><a href="direction-2-tripix/excursion-agafay.html">voir</a></td><td><a href="direction-3-reservation/excursion-agafay.html">voir</a></td><td><a href="direction-4-corporate/excursion-agafay.html">voir</a></td></tr>
+<tr><th scope="row">Essaouira</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-essaouira.html">voir</a></td><td><a href="direction-2-tripix/excursion-essaouira.html">voir</a></td><td><a href="direction-3-reservation/excursion-essaouira.html">voir</a></td><td><a href="direction-4-corporate/excursion-essaouira.html">voir</a></td></tr>
+<tr><th scope="row">Vallee de l Ourika</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-vallee-ourika.html">voir</a></td><td><a href="direction-2-tripix/excursion-vallee-ourika.html">voir</a></td><td><a href="direction-3-reservation/excursion-vallee-ourika.html">voir</a></td><td><a href="direction-4-corporate/excursion-vallee-ourika.html">voir</a></td></tr>
+<tr><th scope="row">Ait Ben Haddou</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-ait-ben-haddou-ouarzazate.html">voir</a></td><td><a href="direction-2-tripix/excursion-ait-ben-haddou-ouarzazate.html">voir</a></td><td><a href="direction-3-reservation/excursion-ait-ben-haddou-ouarzazate.html">voir</a></td><td><a href="direction-4-corporate/excursion-ait-ben-haddou-ouarzazate.html">voir</a></td></tr>
+<tr><th scope="row">Asni et Imlil</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-asni-tahanaout-imlil.html">voir</a></td><td><a href="direction-2-tripix/excursion-asni-tahanaout-imlil.html">voir</a></td><td><a href="direction-3-reservation/excursion-asni-tahanaout-imlil.html">voir</a></td><td><a href="direction-4-corporate/excursion-asni-tahanaout-imlil.html">voir</a></td></tr>
+<tr><th scope="row">Cascades d Ouzoud</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-cascades-ouzoud.html">voir</a></td><td><a href="direction-2-tripix/excursion-cascades-ouzoud.html">voir</a></td><td><a href="direction-3-reservation/excursion-cascades-ouzoud.html">voir</a></td><td><a href="direction-4-corporate/excursion-cascades-ouzoud.html">voir</a></td></tr>
+<tr><th scope="row">Fantasia Chez Ali</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-chez-ali.html">voir</a></td><td><a href="direction-2-tripix/excursion-chez-ali.html">voir</a></td><td><a href="direction-3-reservation/excursion-chez-ali.html">voir</a></td><td><a href="direction-4-corporate/excursion-chez-ali.html">voir</a></td></tr>
+<tr><th scope="row">Trois Vallees</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-trois-vallees.html">voir</a></td><td><a href="direction-2-tripix/excursion-trois-vallees.html">voir</a></td><td><a href="direction-3-reservation/excursion-trois-vallees.html">voir</a></td><td><a href="direction-4-corporate/excursion-trois-vallees.html">voir</a></td></tr>
+<tr><th scope="row">Jardins de Marrakech</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-jardins-marrakech.html">voir</a></td><td><a href="direction-2-tripix/excursion-jardins-marrakech.html">voir</a></td><td><a href="direction-3-reservation/excursion-jardins-marrakech.html">voir</a></td><td><a href="direction-4-corporate/excursion-jardins-marrakech.html">voir</a></td></tr>
+<tr><th scope="row">Oukaimeden</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-oukaimeden.html">voir</a></td><td><a href="direction-2-tripix/excursion-oukaimeden.html">voir</a></td><td><a href="direction-3-reservation/excursion-oukaimeden.html">voir</a></td><td><a href="direction-4-corporate/excursion-oukaimeden.html">voir</a></td></tr>
+<tr><th scope="row">Casablanca</th><td class="rubrique">excursions</td><td><a href="direction-1-travele/excursion-casablanca.html">voir</a></td><td><a href="direction-2-tripix/excursion-casablanca.html">voir</a></td><td><a href="direction-3-reservation/excursion-casablanca.html">voir</a></td><td><a href="direction-4-corporate/excursion-casablanca.html">voir</a></td></tr>
+<tr><th scope="row">Circuits</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuits.html">voir</a></td><td><a href="direction-2-tripix/circuits.html">voir</a></td><td><a href="direction-3-reservation/circuits.html">voir</a></td><td><a href="direction-4-corporate/circuits.html">voir</a></td></tr>
+<tr><th scope="row">Ouarzazate et Zagora, 2 jours</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuit-ouarzazate-zagora.html">voir</a></td><td><a href="direction-2-tripix/circuit-ouarzazate-zagora.html">voir</a></td><td><a href="direction-3-reservation/circuit-ouarzazate-zagora.html">voir</a></td><td><a href="direction-4-corporate/circuit-ouarzazate-zagora.html">voir</a></td></tr>
+<tr><th scope="row">Gorges du Dades et Merzouga, 3 jours</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuit-dades-merzouga.html">voir</a></td><td><a href="direction-2-tripix/circuit-dades-merzouga.html">voir</a></td><td><a href="direction-3-reservation/circuit-dades-merzouga.html">voir</a></td><td><a href="direction-4-corporate/circuit-dades-merzouga.html">voir</a></td></tr>
+<tr><th scope="row">Ouarzazate et gorges du Todra, 2 jours</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuit-ouarzazate-todra.html">voir</a></td><td><a href="direction-2-tripix/circuit-ouarzazate-todra.html">voir</a></td><td><a href="direction-3-reservation/circuit-ouarzazate-todra.html">voir</a></td><td><a href="direction-4-corporate/circuit-ouarzazate-todra.html">voir</a></td></tr>
+<tr><th scope="row">Ouzoud et Bin El Ouidane, 2 jours</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuit-ouzoud-bin-el-ouidane.html">voir</a></td><td><a href="direction-2-tripix/circuit-ouzoud-bin-el-ouidane.html">voir</a></td><td><a href="direction-3-reservation/circuit-ouzoud-bin-el-ouidane.html">voir</a></td><td><a href="direction-4-corporate/circuit-ouzoud-bin-el-ouidane.html">voir</a></td></tr>
+<tr><th scope="row">Villes imperiales, 5 jours</th><td class="rubrique">circuits</td><td><a href="direction-1-travele/circuit-villes-imperiales.html">voir</a></td><td><a href="direction-2-tripix/circuit-villes-imperiales.html">voir</a></td><td><a href="direction-3-reservation/circuit-villes-imperiales.html">voir</a></td><td><a href="direction-4-corporate/circuit-villes-imperiales.html">voir</a></td></tr>
+<tr><th scope="row">Reservation</th><td class="rubrique">reservation</td><td><a href="direction-1-travele/reservation.html">voir</a></td><td><a href="direction-2-tripix/reservation.html">voir</a></td><td><a href="direction-3-reservation/reservation.html">voir</a></td><td><a href="direction-4-corporate/reservation.html">voir</a></td></tr>
+<tr><th scope="row">Contact</th><td class="rubrique">contact</td><td><a href="direction-1-travele/contact.html">voir</a></td><td><a href="direction-2-tripix/contact.html">voir</a></td><td><a href="direction-3-reservation/contact.html">voir</a></td><td><a href="direction-4-corporate/contact.html">voir</a></td></tr>
+<tr><th scope="row">Mentions legales</th><td class="rubrique">legal</td><td><a href="direction-1-travele/mentions-legales.html">voir</a></td><td><a href="direction-2-tripix/mentions-legales.html">voir</a></td><td><a href="direction-3-reservation/mentions-legales.html">voir</a></td><td><a href="direction-4-corporate/mentions-legales.html">voir</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="conteneur">
+    Portail regénéré le 20/09/2026.
+    Contenu issu du site actuel, aucun prix ni témoignage inventé.
+  </div>
+</footer>
+</body>
+</html>

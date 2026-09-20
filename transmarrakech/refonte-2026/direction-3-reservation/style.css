@@ -1,0 +1,498 @@
+/* Direction 3 - Reservation, d'apres My Hotel. Blanc, filets fins, anthracite,
+   un accent or fume. Polices systeme uniquement, rien de telecharge. */
+
+:root {
+  --encre: #1b1d21;
+  --texte: #2d3137;
+  --doux: #6a7078;
+  --or: #8a6a28;          /* contraste 5,0 sur blanc */
+  --or-clair: #b08d45;    /* contraste 5,6 sur anthracite */
+  --ivoire: #faf8f4;
+  --ivoire-2: #f3f0ea;
+  --trait: #e3dfd7;
+  --trait-nuit: rgba(255, 255, 255, .16);
+  --conteneur: 1180px;
+  --ombre: 0 1px 2px rgba(27, 29, 33, .05);
+  --ombre-carte: 0 18px 44px rgba(27, 29, 33, .13);
+  --police: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--police);
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--texte);
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--or); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.18; color: var(--encre); margin: 0 0 .5em; }
+h1 { font-size: clamp(1.95rem, 4.2vw, 3rem); letter-spacing: -.012em; }
+h2 { font-size: clamp(1.5rem, 2.8vw, 2.05rem); letter-spacing: -.008em; }
+h3 { font-size: 1.16rem; }
+h4 { font-family: var(--police); font-size: .96rem; letter-spacing: .02em; margin: 1.8em 0 .5em; color: var(--encre); }
+p { margin: 0 0 1.1em; }
+
+.conteneur { width: 100%; max-width: var(--conteneur); margin: 0 auto; padding-inline: 24px; }
+.conteneur-etroit { max-width: 780px; }
+.conteneur-lecture { max-width: 900px; }
+
+.sur-titre { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--or); font-weight: 700; margin: 0 0 1em; }
+.sec-nuit .sur-titre, .ouverture .sur-titre { color: var(--or-clair); }
+
+.evitement { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--encre); color: #fff; padding: 10px 18px; }
+.evitement:focus { left: 0; }
+
+/* Motif de fond discret : trame diagonale facon zellige, en CSS pur. */
+.fond-motif {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(138, 106, 40, .055) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(-45deg, rgba(138, 106, 40, .055) 0 1px, transparent 1px 24px);
+}
+
+/* Boutons */
+
+.btn {
+  display: inline-block; padding: 13px 26px; border: 1px solid transparent;
+  font-family: var(--police); font-size: .82rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; line-height: 1.25;
+  text-align: center; cursor: pointer; border-radius: 2px;
+  transition: background .18s, color .18s, border-color .18s;
+}
+.btn:hover { text-decoration: none; }
+.btn-or { background: var(--or); color: #fff; }
+.btn-or:hover { background: #71561f; color: #fff; }
+.btn-ligne { background: transparent; color: var(--encre); border-color: var(--encre); }
+.btn-ligne:hover { background: var(--encre); color: #fff; }
+.btn-mince { padding: 9px 18px; font-size: .72rem; background: transparent; color: var(--encre); border-color: var(--trait); }
+.btn-mince:hover { background: var(--encre); color: #fff; border-color: var(--encre); }
+.btn-bloc { display: block; width: 100%; }
+
+.lien-fleche { font-size: .85rem; font-weight: 700; letter-spacing: .04em; color: var(--or); }
+.lien-fleche::after { content: " \2192"; }
+
+/* Entete */
+
+.entete { position: sticky; top: 0; z-index: 60; background: #fff; border-bottom: 1px solid var(--trait); }
+
+.bandeau { background: var(--encre); color: #b9bec6; font-size: .76rem; letter-spacing: .04em; }
+.bandeau-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 34px; flex-wrap: wrap; }
+.bandeau a { color: #fff; }
+.bandeau-liens { display: flex; gap: 20px; flex-wrap: wrap; }
+
+/* Entete plus large que le contenu : le menu couvre 32 pages. */
+.entete .conteneur { max-width: 1320px; }
+.entete-inner { display: flex; align-items: center; gap: 18px; min-height: 76px; }
+
+.logo { display: block; flex: none; color: var(--encre); }
+.logo:hover { text-decoration: none; }
+.logo-nom {
+  display: block; font-family: var(--serif); font-size: 1.28rem; white-space: nowrap;
+  letter-spacing: .04em; text-transform: uppercase; line-height: 1.1;
+}
+.logo-sous { display: block; font-size: .64rem; letter-spacing: .17em; text-transform: uppercase; color: var(--doux); margin-top: 3px; }
+
+.nav { margin-left: auto; }
+.nav > ul { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.nav a {
+  display: block; padding: 10px 12px; color: var(--encre);
+  font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600;
+  border-bottom: 2px solid transparent; white-space: nowrap;
+}
+.nav a:hover { color: var(--or); text-decoration: none; }
+.nav a.actif { border-bottom-color: var(--or); color: var(--or); }
+
+.a-sous-menu { position: relative; }
+.chevron { display: inline-block; margin-left: 6px; border: 3.5px solid transparent; border-top-color: currentColor; transform: translateY(2px); }
+.sous-menu {
+  position: absolute; left: 0; top: 100%; min-width: 262px; background: #fff; list-style: none;
+  border: 1px solid var(--trait); box-shadow: var(--ombre-carte); margin: 0; padding: 8px 0;
+  opacity: 0; visibility: hidden; transform: translateY(6px); transition: .16s;
+}
+/* Deroulants de droite cales a droite : sinon ils depassent du cadre. */
+.nav > ul > li:nth-last-child(-n+4) .sous-menu { left: auto; right: 0; }
+.a-sous-menu:hover .sous-menu, .a-sous-menu:focus-within .sous-menu { opacity: 1; visibility: visible; transform: none; }
+.sous-menu a { font-size: .78rem; text-transform: none; letter-spacing: .02em; padding: 8px 18px; border: 0; font-weight: 500; }
+.sous-menu a:hover { background: var(--ivoire); }
+
+.btn-entete { padding: 12px 22px; }
+
+.burger { display: none; width: 46px; height: 42px; margin-left: auto; background: none; border: 1px solid var(--trait); border-radius: 2px; cursor: pointer; padding: 11px 10px; }
+.burger span { display: block; height: 1px; background: var(--encre); margin: 0 0 6px; }
+.burger span:last-child { margin-bottom: 0; }
+.burger.actif { border-color: var(--or); }
+
+/* Ouverture accueil */
+
+.ouverture { position: relative; background: var(--encre); color: #fff; overflow: hidden; padding: clamp(54px, 8vw, 96px) 0 clamp(78px, 9vw, 122px); }
+.ouverture-fond { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; opacity: .5; }
+.ouverture::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(20, 22, 26, .88) 0%, rgba(20, 22, 26, .72) 46%, rgba(20, 22, 26, .38) 100%);
+}
+.ouverture-inner { position: relative; z-index: 2; max-width: 720px; }
+.ouverture h1 { color: #fff; margin-bottom: .32em; }
+.ouverture-chapeau { font-size: 1.06rem; color: #e2e5e9; max-width: 600px; margin-bottom: 1.6em; }
+.ouverture-preuve { display: inline-flex; align-items: baseline; gap: 12px; margin: 0; padding: 10px 20px; border: 1px solid var(--trait-nuit); border-left: 2px solid var(--or-clair); }
+.ouverture-preuve strong { font-family: var(--serif); font-size: 1.5rem; color: #fff; }
+.ouverture-preuve span { font-size: .84rem; color: #ccd1d7; letter-spacing: .04em; }
+
+/* Le moteur de reservation */
+
+.zone-moteur { position: relative; z-index: 10; margin-top: clamp(-96px, -6vw, -56px); }
+.zone-moteur-haut { margin-top: -54px; margin-bottom: 8px; }
+
+.moteur { background: #fff; border: 1px solid var(--trait); box-shadow: var(--ombre-carte); }
+.moteur-tete { background: var(--encre); color: #fff; padding: 20px 28px; border-bottom: 2px solid var(--or); }
+.moteur-tete h2 { color: #fff; font-size: 1.32rem; margin: 0; }
+.moteur-tete p { margin: 6px 0 0; font-size: .84rem; color: #c3c8cf; }
+.moteur-corps { padding: 26px 28px 24px; }
+.moteur-champs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 20px; margin-bottom: 20px; }
+.moteur-carte .btn-bloc { max-width: 380px; margin-inline: auto; }
+
+.champ { margin: 0; }
+.champ label {
+  display: block; font-size: .68rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--doux); margin-bottom: 6px;
+}
+.champ input, .champ select {
+  width: 100%; padding: 11px 12px; font: inherit; font-size: .92rem; color: var(--texte);
+  background: #fff; border: 1px solid var(--trait); border-radius: 2px;
+}
+.champ input:focus, .champ select:focus { outline: 2px solid var(--or); outline-offset: 0; border-color: var(--or); }
+.moteur-note { font-size: .76rem; color: var(--doux); text-align: center; margin: 12px 0 0; }
+
+/* Barre de reservation des pages interieures : la meme promesse, en une ligne. */
+.moteur-barre {
+  display: flex; align-items: flex-end; gap: 18px; padding: 18px 22px;
+  margin-top: 26px; margin-bottom: -34px; position: relative; z-index: 12;
+}
+.moteur-barre .moteur-champs { flex: 1; grid-template-columns: repeat(3, 1fr); margin: 0; gap: 16px; }
+.moteur-barre .btn { padding: 12px 22px; white-space: nowrap; }
+
+/* Carte en colonne laterale */
+.moteur-colonne .moteur-champs { grid-template-columns: 1fr; gap: 14px; }
+.moteur-colonne .moteur-tete { padding: 17px 20px; }
+.moteur-colonne .moteur-tete h2 { font-size: 1.14rem; }
+.moteur-colonne .moteur-corps { padding: 20px; }
+
+/* Faits */
+
+.faits { border-bottom: 1px solid var(--trait); background: #fff; }
+.faits-grille { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding: 46px 24px; }
+.fait { padding: 0 26px; border-left: 1px solid var(--trait); }
+.fait:first-child { border-left: 0; padding-left: 0; }
+.fait-num { display: block; font-family: var(--serif); font-size: .88rem; color: var(--or); letter-spacing: .1em; margin-bottom: 8px; }
+.fait h3 { font-family: var(--police); font-size: .92rem; font-weight: 700; letter-spacing: .02em; margin-bottom: .45em; }
+.fait p { font-size: .85rem; color: var(--doux); margin: 0; }
+
+/* Sections */
+
+.sec { padding: clamp(48px, 6vw, 78px) 0; }
+.sec-ivoire { background: var(--ivoire); }
+.sec-texte { background: var(--ivoire); }
+.sec-texte h2, .col-contenu h2 { margin-top: 1.6em; }
+.sec-texte h2:first-child, .col-contenu h2:first-child { margin-top: 0; }
+.sec-nuit { background: var(--encre); color: #d6dae0; }
+.sec-nuit h2, .sec-nuit h3 { color: #fff; }
+
+.sec-tete { max-width: 720px; margin: 0 auto 40px; text-align: center; }
+.sec-tete h2 { margin-bottom: .35em; }
+.sec-tete p { color: var(--doux); margin: 0; }
+.sec-tete .sur-titre { margin-bottom: .8em; }
+.sec-suite { text-align: center; margin: 40px 0 0; }
+
+/* Tuiles (galerie d'hotel) */
+
+.grille { display: grid; gap: 26px; }
+.grille-3 { grid-template-columns: repeat(3, 1fr); }
+.grille-4 { grid-template-columns: repeat(4, 1fr); }
+
+.tuile { background: #fff; border: 1px solid var(--trait); border-radius: 2px; transition: border-color .18s, box-shadow .18s; }
+.tuile a { display: block; color: inherit; }
+.tuile a:hover { text-decoration: none; }
+.tuile:hover { border-color: #cfc7b7; box-shadow: var(--ombre); }
+.tuile-corps { padding: 18px 20px 22px; }
+.tuile-corps h3 { font-size: 1.08rem; margin-bottom: .3em; }
+.tuile-corps p { font-size: .87rem; color: var(--doux); margin-bottom: .9em; }
+.tuile-cap { margin-bottom: 0 !important; }
+.tuile-plus { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--or); }
+.tuile:hover .tuile-plus { text-decoration: underline; }
+
+.vig { aspect-ratio: 3 / 2; background: var(--ivoire-2); overflow: hidden; }
+.vig img { width: 100%; height: 100%; object-fit: cover; }
+/* Photos de vehicules : prises de vue catalogue sur fond blanc, jamais recadrees. */
+.vig-objet { background: #fff; border-bottom: 1px solid var(--trait); }
+.vig-objet img { object-fit: contain; padding: 8px; }
+
+/* Etapes */
+
+.etapes { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 0; padding: 0; }
+.etapes li { border-top: 1px solid var(--trait); padding-top: 22px; }
+.etape-num { display: block; font-family: var(--serif); font-size: 2rem; color: var(--or); line-height: 1; margin-bottom: 12px; }
+.etapes h3 { font-family: var(--police); font-size: .95rem; font-weight: 700; letter-spacing: .02em; }
+.etapes p { font-size: .88rem; color: var(--doux); margin: 0; }
+
+/* Bandeau evenement */
+
+.evenement { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+.evenement p { color: #c3c8cf; }
+.evenement .btn { margin-top: 10px; }
+.vig-large { aspect-ratio: 21 / 8; border: 1px solid var(--trait-nuit); }
+
+/* Avis */
+
+.sec-avis { border-top: 1px solid var(--trait); }
+.avis-grille { display: grid; grid-template-columns: 300px 1fr; gap: 52px; align-items: center; }
+.avis-chiffre { display: flex; align-items: baseline; gap: 10px; margin: 0 0 .2em; }
+.avis-chiffre strong { font-family: var(--serif); font-size: 3.4rem; font-weight: 400; color: var(--encre); line-height: 1; }
+.avis-chiffre span { font-size: .9rem; color: var(--doux); }
+.avis-nombre { font-size: .9rem; color: var(--doux); margin: 0; }
+.avis-attente { display: grid; gap: 14px; }
+.avis-vide {
+  border: 1px dashed var(--trait); background: var(--ivoire); color: var(--doux);
+  font-size: .82rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 26px 20px; margin: 0; text-align: center;
+}
+.avis-mention { font-size: .8rem; color: var(--doux); margin: 0; font-style: italic; }
+
+/* Galerie */
+
+.galerie { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.galerie figure { margin: 0; }
+.galerie .vig { aspect-ratio: 1 / 1; }
+.galerie figcaption { font-size: .74rem; color: var(--doux); margin-top: 8px; letter-spacing: .02em; }
+
+/* Ouverture des pages interieures */
+
+.ouverture-int { background: var(--ivoire); border-bottom: 1px solid var(--trait); padding: 34px 0 0; }
+.ouverture-int-grille { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 44px; align-items: center; padding-bottom: 8px; }
+.ouverture-int h1 { margin-bottom: .3em; }
+.ouverture-int .chapeau { color: var(--doux); font-size: 1rem; margin: 0; max-width: 620px; }
+.vig-entete { aspect-ratio: 3 / 2; border: 1px solid var(--trait); }
+
+.fil { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--doux); margin-bottom: 16px; display: flex; gap: 9px; flex-wrap: wrap; }
+.fil a { color: var(--doux); }
+.fil a:hover { color: var(--or); }
+.fil-ici { color: var(--encre); }
+
+/* Colonnes */
+
+.colonnes { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; padding-block: 64px 56px; align-items: start; }
+.colonnes-inverse { padding-top: 0; }
+.col-contenu h3 { margin-top: 1.7em; }
+.col-cote { position: sticky; top: 124px; display: grid; gap: 22px; }
+
+.col-contenu .moteur { margin-top: 2.4em; }
+.puces { margin: 0 0 1.3em; padding-left: 0; list-style: none; }
+.puces li { position: relative; padding-left: 20px; margin-bottom: .5em; }
+.puces li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border: 1px solid var(--or); transform: rotate(45deg); }
+
+.encart { border: 1px solid var(--trait); padding: 22px; background: #fff; }
+.encart h2 { font-family: var(--police); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--doux); margin-bottom: 1em; }
+.encart ul { list-style: none; padding: 0; margin: 0; }
+.encart li { border-top: 1px solid var(--trait); padding: 9px 0; font-size: .9rem; }
+.encart li:first-child { border-top: 0; padding-top: 0; }
+.encart li a { color: var(--texte); }
+.encart li a:hover { color: var(--or); }
+.encart-nuit { background: var(--encre); border-color: var(--encre); color: #c3c8cf; }
+.encart-nuit h2 { color: var(--or-clair); }
+.encart-nuit p { font-size: .88rem; }
+.encart-mention { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: #8e959d; margin: 10px 0 0; text-align: center; }
+.encart-avis { background: var(--ivoire); }
+.encart-avis p { font-size: .88rem; color: var(--doux); margin: 0; }
+.encart-avis .avis-chiffre strong { font-size: 2.6rem; }
+
+/* Contact */
+
+.coord-grille { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.coord { padding: 0 28px; border-left: 1px solid var(--trait); }
+.coord:first-child { border-left: 0; padding-left: 0; }
+.coord-t { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--or); margin-bottom: 10px; }
+.coord p { font-size: .94rem; margin: 0 0 .7em; }
+.coord p:last-child { margin-bottom: 0; }
+.coord-p { font-size: .8rem; color: var(--doux); }
+
+/* Tarifs : la piece maitresse de cette direction */
+
+.tarif { margin: 0 0 30px; border: 1px solid var(--trait); background: #fff; }
+.tarif-tete {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 18px;
+  padding: 16px 22px; background: var(--ivoire); border-bottom: 1px solid var(--trait);
+}
+.tarif-nom { font-family: var(--serif); font-size: 1.12rem; color: var(--encre); line-height: 1.25; }
+.tarif-unite { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--or); white-space: nowrap; }
+
+/* Chaque grille defile dans son propre cadre : la page, elle, ne bouge pas. */
+.tarif-defil { overflow-x: auto; }
+.t { width: 100%; min-width: 290px; border-collapse: collapse; }
+.t th, .t td { padding: 12px 22px; text-align: left; vertical-align: baseline; }
+.t thead th {
+  font-family: var(--police); font-size: .66rem; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--doux); background: #fff;
+  border-bottom: 1px solid var(--trait); padding-top: 14px; padding-bottom: 10px;
+}
+.t thead th:last-child { text-align: right; }
+.t tbody th { font-weight: 500; font-size: .93rem; color: var(--texte); border-top: 1px solid var(--trait); padding-right: 30px; }
+.t tbody tr:first-child th, .t tbody tr:first-child td { border-top: 0; }
+.t tbody td { border-top: 1px solid var(--trait); text-align: right; padding-left: 30px; }
+.t tbody tr:hover th, .t tbody tr:hover td { background: var(--ivoire); }
+.t-prix { font-variant-numeric: tabular-nums; font-weight: 700; font-size: .96rem; color: var(--encre); white-space: nowrap; }
+.t-nd { color: var(--doux); font-size: .82rem; }
+.t-nd abbr { text-decoration: none; border-bottom: 1px dotted var(--doux); cursor: help; letter-spacing: .08em; }
+.tarif-pied {
+  display: flex; justify-content: space-between; align-items: center; gap: 18px;
+  padding: 13px 22px; border-top: 1px solid var(--trait); background: var(--ivoire);
+}
+.tarif-pied p { margin: 0; font-size: .78rem; color: var(--doux); }
+.t-legende { display: block; }
+
+/* Ce qui reste a fournir se voit. */
+.attente {
+  border: 1px dashed var(--trait); background: var(--ivoire); color: var(--doux);
+  font-size: .85rem; font-style: italic; padding: 16px 18px; margin: 0 0 1.4em;
+}
+.attente span {
+  display: block; font-style: normal; font-size: .66rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--or); margin-bottom: 5px;
+}
+
+/* Trajets sans grille publiee */
+.sdv { margin: 0 0 30px; }
+.sdv-intro { font-size: .92rem; color: var(--doux); border-left: 2px solid var(--or); padding-left: 16px; margin-bottom: 20px; }
+.sdv-liste { list-style: none; margin: 0 0 16px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; }
+.sdv-liste li { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--trait); padding: 10px 0; margin: 0; font-size: .92rem; }
+.sdv-liste li span { flex: 1; }
+.sdv-liste li em {
+  font-style: normal; font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--or); white-space: nowrap;
+}
+
+/* Pied de page */
+
+.pied { background: var(--encre); color: #a7aeb6; padding: 58px 0 0; }
+.pied-grille { display: grid; grid-template-columns: 1.7fr repeat(4, 1fr) 1.35fr; gap: 32px; padding-bottom: 44px; }
+.pied h3 { font-family: var(--police); font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #fff; margin-bottom: 1.3em; }
+.pied ul { list-style: none; padding: 0; margin: 0; }
+.pied li { margin-bottom: .55em; font-size: .84rem; line-height: 1.5; }
+.pied a { color: #c2c8cf; }
+.pied a:hover { color: #fff; }
+.pied-identite .logo-nom { color: #fff; font-size: 1.24rem; margin-bottom: .7em; }
+.pied-identite p { font-size: .82rem; line-height: 1.6; color: #969da6; }
+.pied-avis { display: flex; flex-direction: column; gap: 2px; border-left: 2px solid var(--or-clair); padding-left: 14px; }
+.pied-avis strong { font-family: var(--serif); font-size: 1.15rem; color: #fff; }
+.pied-avis span { font-size: .8rem; }
+.pied-contact span { color: #868d96; font-size: .78rem; }
+.pied-bas { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--trait-nuit); padding-block: 20px; font-size: .78rem; }
+
+/* WhatsApp */
+
+.wa {
+  position: fixed; right: 20px; bottom: 20px; z-index: 70;
+  display: flex; align-items: center; gap: 9px;
+  background: var(--encre); color: #fff; padding: 12px 20px; border-radius: 2px;
+  font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  box-shadow: var(--ombre-carte);
+}
+.wa:hover { background: var(--or); color: #fff; text-decoration: none; }
+.wa-point { width: 8px; height: 8px; border-radius: 50%; background: #4ad07d; }
+
+/* Responsive */
+
+/* Le menu se resserre avant de bousculer le logo, puis le rappel "Reserver"
+   cede la place : il reste dans le bandeau et dans le premier ecran. */
+@media (max-width: 1280px) {
+  .nav a { padding: 10px 9px; font-size: .74rem; }
+}
+
+@media (max-width: 1120px) {
+  .btn-entete { display: none; }
+  .pied-grille { grid-template-columns: repeat(3, 1fr); }
+  .colonnes { grid-template-columns: minmax(0, 1fr) 310px; gap: 34px; }
+  .ouverture-int-grille { grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
+  .galerie { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 980px) {
+  .burger { display: block; }
+  .nav {
+    position: absolute; left: 0; right: 0; top: 100%; background: #fff;
+    border-top: 1px solid var(--trait); box-shadow: var(--ombre-carte);
+    max-height: 0; overflow: hidden; transition: max-height .25s ease;
+  }
+  .nav.ouvert { max-height: 76vh; overflow-y: auto; }
+  .nav > ul { flex-direction: column; padding: 8px 20px 20px; gap: 0; }
+  .nav a { padding: 13px 0; font-size: .82rem; border-bottom: 1px solid var(--trait); }
+  .nav a.actif { border-bottom-color: var(--trait); }
+  .chevron { display: none; }
+  .sous-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; padding: 0 0 0 14px; min-width: 0; }
+  .sous-menu a { font-size: .8rem; color: var(--doux); }
+  .btn-entete { display: none; }
+  .entete-inner { position: relative; flex-wrap: wrap; gap: 12px; }
+
+  .grille-4 { grid-template-columns: repeat(2, 1fr); }
+  .faits-grille { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
+  .fait:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .evenement { grid-template-columns: 1fr; gap: 28px; }
+  .colonnes { grid-template-columns: 1fr; }
+  .col-cote { position: static; }
+  .ouverture-int-grille { grid-template-columns: 1fr; gap: 24px; }
+  .vig-entete { max-width: 440px; }
+  .moteur-champs { grid-template-columns: repeat(2, 1fr); }
+  .moteur-barre { flex-direction: column; align-items: stretch; }
+  .moteur-barre .moteur-champs { grid-template-columns: repeat(3, 1fr); }
+  .avis-grille { grid-template-columns: 1fr; gap: 28px; }
+  .coord-grille { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
+  .coord:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+
+@media (max-width: 700px) {
+  .grille-3, .grille-4 { grid-template-columns: repeat(2, 1fr); }
+  .etapes { grid-template-columns: 1fr; gap: 20px; }
+  .sdv-liste { grid-template-columns: 1fr; }
+  .pied-grille { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .bandeau-fait { display: none; }
+  .bandeau-inner { justify-content: center; }
+  .tarif-pied { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+
+@media (max-width: 540px) {
+  .conteneur { padding-inline: 18px; }
+  .grille-3, .grille-4 { grid-template-columns: 1fr; }
+  .galerie { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .faits-grille { grid-template-columns: 1fr; padding: 34px 18px; }
+  .fait { border-left: 0; padding-left: 0; }
+  .coord-grille { grid-template-columns: 1fr; }
+  .coord { border-left: 0; padding-left: 0; }
+  .moteur-champs, .moteur-barre .moteur-champs { grid-template-columns: 1fr 1fr; }
+  .champ { grid-column: 1 / -1; }
+  .champ-demi { grid-column: auto; }
+  .moteur-tete, .moteur-corps { padding-inline: 20px; }
+  .moteur-barre { padding: 18px 20px; margin-bottom: -28px; }
+  .zone-moteur { margin-top: -40px; }
+  .zone-moteur-haut { margin-top: -30px; }
+  .colonnes { padding-block: 48px 44px; }
+  .pied-grille { grid-template-columns: 1fr; }
+  .avis-chiffre strong { font-size: 2.8rem; }
+  .wa { right: 14px; bottom: 14px; padding: 11px 16px; }
+  .t th, .t td { padding: 11px 14px; }
+  .t tbody th { padding-right: 18px; }
+  .t tbody td { padding-left: 18px; }
+  .tarif-tete { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 16px; }
+  .tarif-pied { padding: 13px 16px; }
+  .logo-sous { display: none; }
+}
+
+@media print {
+  .entete, .pied, .wa, .moteur, .zone-moteur, .evitement, .ouverture-fond { display: none; }
+}
