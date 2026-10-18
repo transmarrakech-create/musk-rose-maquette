@@ -1,5 +1,5 @@
 /* Service worker du carnet - genere, ne pas editer a la main */
-const CACHE = 'carnet-785e1990';
+const CACHE = 'carnet-ac4b9e2c';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-180.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
